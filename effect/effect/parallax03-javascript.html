@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-    <title>parallax02-javascript</title>
+    <title>parallax03-javascript</title>
     <style>
         /* reset */
         *, *::before, *::after {
@@ -142,6 +142,7 @@
             text-align: left;
             margin-right: auto;
             margin-left: -4vw;
+            padding-right: 10vw;
             padding-left: 0;
         }
         #section1 .content-item-img{
@@ -186,14 +187,14 @@
 </head>
 <body>
     <div class="info left">
-        <h1>Parallax Effect02 - javascript</h1>
-        <p>패랠랙스 스크로링 효과 - 이질감 느끼기</p>
+        <h1>Parallax Effect03 - javascript</h1>
+        <p>패랠랙스 스크로링 효과 - 기울이기</p>
     </div>    
     <div class="info right">
         <ul>
             <li><a href="parallax01-jquery.html">1</a><a href="parallax01-javascript.html">1</a></li>
-            <li><a href="parallax02-jquery.html" class="active">2</a><a href="parallax02-javascript.html">2</a></li>
-            <li><a href="parallax03-jquery.html">3</a><a href="parallax03-jquery.html">3</a></li>
+            <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html">2</a></li>
+            <li><a href="parallax03-jquery.html">3</a><a href="parallax03-javascript.html" class="active">3</a></li>
             <li><a href="parallax04-jquery.html">4</a><a href="parallax04-jquery.html">4</a></li>
             <li><a href="parallax05-jquery.html">5</a><a href="parallax05-jquery.html">5</a></li>
             <li><a href="parallax06-jquery.html">6</a><a href="parallax06-jquery.html">6</a></li>
@@ -227,4 +228,100 @@
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc">행복은 습관이다,그것을 몸�
+                    <p class="content-item-desc">행복은 습관이다,그것을 몸에 지니라 <br>허버드</p>
+                </section>
+                <section id="section3" class="content-item">
+                    <span class="content-item-num">03</span>
+                    <h2 class="content-item-title">Section3</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">자신감 있는 표정을 지으면 자신감이 생긴다 찰스다윈</p>
+                </section>
+                <section id="section4" class="content-item">
+                    <span class="content-item-num">04</span>
+                    <h2 class="content-item-title">Section4</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">1퍼센트의 가능성, 그것이 나의 길이다. <br>나폴레옹</p>
+                </section>
+                <section id="section5" class="content-item">
+                    <span class="content-item-num">05</span>
+                    <h2 class="content-item-title">Section5</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">자신을 내보여라. 그러면 재능이 드러날 것이다. 발타사르 그라시안 </p>
+                </section>
+                <section id="section6" class="content-item">
+                    <span class="content-item-num">06</span>
+                    <h2 class="content-item-title">Section6</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">작은 기회로 부터 종종 위대한 업적이 시작된다 데모스테네스</p>
+                </section>
+                <section id="section7" class="content-item">
+                    <span class="content-item-num">07</span>
+                    <h2 class="content-item-title">Section7</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">최고에 도달하려면 최저에서 시작하라.<br>P.시루스</p>
+                </section>
+                <section id="section8" class="content-item">
+                    <span class="content-item-num">08</span>
+                    <h2 class="content-item-title">Section8</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">겨울이 오면 봄이 멀지 않으리.<br>셸리</p>
+                </section>
+                <section id="section9" class="content-item">
+                    <span class="content-item-num">09</span>
+                    <h2 class="content-item-title">Section9</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">문제점을 찾지 말고 해결책을 찾으라 헨리포드 </p>
+                </section>
+            </div>
+        </section>    
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+        let pageYOffset = window.pageXOffset;
+
+        const scroll = () => {
+            const newpageYOffset = window.pageYOffset;
+            const different = newpageYOffset - pageYOffset;
+
+            let target = document.querySelectorAll(".content-item-img");
+            // target.stlye.transform = "rotate("+different+"deg)"
+
+            // target.forEach(box => {
+            //     box.style.transform = "rotate("+different+"deg)"
+            // });
+
+            gsap.to(".content-item-imgWrap", {duration: .3, skewY: different * 0.1, ease: Power1.ease});
+            gsap.to(".content-item-num", {duration: .6, skewX: different * 3, ease: Power1.ease});
+            gsap.to(".content-item-desc", {duration: .6, skewX: different * 0.2, ease: Power4.ease});
+
+            pageYOffset = newpageYOffset
+            requestAnimationFrame(scroll);
+        }
+
+        scroll()
+        // let num = 0;
+        // function render(){
+        //     document.querySelector(".content-item-num").innerHTML = num;
+        //     num++;
+        //     // setInterval(render, 100)
+        //     requestAnimationFrame(render);
+        // };
+        // render();
+    </script>
+</body>
+</html>

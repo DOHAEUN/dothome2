@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-    <title>parallax02-javascript</title>
+    <title>parallax02-jquery</title>
     <style>
         /* reset */
         *, *::before, *::after {
@@ -142,6 +142,7 @@
             text-align: left;
             margin-right: auto;
             margin-left: -4vw;
+            padding-right: 10vw;
             padding-left: 0;
         }
         #section1 .content-item-img{
@@ -186,7 +187,7 @@
 </head>
 <body>
     <div class="info left">
-        <h1>Parallax Effect02 - javascript</h1>
+        <h1>Parallax Effect02 - JQuery</h1>
         <p>패랠랙스 스크로링 효과 - 이질감 느끼기</p>
     </div>    
     <div class="info right">
@@ -227,4 +228,84 @@
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc">행복은 습관이다,그것을 몸�
+                    <p class="content-item-desc">행복은 습관이다,그것을 몸에 지니라 <br>허버드</p>
+                </section>
+                <section id="section3" class="content-item">
+                    <span class="content-item-num">03</span>
+                    <h2 class="content-item-title">Section3</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">자신감 있는 표정을 지으면 자신감이 생긴다 찰스다윈</p>
+                </section>
+                <section id="section4" class="content-item">
+                    <span class="content-item-num">04</span>
+                    <h2 class="content-item-title">Section4</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">1퍼센트의 가능성, 그것이 나의 길이다. <br>나폴레옹</p>
+                </section>
+                <section id="section5" class="content-item">
+                    <span class="content-item-num">05</span>
+                    <h2 class="content-item-title">Section5</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">자신을 내보여라. 그러면 재능이 드러날 것이다. 발타사르 그라시안 </p>
+                </section>
+                <section id="section6" class="content-item">
+                    <span class="content-item-num">06</span>
+                    <h2 class="content-item-title">Section6</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">작은 기회로 부터 종종 위대한 업적이 시작된다 데모스테네스</p>
+                </section>
+                <section id="section7" class="content-item">
+                    <span class="content-item-num">07</span>
+                    <h2 class="content-item-title">Section7</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">최고에 도달하려면 최저에서 시작하라.<br>P.시루스</p>
+                </section>
+                <section id="section8" class="content-item">
+                    <span class="content-item-num">08</span>
+                    <h2 class="content-item-title">Section8</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">겨울이 오면 봄이 멀지 않으리.<br>셸리</p>
+                </section>
+                <section id="section9" class="content-item">
+                    <span class="content-item-num">09</span>
+                    <h2 class="content-item-title">Section9</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">문제점을 찾지 말고 해결책을 찾으라 헨리포드 </p>
+                </section>
+            </div>
+        </section>    
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+            $(".content-item").each(function(){
+                let offset1 = (scrollTop - $(this).offset().top) * 0.3;
+                let offset2 = (scrollTop - $(this).offset().top) * 0.6;
+
+                $(this).find(".content-item-desc").css({transform: "translateY("+ -offset1+"px)"})
+                $(this).find(".content-item-num").css({transform: "translateY("+offset1+"px)"})
+                $(this).find(".content-item-img").css({transform: "translateY("+offset2+"px)"})
+            });
+
+            //출력용
+            $(".scrollTop").html(parseInt(scrollTop));
+        })
+    </script>    
+</body>
+</html>

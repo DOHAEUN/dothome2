@@ -227,4 +227,98 @@
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc">행복은 습관이다,그것을 몸�
+                    <p class="content-item-desc">행복은 습관이다,그것을 몸에 지니라 <br>허버드</p>
+                </section>
+                <section id="section3" class="content-item">
+                    <span class="content-item-num">03</span>
+                    <h2 class="content-item-title">Section3</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">자신감 있는 표정을 지으면 자신감이 생긴다 찰스다윈</p>
+                </section>
+                <section id="section4" class="content-item">
+                    <span class="content-item-num">04</span>
+                    <h2 class="content-item-title">Section4</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">1퍼센트의 가능성, 그것이 나의 길이다. <br>나폴레옹</p>
+                </section>
+                <section id="section5" class="content-item">
+                    <span class="content-item-num">05</span>
+                    <h2 class="content-item-title">Section5</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">자신을 내보여라. 그러면 재능이 드러날 것이다. 발타사르 그라시안 </p>
+                </section>
+                <section id="section6" class="content-item">
+                    <span class="content-item-num">06</span>
+                    <h2 class="content-item-title">Section6</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">작은 기회로 부터 종종 위대한 업적이 시작된다 데모스테네스</p>
+                </section>
+                <section id="section7" class="content-item">
+                    <span class="content-item-num">07</span>
+                    <h2 class="content-item-title">Section7</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">최고에 도달하려면 최저에서 시작하라.<br>P.시루스</p>
+                </section>
+                <section id="section8" class="content-item">
+                    <span class="content-item-num">08</span>
+                    <h2 class="content-item-title">Section8</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">겨울이 오면 봄이 멀지 않으리.<br>셸리</p>
+                </section>
+                <section id="section9" class="content-item">
+                    <span class="content-item-num">09</span>
+                    <h2 class="content-item-title">Section9</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">문제점을 찾지 말고 해결책을 찾으라 헨리포드 </p>
+                </section>
+            </div>
+        </section>    
+    </main>
+
+    <script>
+        window.addEventListener("scroll", () => {
+            let pageYoffset = (window.pageYOffset || document.documentElement.scrollTop);
+
+           // let offset1 = (pageYoffset - document.getElementById("section1").offsetTop) * 0.2;
+           // let offset2 = (pageYoffset - document.getElementById("section2").offsetTop) * 0.2;
+           // let offset3 = (pageYoffset - document.getElementById("section3").offsetTop) * 0.2;
+           // let offset4 = (pageYoffset - document.getElementById("section4").offsetTop) * 0.2;
+           // let offset5 = (pageYoffset - document.getElementById("section5").offsetTop) * 0.2;
+           // let offset6 = (pageYoffset - document.getElementById("section6").offsetTop) * 0.2;
+           // let offset7 = (pageYoffset - document.getElementById("section7").offsetTop) * 0.2;
+           // let offset8 = (pageYoffset - document.getElementById("section8").offsetTop) * 0.2;
+           // let offset9 = (pageYoffset - document.getElementById("section9").offsetTop) * 0.2;
+
+           // document.querySelector("#section1 .content-item-desc").style.transform = "translateY("+ -offset1 + "+px)";
+           // document.querySelector("#section2 .content-item-desc").style.transform = "translateY("+ -offset2 + "+px)";
+           // document.querySelector("#section3 .content-item-desc").style.transform = "translateY("+ -offset3 + "+px)";
+           // document.querySelector("#section4 .content-item-desc").style.transform = "translateY("+ -offset4 + "+px)";
+           // document.querySelector("#section5 .content-item-desc").style.transform = "translateY("+ -offset5 + "+px)";
+           // document.querySelector("#section6 .content-item-desc").style.transform = "translateY("+ -offset6 + "+px)";
+           // document.querySelector("#section7 .content-item-desc").style.transform = "translateY("+ -offset7 + "+px)";
+           // document.querySelector("#section8 .content-item-desc").style.transform = "translateY("+ -offset8 + "+px)";
+           // document.querySelector("#section9 .content-item-desc").style.transform = "translateY("+ -offset9 + "+px)";
+
+           document.querySelectorAll(".content-item").forEach((elem) => {
+                let taget = elem.childNodes[7];
+                let offset = (pageYoffset - elem.offsetTop) * 0.2;
+                taget.style.transform = "translateY("+ -offset + "px)";
+           });
+        });
+    </script>    
+</body>
+</html>
