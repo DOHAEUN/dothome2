@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords" content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
+    <title>DOHAEUN | Border Radius</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../assets/css/prism.css" rel="stylesheet">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
+    <link rel="icon" href="../assets/ico/icon.png">
+    <link rel="icon" href="../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="128x128">
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="웹스토리보이" />
+    <meta property="og:url" content="https://webstoryboy.co.kr/" />
+    <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="og:site_name" content="웹스토리보이" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webstoryboy" />
+    <meta name="twitter:title" content="웹스토리보이" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">DOHAEUN</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://ssaa0088.tistory.com/">Tistory</a></li>
+                    <li><a href="https://codepen.io/your-work">CodePen</a></li>
+                    <li><a href="https://github.com/DOHAEUN/dothome1">Github</a></li>
+                    <li><a href="https://dohaeun.github.io/dothome1/">Gitbook</a></li>
+                    <li><a href="https://dohaeun.github.io/dothome1/">Figma</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bs-header bgs5" id="content">
+        <div class="container">
+            <h1>Border Radius Reference v1.0 &lt;/doc&gt;</h1>
+            <p><a href="http://snan8800.dothome.co.kr/" target="_blank">http://snan8800.dothome.co.kr/</a></p>
+        </div>
+    </div>
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-12" role="main">
+                <!-- Intro -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">border-radius</h2>
+                    <p class="bs-callout bs-callout-info">boredr-radius: border-top-left-radius | border-top-rigt-redius | border-bottom-left-radius | border-bottom-right-radius
+                    </p>
+                    <p class="bs-callout bs-callout-info">
+                        border-radius: 0px 0px 0px 0px / 0px 0px 0px 0px<br>
+                        border-radius: 0px 0px 0px / 0px 0px 0px 0px<br>
+                        border-radius: 0px 0px / 0px 0px 0px 0px<br>
+                        border-radius: 0px / 0px 0px 0px 0px<br>
+                        border-radius: 0px 0px 0px 0px<br>
+                        border-radius: 0px 0px 0px<br>
+                        border-radius: 0px 0px<br>
+                        border-radius: 0px<br>
+                        x축 / y축 <br>
+                        top left / top right / bottom right / bottom left 
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>종류</th>
+                                    <th>예시</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>border-top-left-radius</td>
+                                    <td>테두리 굴곡을 윗 부분 왼쪽에 설정합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>border-top-rigt-redius</td>
+                                    <td>테두리 굴곡을 윗 부분 오른쪽에 설정합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>border-bottom-left-radius</td>
+                                    <td>테두리 굴곡을 아랫 부분 왼쪽에 설정합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>border-bottom-right-radius</td>
+                                    <td>테두리 굴곡을 아랫 부분 오른쪽에 설정합니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- //Intro -->
+                <style>
+                    .radiusWrap {}
+                    .radiusWrap > div {transition: all 0.6s;}
+                    .radiusWrap > div:hover{border-radius: 0;}
+                    .radiusWrap.bg1 > div {background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); }
+                    .radiusWrap.bg2 > div {background-image: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);}
+                    .radiusWrap.bg3 > div {background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);}
+                    .radiusWrap.bg4 > div {background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);}
+                    .redius01 {border-radius: 0px;} 
+                    .redius02 {border-radius: 10px;}
+                    .redius03 {border-radius: 20px;}
+                    .redius04 {border-radius: 30px;}
+                    .redius05 {border-radius: 40px;}
+                    .redius06 {border-radius: 50px;}
+                    .redius07 {border-radius: 60px;}
+                    .redius08 {border-radius: 70px;}
+                    .redius09 {border-radius: 80px;}
+                    .redius10 {border-radius: 90px;}
+
+                    .redius11 {border-radius: 0px 0px;} 
+                    .redius12 {border-radius: 15px 0px;}
+                    .redius13 {border-radius: 30px 0px;}
+                    .redius14 {border-radius: 45px 0px;}
+                    .redius15 {border-radius: 60px 0px;}
+                    .redius16 {border-radius: 75px 0px;}
+                    .redius17 {border-radius: 90px 0px;}
+                    .redius18 {border-radius: 105px 0px;}
+                    .redius19 {border-radius: 130px 0px;}
+                    .redius20 {border-radius: 145px 0px;}
+
+                    .redius21 {border-radius: 0px / 50px;}
+                    .redius22 {border-radius: 15px / 50px;}
+                    .redius23 {border-radius: 35px / 50px;}
+                    .redius24 {border-radius: 50px / 50px;}
+                    .redius25 {border-radius: 65px / 50px;}
+                    .redius26 {border-radius: 80px / 50px;}
+                    .redius27 {border-radius: 95px / 50px;}
+                    .redius28 {border-radius: 105px / 50px;}
+                    .redius29 {border-radius: 120px / 50px;}
+                    .redius30 {border-radius: 130px / 50px;}
+                    
+                    .redius31 {border-radius: 0px 0px 10px 10px;}
+                    .redius32 {border-radius: 0px 0px 30px 30px;}
+                    .redius33 {border-radius: 0px 0px  50px 50px;}
+                    .redius34 {border-radius: 0px 0px 70px 70px;}
+                    .redius35 {border-radius: 0px 0px 90px 90px;}
+                    .redius36 {border-radius: 10px 10px 0px 0px;}
+                    .redius37 {border-radius: 30px 30px 0px 0px;}
+                    .redius38 {border-radius: 50px 50px 0px 0px;}
+                    .redius39 {border-radius: 70px 70px 0px 0px;}
+                    .redius40 {border-radius: 90px 90px 0px 0px;}
+
+                    .redius20.active {
+                        animation-name: radius20;
+                        animation-duration: 3s;
+                        animation-iteration-count: 100;
+                    }
+                    @keyframes radius20 {
+                        0% {border-radius: 0px 0px;}
+                        25% {border-radius: 150px 0;}
+                        50% {border-radius: 0px 0px;}
+                        75% {border-radius: 0px 150px;}
+                        100% {border-radius: 0px 0px;}
+                    }
+                </style>
+                <!-- Intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">Sample01</h2>
+                </div>
+                <div class="sample">
+                    <h3><span></span><em class="sr-only">border-radius</em></h3>
+                    <div class="boxWrap radiusWrap bg1">
+                        <div class = "redius01"><span>radius1</span></div>
+                        <div class = "redius02"><span>radius2</span></div>
+                        <div class = "redius03"><span>radius3</span></div>
+                        <div class = "redius04"><span>radius4</span></div>
+                        <div class = "redius05"><span>radius5</span></div>
+                        <div class = "redius06"><span>radius6</span></div>
+                        <div class = "redius07"><span>radius7</span></div>
+                        <div class = "redius08"><span>radius8</span></div>
+                        <div class = "redius09"><span>radius9</span></div>
+                        <div class = "redius10"><span>radius10</span></div>
+                    </div>
+                </div>
+<pre class="line-number language-css"><code>.redius01 {border-radius: 0px;}
+.redius02 {border-radius: 10px;}
+.redius03 {border-radius: 20px;}
+.redius04 {border-radius: 30px;}
+.redius05 {border-radius: 40px;}
+.redius06 {border-radius: 50px;}
+.redius07 {border-radius: 60px;}
+.redius08 {border-radius: 70px;}
+.redius09 {border-radius: 80px;}
+.redius10 {border-radius: 90px;}
+</code></pre>
+                <!-- //Intro1 -->
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">Sample02</h2>
+                </div>
+                <div class="sample">
+                    <h3><span></span><em class="sr-only">border-radius</em></h3>
+                    <div class="boxWrap radiusWrap bg2">
+                        <div class = "redius11"><span>redius11</span></div>
+                        <div class = "redius12"><span>redius12</span></div>
+                        <div class = "redius13"><span>redius13</span></div>
+                        <div class = "redius14"><span>redius14</span></div>
+                        <div class = "redius15"><span>redius15</span></div>
+                        <div class = "redius16"><span>redius16</span></div>
+                        <div class = "redius17"><span>redius17</span></div>
+                        <div class = "redius18"><span>redius18</span></div>
+                        <div class = "redius19"><span>redius19</span></div>
+                        <div class = "redius20"><span>redius20</span></div>
+                    </div>
+                </div>
+<pre class="line-number language-css"><code>.redius11 {border-radius: 0px 0px;} 
+.redius12 {border-radius: 15px 0px;}
+.redius13 {border-radius: 30px 0px;}
+.redius14 {border-radius: 45px 0px;}
+.redius15 {border-radius: 60px 0px;}
+.redius16 {border-radius: 75px 0px;}
+.redius17 {border-radius: 90px 0px;}
+.redius18 {border-radius: 105px 0px;}
+.redius19 {border-radius: 130px 0px;}
+.redius20 {border-radius: 145px 0px;}
+.redius20.active {
+    animation-name: radius20;
+    animation-duration: 3s;
+    animation-iteration-count: 100;
+}
+@keyframes radius20 {
+    0% {border-radius: 0px 0px;}
+    25% {border-radius: 150px 0;}
+    50% {border-radius: 0px 0px;}
+    75% {border-radius: 0px 150px;}
+    100% {border-radius: 0px 0px;}
+}
+</code></pre>
+                <!-- //Intro2 -->
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">Sample03</h2>
+                </div>
+                <div class="sample">
+                    <h3><span></span><em class="sr-only">border-radius</em></h3>
+                    <div class="boxWrap radiusWrap bg3">
+                        <div class = "redius21"><span>redius21</span></div>
+                        <div class = "redius22"><span>redius22</span></div>
+                        <div class = "redius23"><span>redius23</span></div>
+                        <div class = "redius24"><span>redius24</span></div>
+                        <div class = "redius25"><span>redius25</span></div>
+                        <div class = "redius26"><span>redius26</span></div>
+                        <div class = "redius27"><span>redius27</span></div>
+                        <div class = "redius28"><span>redius28</span></div>
+                        <div class = "redius29"><span>redius29</span></div>
+                        <div class = "redius30"><span>redius30</span></div>
+                    </div>
+                </div>
+<pre class="line-number language-css"><code>.redius21 {border-radius: 0px / 50px;}
+.redius22 {border-radius: 15px / 50px;}
+.redius23 {border-radius: 35px / 50px;}
+.redius24 {border-radius: 50px / 50px;}
+.redius25 {border-radius: 65px / 50px;}
+.redius26 {border-radius: 80px / 50px;}
+.redius27 {border-radius: 95px / 50px;}
+.redius28 {border-radius: 105px / 50px;}
+.redius29 {border-radius: 120px / 50px;}
+.redius30 {border-radius: 130px / 50px;}
+</code></pre>
+                <!-- //Intro3 -->
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">Sample04</h2>
+                </div>
+                <div class="sample">
+                    <h3><span></span><em class="sr-only">border-radius</em></h3>
+                    <div class="boxWrap radiusWrap bg4">
+                        <div class = "redius31"><span>redius31</span></div>
+                        <div class = "redius32"><span>redius32</span></div>
+                        <div class = "redius33"><span>redius33</span></div>
+                        <div class = "redius34"><span>redius34</span></div>
+                        <div class = "redius35"><span>redius35</span></div>
+                        <div class = "redius36"><span>redius36</span></div>
+                        <div class = "redius37"><span>redius37</span></div>
+                        <div class = "redius38"><span>redius38</span></div>
+                        <div class = "redius39"><span>redius39</span></div>
+                        <div class = "redius40"><span>redius40</span></div>
+                    </div>
+                </div>
+<pre class="line-number language-css"><code>.redius31 {border-radius: 0px 10px 10px;}
+.redius32 {border-radius: 0px 30px 30px;}
+.redius33 {border-radius: 0px 50px 50px;}
+.redius34 {border-radius: 0px 70px 70px;}
+.redius35 {border-radius: 0px 90px 90px;}
+.redius36 {border-radius: 10px 10px 0px;}
+.redius37 {border-radius: 30px 30px 0px;}
+.redius38 {border-radius: 50px 50px 0px;}
+.redius39 {border-radius: 70px 70px 0px;}
+.redius40 {border-radius: 90px 90px 0px;}
+</code></pre>
+                <!-- //Intro4 -->
+            </div>
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="https://webstoryboy.github.io/w9/html/">webstoryboy</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/docs.min.js"></script>
+    <script src="../assets/js/prism.js"></script>
+    <script>
+        $(".redius20").click(function(){
+            $(".redius20").addClass("active");
+        })
+    </script>
+</body>
+</html>

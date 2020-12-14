@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //선언적 함수
+        function func1(){
+            document.write("선언적 함수가 실행되었습니다.<br>");
+        }
+        func1();
+        
+        //익명 함수
+        const func2 = function(){
+            document.write("익명함수가 실행되었습니다.<br>");
+        }
+        func2();
+
+        //매개변수가 있는 함수
+        const func3 = function(name){
+            document.write(name + "가 실행되었습니다.<br>");
+        }
+        func3("매개변수함수");
+
+        //리턴값(종료)이 있는 함수
+        function func4(){
+            const str = "리턴값이 있는 실행되었습니다.<br>";
+            return str;
+        }
+        document.write(func4());
+
+        //즉시 실행 함수
+        (function(){
+            document.write("즉시실행함수가 실행되었습니다.<br>");
+        }());
+
+        //화살표 함수(선언적 함수)
+        func6 = () => {
+            document.write("화살표함수가 실행되었습니다.<br>");
+        }
+        func6();
+
+        //화살표 함수(익명 함수)
+        const func7 = () => {
+            document.write("화살표함수(익명)가 실행되었습니다.<br>");
+        }
+        func7();
+
+        //화살표 함수(매개변수가 있는 함수)
+        const func8 = (str) => {
+            document.write(str + "이 실행되었습니다.<br>");
+        }
+        func8("화살표함수(매개변수)");
+
+        //화살표 함수(리턴값이 있는 함수)
+        const func9 = () => {
+            const str = "화살표함수(리턴값) 실행되었습니다.<br>";
+            return str;
+        }
+        document.write(func9());
+
+        //객체 생성자 함수
+        function Func10(name, action){
+            this.name = name;
+            this.action = action;
+            this.study = function(){
+                document.write(this.name + "가 "+ this.action +"되었습니다.<br>");
+            }
+        }
+        const obj1 = new Func10("객체 생성자 함수","실행");
+        obj1.study();
+
+        //프로토타입 메서드
+        function Func11(name, action){
+            this.name = name;
+            this.action = action;
+        }
+        Func11.prototype.study = function(){
+            document.write(this.name + "이 "+ this.action +"되었습니다.<br>");
+        }
+        const obj2 = new Func11("프로토타입 메서드","실행");
+        obj2.study();
+
+        //클래스(es6)
+        class Func12 {
+            constructor(name, action){
+                this.name = name;
+                this.action = action;
+            }
+            study(){
+                document.write(this.name + "가 "+ this.action +"되었습니다.<br>");
+            }
+        }
+        const obj3 = new Func12("클래스","실행");
+        obj3.study();
+
+        //템플릿 리터럴
+        function func13(name, action){
+            document.write(name+"이 실행되었습니다.<br>");
+            document.write(`${name}이 ${action}되었습니다.<br>`);
+        }
+        func13("템플렛 리터럴","실행");
+
+        // 클래스 상속
+        class Box1 {
+            constructor(name, action){
+                this.name = name;
+                this.action = action;
+            }
+            study(){
+                document.write(this.name + "이 "+ this.action +"되었습니다.<br>");
+            }
+        }
+        class Box2 extends Box1 {
+            constructor(name, action, today){
+                super(name, action);
+                this.today = today;
+            }
+            study2(){
+                document.write(this.today + this.name + "가 "+ this.action + "되었습니다.<br>");
+            }
+        }
+        
+        const result = new Box1("클래스상속1", "실행");
+        const result2 = new Box2("클래스상속2", "실행", "20.10.27");
+
+        result.study();
+        result2.study2();
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 사이트4</title>
+    <style>
+        /* 초기화 */
+        * {margin: 0; padding: 0;}
+        /* 레이아웃 */
+        body {background: #fff8e1;}
+        /* 헤더 */
+        header {width: 100%; height: 100px; background: #ffde81;}
+        /* 컨텐츠 */
+        article {width: 100%; height: 300px; background: #ffd34e;}
+        section {width: 90%; padding: 5%; background: #ffc825;overflow: hidden;}
+        section > article {width: 18%; margin: 1%; height: 200px; background: #ff9900; float: left; border-radius: 10px;}
+        /* 푸터 */
+        footer {width: 100%; height: 100px; background: #ffb200; }
+        /* 컨테이너 */
+        .container {width: 1200px; margin: 0 auto;}
+        /* 미디어쿼리 */
+        @media (max-width: 1210px){
+            .container {width: 100%;}
+            section > article {width: 23%;}
+            section > article:nth-child(5n) {display: none;}
+        }
+        @media (max-width: 900px){
+            section > article {width: 31.3333%;}
+            section > article:nth-child(5) {display: block;}
+        }
+        @media (max-width: 600px){
+            section > article {width: 48%;}
+            section > article:nth-child(5n) {display: block;}
+        }
+        @media (max-width: 480px){
+            section > article {width: 98%;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header></header>
+            <article></article>
+            <section>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+                <article></article>
+            </section>
+            <footer></footer>
+        </div>
+    </div>
+</body>
+</html>

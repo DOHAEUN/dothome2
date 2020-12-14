@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 사이트4</title>
+    <style>
+        /* 초기화 */
+        * {margin: 0; padding: 0;}
+        /* 레이아웃 */
+        /* 헤더 */
+        .container .header {height: 100px; background: #d1c4e9;}
+        /* 배너 */
+        .container .banner {height: 300px; background: #9575cd;}
+        /* 콘텐츠 */
+        .container .contents { background: #512da8; overflow: hidden;}
+        .container .contents > article {
+            width: 18%; height: 200px;
+            margin: 1%;
+            background: #9575cd  ;
+            float: left;
+            border-radius: 10px;
+        }
+        /* 푸터 */
+        .container .footer {height: 100px; background: #311b92 ;}
+        /* 컨테이너 */
+        .container {width: 1200px; margin: 0 auto;}
+        /* 미디어쿼리 */
+        @media(max-width: 1200px) {
+            .container {width: 100%;}
+            .container .contents > article {width: 23%;}
+            .contents .cont5 {display: none;}
+            .contents .cont10 {display: none;}   
+        }
+        @media(max-width: 900px){
+            .container .contents > article {width: 31.333%;}
+            .contents .cont5 {display: block;}
+        }
+
+        @media (max-width: 480px){
+            .container .contents > article {width: 48%;}
+            .contents .cont10 {display: block;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header class="header"></header>
+            <!-- //header -->
+            <article class="banner"></article>
+            <!-- //banner -->
+            <section class="contents">
+                <article class="cont1"></article>
+                <article class="cont2"></article>
+                <article class="cont3"></article>
+                <article class="cont4"></article>
+                <article class="cont5"></article>
+                <article class="cont6"></article>
+                <article class="cont7"></article>
+                <article class="cont8"></article>
+                <article class="cont9"></article>
+                <article class="cont10"></article>
+            </section>
+            <!-- //section -->
+            <footer class="footer"></footer>
+            <!-- //footer -->
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- wrap -->
+</body>
+</html>

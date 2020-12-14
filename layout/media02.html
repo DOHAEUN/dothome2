@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 사이트2</title>
+    <style>
+        /* 초기화 */
+        * {margin: 0; padding: 0;}
+        /* 레이아웃 */
+        /* 헤더 */
+        header {width: 100%; height: 150px; background: #ffe0b2;}
+        /* 컨텐츠 */
+        aside {width: 20%; height: 700px; background: #ffb74d; float: left;}
+        section {width: 60%; height: 700px; background: #ff9800; float: left;}
+        article {width: 20%; height: 700px; background: #f57c00; float: left;}
+        /* 푸터 */
+        footer {width: 100%; height: 150px; background: #e65100; clear: both;}
+        /* 컨테이너 */
+        .container {width: 1200px; margin: 0 auto;}
+        /* 미디어쿼리 */
+        /* 0 ~ 1280px  */
+        @media(max-width: 1280px){
+            section {width: 80%;}
+            article {width: 100%; height: 300px;}
+        }
+        /* 화면 너비 0 ~ 900px */
+        @media (max-width: 900px){
+            aside {width: 100%}
+            section {width: 100%;}
+        }
+ 
+        @media (max-width: 480px){
+            header {width: 100%;}
+            aside {width: 100%; height: 300px;}
+            section {width: 100%; height: 300px;}
+            article {width: 100%;}
+            footer {width: 100%;} 
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header></header><!-- //header-->
+            <aside></aside>
+            <section></section>
+            <article></article>
+            <!-- //contents -->
+            <footer></footer><!-- //header-->
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        #wrap {}
+        #header {height: 200px; background: #999;}
+        #banner {height: 500px; background: #888;}
+        #contents {}
+        #cont1 {height: 600px; background: #777;}
+        #cont2 {height: 600px; background: #666;}
+        #cont3 {height: 600px; background: #555;}
+        #cont4 {height: 600px; background: #444;}
+        #cont5 {height: 600px; background: #333;}
+        #cont6 {height: 200px; background: #111;}
+        .content {overflow: hidden; }
+        .content h2 {padding: 20px 0 ;}
+        .content a {position: absolute; right: 30px; top:30px}
+        .content .left {width: 560px; height: inherit; float: left; margin-left: 40px; position: relative;}
+        .content .right {width: 560px; height: inherit; float: left; margin-left: 40px;position: relative;}
+        #footer {height: 200px; background: #000;}
+        .container {
+            width: 1200px;
+            height: inherit;
+            background: rgba(255, 255, 255, 0.3);
+            margin: 0 auto;            
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container"></div>
+        </div>
+        <div id="banner">
+            <div class="container"></div>
+        </div>
+        <div id="contents">
+            <div id="cont1">
+                <div class="container"></div>
+            </div>
+            <div id="cont2">
+                <div class="container"></div>
+            </div>
+            <div id="cont3">
+                <div class="container"></div>
+            </div>
+            <div id="cont4">
+                <div class="container"></div>
+            </div>
+            <div id="cont5">
+                <div class="container"></div>
+            </div>
+            <div id="cont6">
+                <div class="container">
+                    <div class="content">
+                        <div class="left">
+                            <h2>이벤트</h2>
+                            <p>공지사항 게시판 입니다.</p>
+                            <span>2020.10.08</span>
+                            <a href="#">더보기</a>
+                        </div>
+                        <div class="right">
+                            <h2>이벤트</h2>
+                            <p>이벤트 게시판 입니다.</p>
+                            <span>2020.10.08</span>
+                            <a href="#">더보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container"></div>
+        </div>
+    </div>
+</body>
+</html>

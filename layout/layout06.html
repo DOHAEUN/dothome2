@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout06</title>
+    <style>
+        @font-face {
+            font-family: 'S-CoreDream-8Heavy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {margin:0; padding:0;}
+        
+        #wrap {
+            width: 100%; 
+            text-align: center;
+            font-family: 'S-CoreDream-8Heavy'; 
+            font-size: 72px; color: #fff; 
+            text-transform: uppercase;
+        }
+        #header_wrap {width: 100%; height: 150px; background-color: #eeeeee;}
+        #banner_wrap {width: 100%; height: 400px; background-color: #bdbdbd;}
+        #contents_wrap {width: 100%; height: 900px; background-color: #757575;}
+        #footer_wrap {width: 100%; height: 150px; background-color: #424242;}
+
+        .header {
+            width: 1200px; 
+            height: inherit; 
+            background-color: #b0bec5; 
+            margin:0 auto; 
+            line-height: 150px;
+        }
+
+        .banner {
+            width: 1200px; 
+            height: inherit; 
+            background-color: #78909c; 
+            margin:0 auto; 
+            line-height: 400px;
+        }
+        .content1 {
+            width: 1200px; 
+            height: 300px; 
+            background-color: #546e7a; 
+            margin:0 auto; 
+            line-height: 300px;
+        }
+        .content2 {
+            width: 1200px; 
+            height: 300px; 
+            background-color: #455a64; 
+            margin:0 auto; 
+            line-height: 300px;
+        }
+        .content3 {
+            width: 1200px; 
+            height: 300px; 
+            background-color: #37474f; 
+            margin:0 auto; 
+            line-height: 300px;
+        }
+        .footer {
+            width: 1200px; 
+            height: inherit;
+            background-color: #263238; 
+            margin:0 auto; 
+            line-height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header_wrap">
+            <div class="header">header</div>
+        </div>
+        <div id="banner_wrap">
+            <div class="banner">banner</div>
+        </div>
+        <div id="contents_wrap">
+            <div class="content1">content1</div>
+            <div class="content2">content2</div>
+            <div class="content3">content3</div>
+        </div>
+        <div id="footer_wrap">
+            <div class="footer">footer</div>
+        </div>
+    </div>
+</body>
+</html>

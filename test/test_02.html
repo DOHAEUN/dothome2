@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 사이트5</title>
+    <style>
+        /* 초기화 */
+        * {margin: 0; padding: 0;}
+        /* 레이아웃 */
+        /* 헤더 */
+        .container .header {height: 100px; background: #efebe9;}
+        /* 배너 */
+        .container .banner {height: 300px; background: #d7ccc8;}
+        /* 컨텐츠 */
+        .container .content1 {overflow: hidden;}
+        .container .content1 aside {width: 30%; height: 500px; background: #bcaaa4; float: left; }
+        .content1 .content1_cont1 {width: 70%; height: 250px; float: left;background: #a1887f; overflow: hidden;}
+        .content1_cont1 .cont1_in1 {width: 40%; height: 180px; margin: 5%; background: #3e2723;float: left; border-radius: 10px;}
+        .content1_cont1 .cont1_in2 {width: 40%; height: 180px; margin: 5%; background: #3e2723;float: left; border-radius: 10px;}
+        .content1 .content1_cont2 {width: 70%; height: 250px; float: left;background: #8d6e63;}
+        .container .content2 {overflow: hidden;}
+        .content2 .content2_cont1 {width: 33.3333%; height: 400px; background: #795548; float: left;}
+        .content2 .content2_cont2 {width: 33.3333%; height: 400px; background: #6d4c41; float: left;}
+        .content2 .content2_cont3 {width: 33.3333%; height: 400px; background: #5d4037; float: left;}
+        .container .content3 {background: #4e342e; overflow: hidden;}
+        .content3 .content3_cont1 {width: 21%; margin: 2%; height: 250px; background: #a1887f; float: left; border-radius: 10px;}
+        .content3 .content3_cont2 {width: 21%; margin: 2%; height: 250px; background: #a1887f; float: left; border-radius: 10px;}
+        .content3 .content3_cont3 {width: 21%; margin: 2%; height: 250px; background: #a1887f; float: left; border-radius: 10px;}
+        .content3 .content3_cont4 {width: 21%; margin: 2%; height: 250px; background: #a1887f; float: left; border-radius: 10px;}
+        /* 푸터 */
+        .container .footer {height: 100px; background: #3e2723;}
+        /* 컨테이너 */
+        .container {width: 1200px; margin: 0 auto;}
+        /* 미디어쿼리 */
+        @media (max-width: 1200px){
+            .container {width: 100%;}
+            .content1_cont1 .cont1_in1 {width: 90%;}
+            .content1_cont1 .cont1_in2 {display: none;}
+            .content2 .content2_cont1 {width: 50%;}
+            .content2 .content2_cont2 {width: 50%;}
+            .content2 .content2_cont3 {display: none;}
+            .content3 .content3_cont1 {width: 29.3333%;}
+            .content3 .content3_cont2 {width: 29.3333%;}
+            .content3 .content3_cont3 {width: 29.3333%;}
+            .content3 .content3_cont4 {display: none;}
+        }
+        @media(max-width: 900px){
+            .content1_cont1 .cont1_in1 {display: none;}
+            .content2 .content2_cont1 {width: 100%; height: 200px;}
+            .content2 .content2_cont2 {width: 100%; height: 200px;}
+        }
+        @media(max-width: 480px){
+            .container .content1 aside {width: 100%;}
+            .content1 .content1_cont1 {width: 100%;}
+            .content1 .content1_cont2 {width: 100%;}
+            .content3 .content3_cont1 {width: 96%;}
+            .content3 .content3_cont2 {width: 96%;}
+            .content3 .content3_cont3 {width: 96%;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header class="header"></header>
+            <!-- //header -->
+            <article class="banner"></article>
+            <!-- banner -->
+            <section class="content1">
+                <aside></aside>
+                <article>
+                    <article class="content1_cont1">
+                        <article class="cont1_in1"></article>
+                        <article class="cont1_in2"></article>
+                    </article>
+                    <article class="content1_cont2"></article>
+                </article>
+            </section>
+            <!-- //content1 -->
+        

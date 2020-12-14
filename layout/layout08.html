@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout08</title>
+    <style>
+        @font-face {
+            font-family: 'S-CoreDream-8Heavy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        /* reset */
+        * {
+            margin:0;
+            padding:0;
+            font-family: 'S-CoreDream-8Heavy';
+        }
+        /* layout */
+        #wrap {
+            font-size: 72px;
+            text-transform: uppercase;
+            color:#fff
+        }
+        #header{height: 150px; background: #fce4ec; line-height: 150px;}
+        #banner {height: 500px; background: #f8bbd0; line-height: 500px;}
+        #content1 {height: 600px; background: #f48fb1; line-height: 600px;}
+        #content2 {height: 220px; background: #f06292; line-height: 220px;}
+        #content3 {height: 550px; background: #ec407a; line-height: 550px;}
+        #content4 {height: 650px; background: #e91e63; line-height: 650px;}
+        #content5 {height: 550px; background: #d81b60; line-height: 550px;}
+        #content6 {height: 400px; background: #c2185b; line-height: 400px;}
+        #content7 {height: 80px; background: #ff4081; line-height: 80px;}
+        #footer_top {height: 80px; background: #ad1457; line-height: 80px;}
+        #footer_bom {height: 150px; background: #880e4f; line-height: 150px;}
+        /* container */
+        .container {
+            width: 1280px;
+            height: inherit;
+            margin:0 auto;
+            background: rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">header</div>
+        </div>
+        <div id="banner">
+            <div class="container">banner</div>
+        </div>
+        <div id="contents">
+            <div id="content1">                
+                <div class="container">content1</div>
+            </div>
+            <div id="content2">
+                <div class="container">content2</div>
+            </div>
+            <div id="content3">
+                <div class="container">content3</div>
+            </div>
+            <div id="content4">
+                <div class="container">content4</div>
+            </div>
+            <div id="content5">
+                <div class="container">content5</div>
+            </div>
+            <div id="content6">
+                <div class="container">content6</div>
+            </div>
+            <div id="content7">
+                <div class="container">content7</div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="footer_top">
+                <div class="container">footer1</div>
+            </div>
+            <div id="footer_bom">
+                <div class="container">footer2</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords" content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
+    <title>DOHAEUN | GAME Effect</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../assets/css/prism.css" rel="stylesheet">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
+    <link rel="icon" href="../assets/ico/icon.png">
+    <link rel="icon" href="../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="128x128">
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="웹스토리보이" />
+    <meta property="og:url" content="https://webstoryboy.co.kr/" />
+    <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="og:site_name" content="웹스토리보이" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webstoryboy" />
+    <meta name="twitter:title" content="웹스토리보이" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">DOHAEUN</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://ssaa0088.tistory.com/">Tistory</a></li>
+                    <li><a href="https://codepen.io/your-work">CodePen</a></li>
+                    <li><a href="https://github.com/DOHAEUN/dothome1">Github</a></li>
+                    <li><a href="https://dohaeun.github.io/dothome1/">Gitbook</a></li>
+                    <li><a href="https://dohaeun.github.io/dothome1/">Figma</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bs-header bgs5" id="content">
+        <div class="container">
+            <h1>GAME Effect v1.0 &lt;/doc&gt;</h1>
+            <p><a href="http://snan8800.dothome.co.kr/" target="_blank">http://snan8800.dothome.co.kr/</a></p>
+        </div>
+    </div>
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-12" role="main">
+                <!-- Intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">Quiz 1</h2>
+                    <p class="bs-callout bs-callout-info">주관식 1문제 스타일 - jQuery / JavaScript</p>
+                    <iframe width="100%" height="650px" src="quizeffect01-jQuery.html" frameborder="0"></iframe>
+<pre class="line-number language-css"><code> // 선택자
+const question = $(".question");
+const questionNum = $(".num");
+const questionBtn = $(".confirm-btn");
+const questionAnswer = $(".confirm-answer");
+const questionEx = $(".confirm-ex");
+// 문제 정보
+const quizNum = 1;
+const quizAsk = "태그 중에서 유일하게 블록구조를 감쌀 수 있는 태그는?";
+const quizAnswer = "&lt;a&gt;";
+const quizEx = "HTML에서 &lt;a&gt; 태그는 유일하게 블록 구조를 감쌀 수 있는 태그입니다."
+// 문제 출력
+questionNum.text(quizNum);
+question.text(quizAsk);
+questionAnswer.text(quizAnswer);
+questionEx.text(quizEx);
+
+// 정답 숨기기
+questionAnswer.hide();
+questionEx.hide();
+// 정답 확인 
+questionBtn.click(function(){
+    questionBtn.hide()
+    questionAnswer.show()
+    questionEx.show()
+})
+</code></pre>
+<pre class="line-number language-css"><code>// 선택자
+const question = document.querySelector(".question");
+const questionNum = document.querySelector(".num");
+const questionBtn = document.querySelector(".confirm-btn");
+const questionAnswer = document.querySelector(".confirm-answer");
+const questionEx = document.querySelector(".confirm-ex");
+// 문제 정보
+const quizNum = 1;
+const quizAsk = "태그 중에서 유일하게 블록구조를 감쌀 수 있는 태그는?";
+const quizAnswer = "&lt;a&gt;";
+const quizEx = "HTML에서 &lt;a&gt; 태그는 유일하게 블록 구조를 감쌀 수 있는 태그입니다."
+// 문제 출력
+questionNum.innerHTML = quizNum;
+question.innerHTML= quizAsk;
+questionAnswer.innerHTML = quizAnswer;
+questionEx.innerHTML = quizEx;
+// 정답 숨기기
+questionAnswer.style.display="none"
+questionEx.style.display="none"
+// 정답 확인 
+questionBtn.addEventListener("click", function(){
+    questionBtn.style.display="none";
+    questionAnswer.style.display="block";
+    questionEx.style.display="block";
+})
+</code></pre>
+            </div>
+            <div class="col-md-12" role="main">
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">Quiz 2</h2>
+                    <p class="bs-callout bs-callout-info">주관식 1문제 스타일 - jQuery / JavaScript</p>
+                    <iframe width="100%" height="1200px" src="quizeffect02-jQuery.html" frameborder="0"></iframe>
+<pre class="line-number language-css"><code>// 선택자
+const question = $(".question");
+const questionNum = $(".num");
+const questionBtn = $(".confirm-btn");
+const questionAnswer = $(".confirm-answer");
+const questionEx = $(".confirm-ex");
+// 문제 정보
+const quizInfo = [
+    {
+        quizNum:"1",
+        quizAsk:"시멘틱 태그가 무엇인가요?",
+        quizAnswer: "의미가 부여된 HTML5 태그",
+        quizEx: "의미가 부여된 뜻으로 div태그에서 파생된 태그."
+    },{
+        quizNum:"2",
+        quizAsk:"태그 중에 의미가 없는 태그는 무엇인가요?",
+        quizAnswer: "&lt;div&gt"+"&lt;span&gt",
+        quizEx: "의미가 없음."
+    },{
+        quizNum:"3",
+        quizAsk:"태그 중에 글자의 중요성을 강조하는 태그는?",
+        quizAnswer: "&lt;strong>",
+        quizEx: "&lt;strong&gt; 태그는 글자의 중요성을 강조해준다."       
+    }
+];
+$(".quiz-wrap .quiz").each(function(i){
+    $(this).find(questionNum).html(quizInfo[i].quizNum);
+    $(this).find(question).html(quizInfo[i].quizAsk);
+    $(this).find(questionAnswer).html(quizInfo[i].quizAnswer);
+    $(this).find(questionEx).html(quizInfo[i].quizEx);
+})
+// 문제 숨기기
+questionAnswer.hide()
+questionEx.hide()
+// 버튼 누르면 정답 출력
+$(questionBtn).click(function(){
+    $(this).hide();
+    $(this).nextAll().show();
+})
+</code></pre>
+<pre class="line-number language-css"><code>const questionQuiz = document.querySelectorAll(".quiz")
+const question = document.querySelectorAll(".question");
+const questionNum = document.querySelectorAll(".num");
+const questionBtn = document.querySelectorAll(".confirm-btn");
+const questionAnswer = document.querySelectorAll(".confirm-answer");
+const questionEx = document.querySelectorAll(".confirm-ex");
+const confirmBottom = document.querySelectorAll(".confirm-bottom")
+// 문제 정보
+const quizInfo = [
+    {
+        quizNum:"1",
+        quizAsk:"시멘틱 태그가 무엇인가요?",
+        quizAnswer: "의미가 부여된 HTML5 태그",
+        quizEx: "의미가 부여된 뜻으로 div태그에서 파생된 태그."
+    },{
+        quizNum:"2",
+        quizAsk:"태그 중에 의미가 없는 태그는 무엇인가요?",
+        quizAnswer: "&lt;div&gt;"+"&lt;sapn&gt;",
+        quizEx: "의미가 없음."
+    },{
+        quizNum:"3",
+        quizAsk:"태그 중에 글자의 중요성을 강조하는 태그는?",
+        quizAnswer: "&lt;strong&gt;",
+        quizEx: "&lt;strong&gt; 태그는 글자의 중요성을 강조해준다."       
+    }
+];
+questionQuiz.forEach((elem, index) => {
+    question[index].innerHTML = quizInfo[index].quizAsk
+    questionNum[index].innerHTML = quizInfo[index].quizNum
+    questionAnswer[index].innerHTML = quizInfo[index].quizAnswer
+    questionEx[index].innerHTML = quizInfo[index].quizEx
+})
+
+for(let i=0; i<quizInfo.length; i++){
+    confirmBottom[i].style.display = "none";
+};
+
+questionBtn.forEach(elem => {
+    elem.addEventListener("click", function(){
+        elem.style.display = "none";
+        elem.nextElementSibling.style.display = "block"
+        console.log(elem.nextElementSibling)
+    })
+});
+</code></pre>
+            </div>
+            <div class="col-md-12" role="main">
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">Quiz 2</h2>
+                    <p class="bs-callout bs-callout-info">주관식 1문제 스타일 - jQuery / JavaScript</p>
+                    <iframe width="100%" height="820px" src="quizeffect03-jQuery.html" frameborder="0"></iframe>
+<pre class="line-number language-css"><code>// 선택자
+const question = $(".question");
+const questionNum = $(".num");
+const questionBtn = $(".confirm-btn");
+const questionAnswer = $(".confirm-answer");
+const questionEx = $(".confirm-ex");
+const questionBottom = $(".contirm-bottom");
+const questionSelect = $(".select");
+const questionChoice = $(".choice");
+
+// 문제 정보
+const quizInfo = [
+    {
+        quizNum : 1,
+        quizAsk : "다음 중 시멘틱 태그는 무엇인가요?",
+        quizChoice : ["div 태그", "h1 태그", "span 태그", "main 태그"],
+        quizAnswer : "4",
+        quizEx : "시멘틱 태그는 의미가 부여된 태그로써 main 태그는 사이트에 중요한 컨텐츠에 한번만 사용할 수 있습니다."
+    }
+];
+
+function updateQuiz(){
+    questionNum.html(quizInfo[0].quizNum);
+    question.html(quizInfo[0].quizAsk);
+    questionAnswer.html(quizInfo[0].quizAnswer);
+    questionEx.html(quizInfo[0].quizEx);
+
+    questionChoice.each(function(i){
+        $(this).html(quizInfo[0].quizChoice[i])
+    });
+};
+
+// 정답 감추기
+questionAnswer.hide();
+questionEx.hide();
+
+updateQuiz();
+
+// 정답 확인
+function answerQuiz(){
+    //문제 정답과 사용자의 정답이 일치하는지 확인
+    questionSelect.each(function(index){
+        // 사용자가 체크한 choice를 선별
+        if(questionSelect[index].checked == true){
+            if(questionSelect[index].value == quizInfo[0].quizAnswer){
+                // 정답
+                questionBtn.hide();
+                questionAnswer.show();
+                questionEx.show();
+            } else {
+                questionBtn.hide();
+                questionAnswer.show();
+                questionEx.show();
+            }
+        };
+    })   
+};
+//answerQuiz();
+//questionBtn.click(function(){});
+questionBtn.on("click", answerQuiz)
+</code></pre>
+<pre class="line-number language-css"><code>// 선택자
+const question = document.querySelector(".question");
+const questionNum = document.querySelector(".num");
+const questionBtn = document.querySelector(".confirm-btn");
+const questionAnswer = document.querySelector(".confirm-answer");
+const questionEx = document.querySelector(".confirm-ex");
+const questionBottom = document.querySelector(".contirm-bottom");
+const questionSelect = document.querySelectorAll(".select");
+const questionChoice = document.querySelectorAll(".choice");
+
+// 문제 정보
+const quizInfo = [
+    {
+        quizNum : 1,
+        quizAsk : "다음 중 시멘틱 태그는 무엇인가요?",
+        quizChoice : ["div 태그", "h1 태그", "span 태그", "main 태그"],
+        quizAnswer : "4",
+        quizEx : "시멘틱 태그는 의미가 부여된 태그로써 main 태그는 사이트에 중요한 컨텐츠에 한번만 사용할 수 있습니다."
+    }
+];
+
+//문제 출력
+function updateQuiz(){
+    question.innerHTML = quizInfo[0].quizAsk;
+    questionNum.innerHTML = quizInfo[0].quizNum;
+    questionAnswer.innerHTML = quizInfo[0].quizAnswer;
+    questionEx.innerHTML = quizInfo[0].quizEx;
+
+    for(let i=0; i&lt;4; i++){
+        questionChoice[i].innerHTML = quizInfo[0].quizChoice[i]
+    }
+    
+};
+
+// 정답 감추기
+questionAnswer.style.display = "none";
+questionEx.style.display = "none";
+
+updateQuiz();
+
+// 정답 확인
+function answerQuiz(){
+    for (let i=0; i&lt;questionChoice.length; i++){
+        if(questionSelect[i].checked == true){
+            if(questionSelect[i].value == quizInfo[0].quizAnswer == true){
+                //정답
+                questionBtn.style.display = "none";
+                questionAnswer.style.display = "block"
+                
+            } else {
+                //오답
+                questionBtn.style.display = "none";
+                questionAnswer.style.display = "block";
+                questionEx.style.display = "block";
+            }
+        }
+    }
+};
+questionBtn.addEventListener("click", answerQuiz);
+</code></pre>
+                </div>
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="https://webstoryboy.github.io/w9/html/">webstoryboy</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/docs.min.js"></script>
+    <script src="../assets/js/prism.js"></script>
+</body>
+</html>
