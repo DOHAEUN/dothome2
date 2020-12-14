@@ -1,0 +1,57 @@
+{
+    "status": "ok",
+    "status_message": "Query was successful",
+    "data": {
+      "refer": [
+        {
+            "type": "html",
+            "id": 1,
+            "link": "https://webzz.tistory.com/229",
+            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+            "title": "<a>",
+            "desc": "<a> 태그는 하이퍼 링크를 정의합니다.",
+            "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+            "element": "인라인 구조(Inline Element)",
+            "tag": "닫는 태그 사용(<a> ~ </a>)",
+            "version" : "HTML4",
+            "view" : "밑줄과 파란색으로 표시",
+            "definition" : [
+                "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다.",
+                "방문하지 않는 링크는 밑줄과 파란색으로 표시됩니다.",
+                "방문한 링크는 밑줄과 보라색으로 표시됩니다.",
+                "활성화된 링크는 밑줄과 빨간색으로 표시됩니다.",
+                "HTML5에서는 <a> 태그는 블록 요소를 포함할 수 있습니다."
+            ]
+        },
+        {
+            "type": "html",
+            "id": 2,
+            "link": "https://webzz.tistory.com/232",
+            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+            "title": "<address>",
+            "desc": "<address> 태그는 웹 페이지의 연락처 정보를 설정합니다.",
+            "category": "플로우 콘텐츠(Flow Content), 팰퍼블 콘텐츠(palpable content)",
+            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+            "element": "블록 요소(Block Element)",
+            "tag": "닫는 태그 사용(<address> ~ </address>)",
+            "version" : "HTML4",
+            "view" : "기울임꼴"
+        },
+        {
+            "type": "html",
+            "id": 3,
+            "link": "https://webzz.tistory.com/231",
+            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+            "title": "<button>",
+            "desc": "<button> 태그는 클릭 할 수 있는 버튼을 설정합니다.",
+            "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing Content), 인터렉티브 콘텐츠(Interactive Content)",
+            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+            "element": "인라인 구조(Inline Element)",
+            "tag": "닫는 태그 사용(<button> ~ </button>)",
+            "version" : "HTML4",
+            "view" : "기본적인 버튼 디자인"
+        }
+      ]
+    }
+  }
