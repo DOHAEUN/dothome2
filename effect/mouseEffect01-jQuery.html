@@ -3,59 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouse Effect01 - jQuery</title>
+    <title>Mouse Effect01 - jquery</title>
     <style>
-        /* 폰트 */
-        @font-face {
-            font-family: '국립박물관문화재단클래식B';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
+      @import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+
+        .jejumyeongjo * { 
+        font-family: 'Jeju Myeongjo', serif;
         }
-        /* 초기화 */
-        *, *::before, *::after {box-sizing: border-box; margin: 0; padding: 0;}
-        a {text-decoration: none; color: #fff; transition:  all 0.2s;}
+        *, *::before, *::after {box-sizing: border-box; margin: 0; padding: 0; color: #fff;}
+        a {text-decoration: none; color: #fff; transition: all 0.2s;}
         a:hover {border-bottom: 1px dashed #fff;}
-        img {width: 100%; vertical-align: top;}
+        img { width: 100%; vertical-align: top;}
         li {list-style: none;}
+
         body {
-            background: url(img/image01.jpg) no-repeat center center;
+            background: url(img/images10@2.jpg) no-repeat center center;
             background-size: cover;
+            background-color: #c5cae9;
             height: 100vh;
             overflow: hidden;
             font-size: 16px;
-            line-height: 1.4;
-            font-family: '국립박물관문화재단클래식B';
+            line-height: 1.5;
+            font-family: 'Jeju Myeongjo', serif;
             background-blend-mode: luminosity;
-            background-color: lightslategray;
             cursor: none;
         }
         /* info */
-        .info {position: fixed; z-index: 1000; color: #fff;}
-        .info.left {left: 20px; top: 20px;}
-        .info.right{right: 20px; top: 20px;}
-        .info.bottom {right: 20px; bottom: 20px;}
-        .info h1 {font-size: 2rem; line-height: 1.4;}
-        .info p {font-size: 1rem;}
-        .info li {font-size: 1rem; line-height: 1.4;}
+        .info {
+            position: fixed; z-index: 1000;
+        }
+        .info.left {
+            left: 20px; top: 20px;
+        }
+        .info.right {
+            right: 20px; top: 20px;
+        }
+        .info.bottom {
+            right: 20px; bottom: 20px;
+        }
+        .info h1 {
+            font-size: 2rem;
+            line-height: 1.4;
+        }
+        .info p {
+            font-size: 1rem;
+        }
+        .info li {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
         .info li a {
-            color: fff;
-            width: 25px; height: 25px; 
-            border: 1px dashed #fff; 
+            color: #fff;
+            width: 25px; height: 25px;
+            border: 1px dashed #fff;
             display: inline-block;
-            border-radius: 50%; 
+            border-radius: 50%;
+            text-align: center;
             line-height: 25px;
             font-size: 0.8rem;
-            margin: 5px;
-            text-align: center;
+            margin: 3px;
         }
-        .info li a.active {background: #fff; color: #000;}
+        .info li a.active {
+            background: #fff;
+            color: #000;
+        }
+
         @media (max-width: 800px){
-            .info h1{display: none;}
+            .info h1 {display: none;}
         }
+
         /* main */
         .contents {
-            display:flex;
+            display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
@@ -64,14 +83,16 @@
         }
         .contents p {
             font-size: 3vw;
-            color:#fff;    
+            color: #fff;
         }
-        .contents p:first-child{font-size: 2.5vw; line-height: 2;}
+        .contents p:first-child {
+            font-size: 2.3vw;
+            line-height: 2;
+        }
         .contents p em {
-            color: deepskyblue;
-            border-bottom: 2px dashed deepskyblue;
+            color: skyblue;
+            border-bottom: 2px dashed skyblue;
             font-style: normal;
-           
         }
         .cursor {
             position: absolute;
@@ -83,58 +104,72 @@
             background: rgba(255, 255, 255, 0.1);
             user-select: none;
             pointer-events: none;
-            transition: background-color .2s,  border-color .2s;
-            }
+            transition:
+                background-color .2s,
+                border-color .2s,
+                transform .9s,
+                border-radius .7s;
+        }
         .cursor.active {
-            background: rgba(0, 191, 255, 0.4);
-            border-color: deepskyblue;
+            background-color: rgba(135,206,235,0.4);
+            border-color: skyblue;
+            transform: scale(2) rotate(720deg);
+            border-radius: 0;
         }
     </style>
 </head>
 <body>
+    
+    <!-- info -->
+    <div class="info left">
+        <h1>mouse Effect01-jQuery</h1>
+        <p>마우스 커서 효과 - 제이쿼리</p>
+    </div>
+    <div class="info right">
+        <ul>
+            <li><a href="mouseEffect01-jquery.html" class="active">1</a><a href="mouseEffect01-javascript.html">1</a></li>
+            <li><a href="mouseEffect02-jquery.html">2</a><a href="mouseEffect02-javascript.html">2</a></li>
+            <li><a href="mouseEffect03-jquery.html">3</a><a href="mouseEffect03-javascript.html">3</a></li>
+            <li><a href="mouseEffect04-jquery.html">4</a><a href="mouseEffect04-javascript.html">4</a></li>
+            <li><a href="mouseEffect05-jquery.html">5</a><a href="mouseEffect05-javascript.html">5</a></li>
+            <li><a href="mouseEffect06-jquery.html">6</a><a href="mouseEffect06-javascript.html">6</a></li>
+            <li><a href="mouseEffect07-jquery.html">7</a><a href="mouseEffect07-javascript.html">7</a></li>
+            <li><a href="mouseEffect08-jquery.html">8</a><a href="mouseEffect08-javascript.html">8</a></li>
+            <li><a href="mouseEffect09-jquery.html">9</a><a href="mouseEffect09-javascript.html">9</a></li>
+        </ul>
+    </div>
+
+    <div class="info bottom">
+        <ul>
+            <li>clientX : <span class="clientX">0</span></li>
+            <li>clientY : <span class="clientY">0</span></li>
+            <li>offsetX : <span class="offsetX">0</span></li>
+            <li>offsetY : <span class="offsetY">0</span></li>
+            <li>pageX : <span class="pageX">0</span></li>
+            <li>pageY : <span class="pageY">0</span></li>
+            <li>screenX : <span class="screenX">0</span></li>
+            <li>screenY : <span class="screenY">0</span></li>
+        </ul>
+    </div>
+    <!-- info -->
+    
     <main>
         <div class="cursor"></div>
+
         <div class="contents">
             <p>To climb step hills requires <em>slow</em> pace at first</p>
-            <p>험준한 산을 오르기 위해서 먼저 <em>천천히</em> 걸어야 한다.</p>
-        </div>
-        <div class="info left">
-            <h1>Mouse Effect01 - JQuery</h1>
-            <p>마우스 오버효과 - 기본</p>
-        </div>    
-        <div class="info right">
-            <ul>
-                <li><a href="mouseEffect01-jQuery.html" class="active">1</a><a href="mouseEffect01-javascript.html">1</a></li>
-                <li><a href="mouseEffect02-jQuery.html">2</a><a href="mouseEffect01-javascript.html">2</a></li>
-                <li><a href="#">3</a><a href="#">3</a></li>
-                <li><a href="#">4</a><a href="#">4</a></li>
-                <li><a href="#">5</a><a href="#">5</a></li>
-                <li><a href="#">6</a><a href="#">6</a></li>
-                <li><a href="#">7</a><a href="#">7</a></li>
-                <li><a href="#">8</a><a href="#">8</a></li>
-                <li><a href="#">9</a><a href="#">9</a></li>
-                <li><a href="#">10</a><a href="#">10</a></li>
-            </ul>
-        </div>
-        <div class="info bottom">
-            <ul>
-                <li>clientX<span class="clientX">0</span></li>
-                <li>clientY<span class="clientY">0</span></li>
-                <li>offsetX<span class="offsetX">0</span></li>
-                <li>offsetY<span class="offsetY">0</span></li>
-                <li>pageX<span class="pageX">0</span></li>
-                <li>PageY<span class="pageY">0</span></li>
-                <li>screenX<span class="screenX">0</span></li>
-                <li>screenY<span class="screenY">0</span></li>  
-            </ul>
+            <p>험준한 산을 오르기 위해선 먼저 <em>천천히</em> 걸어야 한다.</p>
         </div>
     </main>
-    <!-- script -->
+
+    <!-- scirpt -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
+        // 출력용
         $(window).mousemove(function(event){
+            console.log(event);
             $(".clientX").text(event.clientX);
-            $(".clientY").text(event.clientX);
+            $(".clientY").text(event.clientY);
             $(".offsetX").text(event.offsetX);
             $(".offsetY").text(event.offsetY);
             $(".pageX").text(event.pageX);
@@ -142,24 +177,17 @@
             $(".screenX").text(event.screenX);
             $(".screenY").text(event.screenY);
         });
+
         // 마우스 움직이기
         $(window).mousemove(function(e){
             $(".cursor").css({left: e.clientX - 25, top: e.clientY - 25});
-        })
-        // em 태그에 마우스를 오버했을때 acitve 클래스 추가
-        // $("em").mouseover(function(){
-        //     $(".cursor").addClass("active")
-        // })
-        // em 태그에 마우스를 오버했을때 acitve 클래스 삭제
-        // $("em").mouseleave(function(){
-        //     $(".cursor").removeClass("active")
-        // })
-        // 마우스 오버효과
+        });
         $(".contents em").hover(function(){
-            $(".cursor").addClass("active")
+            $(".cursor").addClass("active");
         }, function(){
-            $(".cursor").removeClass("active")
-        })
+            $(".cursor").removeClass("active");
+        });
+        
     </script>
 </body>
 </html>

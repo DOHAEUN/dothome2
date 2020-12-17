@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>quizeffect03-javascript</title>
+    <title>quizEffect03 - Javascript</title>
     <style>
         body {
             font-size: 18px;
@@ -86,12 +86,6 @@
             text-align: center;
             margin-bottom: 20px;
         }
-        .quiz-wrap .quiz .confirm-answer::before {
-            content:"정답은 : "
-        }
-        .quiz-wrap .quiz .confirm-answer::after {
-            content:" 입니다."
-        }
         .quiz-wrap .quiz .confirm-ex {
             color: red;
             position: relative;
@@ -104,6 +98,7 @@
             border-radius: 50%;
             position: absolute; left: 0; top: 6px;
         }
+        /*  */
         .selects label {
             display: -webkit-box;
             display: flex;
@@ -154,12 +149,13 @@
     </style>
 </head>
 <body>
+
     <div class="quiz-wrap">
         <div class="info">
             <ul>
-                <li>시험 유형 : <span>객관식 퀴즈</span></li>
-                <li>시험 과목 : <span>자바스크립트</span></li>
-                <li>시험 과목 : <span>HTML</span></li>
+                <li>시험 유형 : <span>주관식 퀴즈(3문제)</span></li>
+                <li>시험 과목 : <span>제이쿼리</span></li>
+                <li>시험 과목 : <span>CSS</span></li>
             </ul>
         </div>
         <div class="quiz">
@@ -185,74 +181,77 @@
             </div>
             <div class="confirm">
                 <p class="confirm-btn">정답 확인하기</p>
-                <div class="contirm-bottom">
+                <div class="confirm-bottom">
                     <p class="confirm-answer"></p>
                     <p class="confirm-ex"></p>
                 </div>
             </div>
         </div>
     </div>
+    
     <!-- script -->
     <script>
         // 선택자
-        const question = document.querySelector(".question");
+        const questionAsk = document.querySelector(".question");
         const questionNum = document.querySelector(".num");
         const questionBtn = document.querySelector(".confirm-btn");
         const questionAnswer = document.querySelector(".confirm-answer");
-        const questionEx = document.querySelector(".confirm-ex");
-        const questionBottom = document.querySelector(".contirm-bottom");
+        const questionEX = document.querySelector(".confirm-ex");
+        const questionBottom = document.querySelector(".confirm-bottom");
         const questionSelect = document.querySelectorAll(".select");
         const questionChoice = document.querySelectorAll(".choice");
-
-        // 문제 정보
+        
+        // 문제정보
         const quizInfo = [
             {
                 quizNum : 1,
-                quizAsk : "다음 중 시멘틱 태그는 무엇인가요?",
+                quizASk : "다음 중 시멘틱 태그는 무엇인가요?",
                 quizChoice : ["div 태그", "h1 태그", "span 태그", "main 태그"],
                 quizAnswer : "4",
-                quizEx : "시멘틱 태그는 의미가 부여된 태그로써 main 태그는 사이트에 중요한 컨텐츠에 한번만 사용할 수 있습니다."
+                quizEx : "시멘틱 태그는 의미가 부여된 태그로써 main 태그는 사이트에서 중요한 컨텐츠에 한번만 사용할 수 있습니다."
             }
         ];
 
-        //문제 출력
-        function updateQuiz(){
-            question.innerHTML = quizInfo[0].quizAsk;
+        // 문제출력
+        function updataQuiz(){
             questionNum.innerHTML = quizInfo[0].quizNum;
+            questionAsk.innerHTML = quizInfo[0].quizASk;
             questionAnswer.innerHTML = quizInfo[0].quizAnswer;
-            questionEx.innerHTML = quizInfo[0].quizEx;
-
+            questionEX.innerHTML = quizInfo[0].quizEx;
+            
+            // 보기 출력
             for(let i=0; i<4; i++){
-                questionChoice[i].innerHTML = quizInfo[0].quizChoice[i]
+                questionChoice[i].innerHTML = quizInfo[0].quizChoice[i];
             }
             
-        };
-
-        // 정답 감추기
-        questionAnswer.style.display = "none";
-        questionEx.style.display = "none";
-
-        updateQuiz();
-
+            // 정답 감추기
+            questionAnswer.style.display = "none";
+            questionEX.style.display = "none";
+        }
+        updataQuiz();
+        
         // 정답 확인
         function answerQuiz(){
             for (let i=0; i<questionSelect.length; i++){
-                if(questionSelect[i].checked == true);
-                    if(questionSelect[i].value == quizInfo[0].quizAnswer){
-                        //정답
-                        questionBtn.style.display = "none";
-                        questionAnswer.style.display = "block"
-                        
-                    } else {
-                        //오답
+                if( questionSelect[i].checked == true ){
+                    if( questionSelect[i].value == quizInfo[0].quizAnswer){
+
+                        questionAnswer.innerHTML = "정답입니다.";
                         questionBtn.style.display = "none";
                         questionAnswer.style.display = "block";
-                        questionEx.style.display = "block";
+                        questionEX.style.display = "block";
+                    } else {
+                        
+                        questionAnswer.innerHTML = "오답입니다.";
+                        questionBtn.style.display = "none";
+                        questionAnswer.style.display = "block";
+                        questionEX.style.display = "block";
                     }
+                }
             }
-        };
+        }
         questionBtn.addEventListener("click", answerQuiz);
 
-    </script>   
+    </script>
 </body>
 </html>

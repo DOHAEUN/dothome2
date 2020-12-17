@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>quizeffect01-jQuery</title>
+    <title>quizEffect01 - jQuery</title>
     <style>
         body {
             font-size: 18px;
@@ -106,10 +106,11 @@
     </style>
 </head>
 <body>
+
     <div class="quiz-wrap">
         <div class="info">
             <ul>
-                <li>시험 유형 : <span>주관식 퀴즈</span></li>
+                <li>시험 유형 : <span>주관식 퀴즈(한문제)</span></li>
                 <li>시험 과목 : <span>제이쿼리</span></li>
                 <li>시험 과목 : <span>HTML</span></li>
             </ul>
@@ -124,35 +125,42 @@
             </div>
         </div>
     </div>
+    
     <!-- script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         // 선택자
-        const question = $(".question");
+        const questionAsk = $(".question");
         const questionNum = $(".num");
         const questionBtn = $(".confirm-btn");
         const questionAnswer = $(".confirm-answer");
-        const questionEx = $(".confirm-ex");
+        const questionEX = $(".confirm-ex");
+
         // 문제 정보
         const quizNum = 1;
         const quizAsk = "태그 중에서 유일하게 블록구조를 감쌀 수 있는 태그는?";
-        const quizAnswer = "<a>";
-        const quizEx = "HTML에서 <a> 태그는 유일하게 블록 구조를 감쌀 수 있는 태그입니다."
+        const quizAnswer = "&lt;a&gt;";
+        const quizEx = "HTML5에서 &lt;a&gt; 태그는 유일하게 블록구조를 감쌀 수 있는 태그입니다.";
+
         // 문제 출력
-        questionNum.text(quizNum);
-        question.text(quizAsk);
-        questionAnswer.text(quizAnswer);
-        questionEx.text(quizEx);
-        
+        questionNum.html(quizNum);
+        questionAsk.html(quizAsk);
+        questionAnswer.html(quizAnswer);
+        questionEX.html(quizEx);
+
         // 정답 숨기기
         questionAnswer.hide();
-        questionEx.hide();
-        // 정답 확인 
+        questionEX.hide();
+
+        // 정답 확인
+        // 버튼을 클릭하면 버튼은 사라지고 정답과 해설은 나타나게
         questionBtn.click(function(){
-            questionBtn.hide()
-            questionAnswer.show()
-            questionEx.show()
+            questionBtn.hide();         
+            questionAnswer.show();
+            questionEX.show();
         });
-    </script>   
+
+        
+    </script>
 </body>
 </html>

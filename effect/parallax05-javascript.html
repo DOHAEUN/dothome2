@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax02 - Javascript</title>
+    <title>Parallax05 - JQuery</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap" rel="stylesheet">
     <style>
         /* reset */
         @font-face {
-            font-family: 'Cafe24Danjunghae';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff');
+            font-family: 'Chosunilbo_myungjo';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
@@ -23,7 +23,7 @@
         }
         img {
             width: 100%;
-            vertical-align: top; /* 여백 초기화 */
+            vertical-align: top; /* 여백초기화 */
         }
         ul {
             list-style: none;
@@ -57,7 +57,7 @@
             line-height: 1.4;
         }
         .info li a {
-            color: #fff;
+            color:#fff;
             width: 25px; height: 25px;
             border: 1px dashed #fff;
             display: inline-block;
@@ -71,21 +71,19 @@
             background: #fff;
             color: #000;
         }
-
         @media (max-width: 800px){
             .info h1 {display: none;}
         }
         /* main */
         body {
-            --color-h1 : #dc6e25;
+            --color-h1 : #DC6E25;
             --color-title : #fff;
             --color-sub : #999;
             --color-link : #000;
-            --color-bg : #cecece;
-            --font-cafe : 'Cafe24Danjunghae';
+            --color-bg : #111;
+            --font-cafe : 'Chosunilbo_myungjo';
             --font-lato : 'Lato', sans-serif;
-            --aspect-ratio: 33/17;
-
+            --aspect-ratio : 33/17;
             background-color: var(--color-bg);
             color: var(--color-title);
             font-family: var(--font-cafe);
@@ -98,12 +96,11 @@
             text-transform: uppercase;
             padding: 10vw 8vw 0 8vw;
         }
-        #parallax-wrap em {
+        #parallax-wrap h1 em {
             display: block;
             font-weight: 100;
             padding-left: 18vw;
         }
-
         .contents {
             margin: 0 auto 35vh;
             width: 100%;
@@ -125,11 +122,18 @@
             position: absolute;
             right: -5vw;
             top: -20vw;
-            opacity: 0.5;
+            opacity: 0.07;
         }
-        .content-item:nth-child(even) .content-item-num { 
+        .content-item:nth-child(even) .content-item-num {
             right: auto;
             left: -5vw;
+        }
+        .content-item-title {
+            text-align: right;
+            padding-bottom: 5px;
+        }
+        .content-item:nth-child(even) .content-item-title {
+            text-align: left;
         }
         .content-item-imgWrap {
             position: relative;
@@ -138,14 +142,13 @@
             /* padding-bottom: 50%; */
             padding-bottom: calc(var(--width) / (var(--aspect-ratio)));
             overflow: hidden;
-            background: red;
         }
         .content-item-img {
             width: var(--width);
             --overflow: 60px;
-            height: calc(100% + (3 * var(--overflow)));
             position: absolute;
-            top: calc(-1 * var(--overflow)); /* -60px; */
+            top: calc(-1 * var(--overflow));
+            height: calc(100% + (3 * var(--overflow)));
             background-size: cover;
             background-position: 50% 0;
         }
@@ -160,12 +163,6 @@
             z-index: 100;
             position: relative;
         }
-        /* position: relative의 역할
-            1. position:absolute의 기준점 역할
-            2. position:absolute를 사용하지 않고 z-index를 사용할 경우
-            3. position:absolute를 left, top을 통해서 위치를 설정할 경우
-        */
-
         .content-item:nth-child(even) .content-item-desc {
             text-align: left;
             margin-right: auto;
@@ -173,66 +170,83 @@
             padding-right: 10vw;
             margin-left: -4vw;
         }
-        .content-item-title {
-            text-align: right;
-            padding-bottom: 5px;
-        }
-        .content-item:nth-child(even) .content-item-title {
-            text-align: left;
-        }
-        /* 사진 */
-        .content-item:nth-child(1) .content-item-img{
-            background: url(img/images10.jpg);
+        .content-item:nth-child(1) .content-item-img {
+            background: url(img/images19.jpg);
             background-size: cover;
         }
-        .content-item:nth-child(2) .content-item-img{
-            background: url(img/images11.jpg);
+        .content-item:nth-child(2) .content-item-img {
+            background: url(img/images20.jpg);
             background-size: cover;
         }
-        .content-item:nth-child(3) .content-item-img{
-            background: url(img/images12.jpg);
+        .content-item:nth-child(3) .content-item-img {
+            background: url(img/images03.jpg);
             background-size: cover;
         }
-        .content-item:nth-child(4) .content-item-img{
-            background: url(img/images13.jpg);
+        .content-item:nth-child(4) .content-item-img {
+            background: url(img/images04.jpg);
             background-size: cover;
         }
-        .content-item:nth-child(5) .content-item-img{
-            background: url(img/images14.jpg);
+        .content-item:nth-child(5) .content-item-img {
+            background: url(img/images21.jpg);
             background-size: cover;
         }
-        .content-item:nth-child(6) .content-item-img{
-            background: url(img/images15.jpg);
+        .content-item:nth-child(6) .content-item-img {
+            background: url(img/images06.jpg);
             background-size: cover;
         }
-        .content-item:nth-child(7) .content-item-img{
-            background: url(img/images16.jpg);
+        .content-item:nth-child(7) .content-item-img {
+            background: url(img/images22.jpg);
             background-size: cover;
         }
-        .content-item:nth-child(8) .content-item-img{
-            background: url(img/images17.jpg);
+        .content-item:nth-child(8) .content-item-img {
+            background: url(img/images08.jpg);
             background-size: cover;
         }
-        .content-item:nth-child(9) .content-item-img{
-            background: url(img/images18.jpg);
+        .content-item:nth-child(9) .content-item-img {
+            background: url(img/images23.jpg);
             background-size: cover;
         }
-
-        .contents > section.show .content-item-num {
-            opacity: 0.7;
-            transform:translateY(0)
+        .content-item-scroll {
+            position: relative;
+            left: 70%; bottom: -100px;
+            display: inline-block;
+            transform: translate(0, -50%);
+            color: #fff;
+            padding-top: 70px;
+            transition: opacity .3s;
         }
-        .contents > section.show .content-item-title {
+        .content-item:nth-child(even) .content-item-scroll {
+            left: 10%;
+        }
+        .content-item-scroll span {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 24px;
+            height: 24px;
+            margin-left: -12px;
+            border-left: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            transform: rotate(-45deg);
+            animation: scroll 2s infinite;
             opacity: 1;
-            transform: translateX(0);
+            box-sizing: border-box;
         }
-        .contents > section.show .content-item-imgWrap {
-            opacity: 1;
-            transform: translateY(0);
+        .content-item-scroll span:nth-of-type(1) {
+            animation-delay: 0s;
         }
-        .contents > section.show .content-item-desc {
-            opacity: 1;
-            transform: translateX(0);
+        .content-item-scroll span:nth-of-type(2) {
+            animation-delay: .15s;
+            top: 16px;
+        }
+        .content-item-scroll span:nth-of-type(3) {
+            animation-delay: .15s;
+            top: 32px;
+        }
+        @keyframes scroll {
+            0% {opacity: 0;}
+            50% {opacity: 1;}
+            100% {opacity: 0;}
         }
     </style>
 </head>
@@ -240,17 +254,17 @@
 
     <!-- info -->
     <div class="info left">
-        <h1>Parallax Effect02 - Javascript</h1>
-        <p>패랠랙스 스크로링 효과 - 이질감 느끼기</p>
+        <h1>Parallax Effect05 - javascript</h1>
+        <p>패랠랙스 스크로링 효과 - 글자 나타내기</p>
     </div>
     <div class="info right">
         <!-- ul>li*10>a*2 -->
         <ul>
             <li><a href="parallax01-jquery.html">1</a><a href="parallax01-javascript.html">1</a></li>
-            <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html" class="active">2</a></li>
+            <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html">2</a></li>
             <li><a href="parallax03-jquery.html">3</a><a href="parallax03-javascript.html">3</a></li>
             <li><a href="parallax04-jquery.html">4</a><a href="parallax04-javascript.html">4</a></li>
-            <li><a href="parallax05-jquery.html">5</a><a href="parallax05-javascript.html">5</a></li>
+            <li><a href="parallax05-jquery.html">5</a><a href="parallax05-javascript.html" class="active">5</a></li>
             <li><a href="parallax06-jquery.html">6</a><a href="parallax06-javascript.html">6</a></li>
             <li><a href="parallax07-jquery.html">7</a><a href="parallax07-javascript.html">7</a></li>
             <li><a href="parallax08-jquery.html">8</a><a href="parallax08-javascript.html">8</a></li>
@@ -277,6 +291,7 @@
                         <div class="content-item-img"></div>
                     </figure>
                     <p class="content-item-desc">높은 목표를 세우고, 스스로 채찍질 한다.</p>
+                    <a class="content-item-scroll" href="#section5" aria-hidden="true" rel="noopner"><span></span><span></span><span></span>Section5</a>
                 </section>
                 <section id="section2" class="content-item">
                     <span class="content-item-num">02</span>
@@ -285,14 +300,16 @@
                         <div class="content-item-img"></div>
                     </figure>
                     <p class="content-item-desc">당신은 모든 사람들을 잠시 동안 속일 수 있다.</p>
+                    <a class="content-item-scroll" href="#section3" aria-hidden="true" rel="noopner"><span></span><span></span><span></span>section3</a>
                 </section>
-                <section id="section3" class="content-item">
+                <section id="section1" class="content-item">
                     <span class="content-item-num">03</span>
                     <h2 class="content-item-title">Section3</h2>
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc">말도 아름다운 꽃처럼 그 색깔을 지니고 있다.</p>
+                    <p class="content-item-desc">높은 목표를 세우고, 스스로 채찍질 한다.</p>
+                    <a class="content-item-scroll" href="#section5" aria-hidden="true" rel="noopner"><span></span><span></span><span></span>Section5</a>
                 </section>
                 <section id="section4" class="content-item">
                     <span class="content-item-num">04</span>
@@ -301,6 +318,7 @@
                         <div class="content-item-img"></div>
                     </figure>
                     <p class="content-item-desc">쓸모 없는 것이 쓸모가 있다.</p>
+                    <a class="content-item-scroll" href="#section8" aria-hidden="true" rel="noopner"><span></span><span></span><span></span>section6</a>
                 </section>
                 <section id="section5" class="content-item">
                     <span class="content-item-num">05</span>
@@ -309,6 +327,7 @@
                         <div class="content-item-img"></div>
                     </figure>
                     <p class="content-item-desc">악한 일은 작다 해도 하지 말라.</p>
+                    <a class="content-item-scroll" href="#section2" aria-hidden="true" rel="noopner"><span></span><span></span><span></span>section2</a>
                 </section>
                 <section id="section6" class="content-item">
                     <span class="content-item-num">06</span>
@@ -317,6 +336,7 @@
                         <div class="content-item-img"></div>
                     </figure>
                     <p class="content-item-desc">행복할 때는 행복에 매달리지 말라.</p>
+                    <a class="content-item-scroll" href="#section9" aria-hidden="true" rel="noopner"><span></span><span></span><span></span>section9</a>
                 </section>
                 <section id="section7" class="content-item">
                     <span class="content-item-num">07</span>
@@ -325,6 +345,7 @@
                         <div class="content-item-img"></div>
                     </figure>
                     <p class="content-item-desc">위대한 행동이라는 것은 없다.</p>
+                    <a class="content-item-scroll" href="#section4" aria-hidden="true" rel="noopner"><span></span><span></span><span></span>section4</a>
                 </section>
                 <section id="section8" class="content-item">
                     <span class="content-item-num">08</span>
@@ -333,6 +354,7 @@
                         <div class="content-item-img"></div>
                     </figure>
                     <p class="content-item-desc">청춘은 다시 오지 않는다.</p>
+                    <a class="content-item-scroll" href="#section6" aria-hidden="true" rel="noopner"><span></span><span></span><span></span>section6</a>
                 </section>
                 <section id="section9" class="content-item">
                     <span class="content-item-num">09</span>
@@ -341,50 +363,24 @@
                         <div class="content-item-img"></div>
                     </figure>
                     <p class="content-item-desc">자존심은 어리석은 자의 소유물이다.</p>
+                    <a class="content-item-scroll" href="#section1" aria-hidden="true" rel="noopner"><span></span><span></span><span></span>section1</a>
                 </section>
             </div>
         </section>
     </main>
 
     <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
-       window.addEventListener("scroll",() => {
-           let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
-
-            // 시작점 0으로 맞추기 위해 작업
-            // let offset1 = (pageYOffset - document.getElementById("section1").offsetTop) * 0.2;
-            // let offset2 = (pageYOffset - document.getElementById("section2").offsetTop) * 0.2;
-            // let offset3 = (pageYOffset - document.getElementById("section3").offsetTop) * 0.2;
-            // let offset4 = (pageYOffset - document.getElementById("section4").offsetTop) * 0.2;
-            // let offset5 = (pageYOffset - document.getElementById("section5").offsetTop) * 0.2;
-            // let offset6 = (pageYOffset - document.getElementById("section6").offsetTop) * 0.2;
-            // let offset7 = (pageYOffset - document.getElementById("section7").offsetTop) * 0.2;
-            // let offset8 = (pageYOffset - document.getElementById("section8").offsetTop) * 0.2;
-            // let offset9 = (pageYOffset - document.getElementById("section9").offsetTop) * 0.2;
-            
-            // document.querySelector("#section1 .content-item-desc").style.transform = "translateY("+ -offset1 +"px)"
-            // document.querySelector("#section2 .content-item-desc").style.transform = "translateY("+ -offset2 +"px)"
-            // document.querySelector("#section3 .content-item-desc").style.transform = "translateY("+ -offset3 +"px)"
-            // document.querySelector("#section4 .content-item-desc").style.transform = "translateY("+ -offset4 +"px)"
-            // document.querySelector("#section5 .content-item-desc").style.transform = "translateY("+ -offset5 +"px)"
-            // document.querySelector("#section6 .content-item-desc").style.transform = "translateY("+ -offset6 +"px)"
-            // document.querySelector("#section7 .content-item-desc").style.transform = "translateY("+ -offset7 +"px)"
-            // document.querySelector("#section8 .content-item-desc").style.transform = "translateY("+ -offset8 +"px)"
-            // document.querySelector("#section9 .content-item-desc").style.transform = "translateY("+ -offset9 +"px)"
-       
-            // 한번에(for문)
-            for(let i=1; i<10; i++){
-                let offset = (pageYOffset - document.getElementById("section"+i).offsetTop) * 0.2;
-                document.querySelector("#section"+i+" .content-item-desc").style.transform = "translateY("+ -offset +"px)"
-            }
-            
-            // 한번에(forEach문)
-            document.querySelectorAll(".content-item").forEach((elem) => {
-                // console.log(elem);
-                let target = elem.childNodes[7];
-                let offset = (pageYOffset - elem.offsetTop) * 0.2;
-                target.style.transform = "translateY("+ -offset +"px)"
-            });
+       document.querySelectorAll("a[href^='#']").forEach(elem => {
+           elem.addEventListener("click", e => {
+               e.preventDefault();
+               document.querySelector(elem.getAttribute('href')).scrollIntoView({
+                   behavior : 'smooth'
+               });
+           });
        });
     </script>
 </body>

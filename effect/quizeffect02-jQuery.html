@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>quizeffect01-jQuery</title>
+    <title>quizEffect02 - jQuery</title>
     <style>
         body {
             font-size: 18px;
@@ -107,12 +107,13 @@
     </style>
 </head>
 <body>
+
     <div class="quiz-wrap">
         <div class="info">
             <ul>
-                <li>시험 유형 : <span>주관식 퀴즈</span></li>
+                <li>시험 유형 : <span>주관식 퀴즈(3문제)</span></li>
                 <li>시험 과목 : <span>제이쿼리</span></li>
-                <li>시험 과목 : <span>HTML</span></li>
+                <li>시험 과목 : <span>CSS</span></li>
             </ul>
         </div>
         <div class="quiz">
@@ -143,72 +144,82 @@
             </div>
         </div>
     </div>
+    
     <!-- script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         // 선택자
-        const question = $(".question");
+        const questionAsk = $(".question");
         const questionNum = $(".num");
         const questionBtn = $(".confirm-btn");
         const questionAnswer = $(".confirm-answer");
-        const questionEx = $(".confirm-ex");
+        const questionEX = $(".confirm-ex");
+
         // 문제 정보
         const quizInfo = [
             {
-                quizNum:"1",
-                quizAsk:"시멘틱 태그가 무엇인가요?",
-                quizAnswer: "의미가 부여된 HTML5 태그",
-                quizEx: "의미가 부여된 뜻으로 div태그에서 파생된 태그."
-            },{
-                quizNum:"2",
-                quizAsk:"태그 중에 의미가 없는 태그는 무엇인가요?",
-                quizAnswer: "&lt;div&gt"+"&lt;span&gt",
-                quizEx: "의미가 없음."
-            },{
-                quizNum:"3",
-                quizAsk:"태그 중에 글자의 중요성을 강조하는 태그는?",
-                quizAnswer: "&lt;strong>",
-                quizEx: "&lt;strong&gt; 태그는 글자의 중요성을 강조해준다."       
+                quizNum : 1,
+                quizAsk : "글씨에 색을 변경하는 CSS 속성은 무엇일까요?",
+                quizAnswer : "color 속성",
+                quizEx : "글씨 속성은 color 값을 이용합니다."
+            },
+            {
+                quizNum : 2,
+                quizAsk : "position: relative는 언제 사용하나요?",
+                quizAnswer : "color 속성",
+                quizEx : "글씨 속성은 color 값을 이용합니다."
+            },
+            {
+                quizNum : 3,
+                quizAsk : "콘텐츠 요소를 가운데로 오게하는 방법 3가지 이상을 설명하시오.",
+                quizAnswer : "color 속성",
+                quizEx : "글씨 속성은 color 값을 이용합니다."
             }
         ];
-        // 문제 출력
-        // question.eq(0).html(quizInfo[0].quizAsk)
-        // questionNum.eq(0).html(quizInfo[0].quizNum)
-        // questionAnswer.eq(0).html(quizInfo[0].quizAnswer)
-        // questionEx.eq(0).html(quizInfo[0].quizEx)     
-
-        // question.eq(1).html(quizInfo[1].quizAsk)
-        // questionNum.eq(1).html(quizInfo[1].quizNum)
-        // questionAnswer.eq(1).html(quizInfo[1].quizAnswer)
-        // questionEx.eq(1).html(quizInfo[1].quizEx)    
-            
-        // question.eq(2).html(quizInfo[2].quizAsk)
-        // questionNum.eq(2).html(quizInfo[2].quizNum)
-        // questionAnswer.eq(2).html(quizInfo[2].quizAnswer)
-        // questionEx.eq(2).html(quizInfo[2].quizEx)        
         
+        // 문제출력
+        // questionNum.eq(0).html(quizInfo[0].quizNum);
+        // questionNum.eq(1).html(quizInfo[1].quizNum);
+        // questionNum.eq(2).html(quizInfo[2].quizNum);
+
+        // questionAsk.eq(0).html(quizInfo[0].quizAsk);
+        // questionAsk.eq(1).html(quizInfo[1].quizAsk);
+        // questionAsk.eq(2).html(quizInfo[2].quizAsk);
+
+        // questionAnswer.eq(0).html(quizInfo[0].quizAnswer);
+        // questionAnswer.eq(1).html(quizInfo[1].quizAnswer);
+        // questionAnswer.eq(2).html(quizInfo[2].quizAnswer);
+        
+        // questionEX.eq(0).html(quizInfo[0].quizEx);
+        // questionEX.eq(1).html(quizInfo[1].quizEx);
+        // questionEX.eq(2).html(quizInfo[2].quizEx);
+
         // for문
-        // for(let i=0; i<3; i++){
-        //     question.eq(i).html(quizInfo[i].quizAsk)
-        //     questionNum.eq(i).html(quizInfo[i].quizNum)
-        //     questionAnswer.eq(i).html(quizInfo[i].quizAnswer)
-        //     questionEx.eq(i).html(quizInfo[i].quizEx)        
-        // }
+        // for(let i=0; i<quizInfo.length; i++){
+        //     questionNum.eq(i).html(quizInfo[i].quizNum);
+        //     questionAsk.eq(i).html(quizInfo[i].quizAsk);
+        //     questionAnswer.eq(i).html(quizInfo[i].quizAnswer);
+        //     questionEX.eq(i).html(quizInfo[i].quizEx);
+        // };
+        
         // each()
         $(".quiz-wrap .quiz").each(function(i){
             $(this).find(questionNum).html(quizInfo[i].quizNum);
-            $(this).find(question).html(quizInfo[i].quizAsk);
+            $(this).find(questionAsk).html(quizInfo[i].quizAsk);
             $(this).find(questionAnswer).html(quizInfo[i].quizAnswer);
-            $(this).find(questionEx).html(quizInfo[i].quizEx);
-        })
-        // 문제 숨기기
-        questionAnswer.hide()
-        questionEx.hide()
-        // 버튼 누르면 정답 출력
-        $(questionBtn).click(function(){
-            $(this).hide();
-            $(this).nextAll().show();
-        })
-    </script>   
+            $(this).find(questionEX).html(quizInfo[i].quizEx);
+        });
+
+        // 정답 숨기기
+        questionAnswer.hide();
+        questionEX.hide();
+
+        // 정답 확인
+        questionBtn.click(function(){
+            $(this).hide();             // -> questionBtn
+            $(this).nextAll().show();   // -> 형제
+        });
+
+    </script>
 </body>
 </html>

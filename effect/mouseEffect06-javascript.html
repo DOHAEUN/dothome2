@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouse Effect06 - jquery</title>
+    <title>Mouse Effect06 - Javascript</title>
     <style>
         @font-face {
             font-family: 'RIDIBatang';
@@ -16,6 +16,12 @@
             .jejumyeongjo * { 
             font-family: 'Jeju Myeongjo', serif;
         }
+        @font-face {
+            font-family: 'MaruBuri-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
         *, *::before, *::after {box-sizing: border-box; margin: 0; padding: 0; color: #fff;}
         a {text-decoration: none; color: #fff; transition: all 0.2s;}
         a:hover {border-bottom: 1px dashed #fff;}
@@ -23,15 +29,16 @@
         li {list-style: none;}
 
         body {
-            background: url(img/image03@2.jpg) no-repeat center center;
+            background: url(img/images20@2.jpg) no-repeat center center;
             background-size: cover;
-            background-color: #e3edfd;
+            background-color: rgb(177, 191, 252);
             height: 100vh;
             overflow: hidden;
             font-size: 16px;
             line-height: 1.5;
-            font-family: 'Jeju Myeongjo', serif;
+            font-family: 'MaruBuri-Regular';
             background-blend-mode: luminosity;
+            cursor: none;
             position: relative;
         }
         body::before {
@@ -112,16 +119,16 @@
             line-height: 2;
         }
         .contents p em {
-            color: orange;
-            border-bottom: 2px dashed orange;
+            color: rgb(159, 211, 235);
+            border-bottom: 2px dashed rgb(159, 211, 235);
             font-style: normal;
         }
         .contents p .word {
-            color: orange;
+            color:rgb(159, 211, 235);
             font-size: 4vw;
-            /* text-shadow: 5px -10px 0px rgba(255, 165, 0, 0.4),
+        /*   text-shadow: 5px -10px 0px rgba(255, 165, 0, 0.4),
                         -5px 10px 0px rgba(255, 35, 251, 0.4),
-                        10px -5px 0px rgba(255, 255, 73, 0.4),
+                        10px -5px 0px rgba(255, 255, 74, 0.4),
                         -10px 5px 0px rgba(102, 249, 255, 0.4); */
         }
         .cursor {
@@ -135,13 +142,14 @@
             transform: scale(.5);
             transition: transform 0.3s ease-in-out;
         }
+
     </style>
 </head>
 <body>
     
     <!-- info -->
     <div class="info left">
-        <h1>Mouse Effect06 - javascript</h1>
+        <h1>Mouse Effect06 - Javascript</h1>
         <p>마우스 방향에 따라 움직이기</p>
     </div>
     <div class="info right">
@@ -150,57 +158,75 @@
             <li><a href="mouseEffect02-jquery.html">2</a><a href="mouseEffect02-javascript.html">2</a></li>
             <li><a href="mouseEffect03-jquery.html">3</a><a href="mouseEffect03-javascript.html">3</a></li>
             <li><a href="mouseEffect04-jquery.html">4</a><a href="mouseEffect04-javascript.html">4</a></li>
-            <li><a href="mouseEffect05-jquery.html">5</a><a href="mouseEffect05-javascript.html">5</a></li>
-            <li><a href="mouseEffect06-jquery.html">6</a><a href="mouseEffect06-javascript.html" class="active">6</a></li>
+            <li><a href="mouseEffect05-jquery.html" class="active">5</a><a href="mouseEffect05-javascript.html">5</a></li>
+            <li><a href="mouseEffect06-jquery.html">6</a><a href="mouseEffect06-javascript.html">6</a></li>
             <li><a href="mouseEffect07-jquery.html">7</a><a href="mouseEffect07-javascript.html">7</a></li>
             <li><a href="mouseEffect08-jquery.html">8</a><a href="mouseEffect08-javascript.html">8</a></li>
             <li><a href="mouseEffect09-jquery.html">9</a><a href="mouseEffect09-javascript.html">9</a></li>
         </ul>
     </div>
+
+    <!-- <div class="info bottom">
+        <ul>
+            <li>clientX : <span class="clientX">0</span></li>
+            <li>clientY : <span class="clientY">0</span></li>
+        </ul>
+    </div> -->
     <!-- info -->
     
     <main>
+        
         <div class="contents">
-            <p>Luck is when preparedness meets opportunity.</p>
-            <p>운이란, 준비가 기회를 만나는 것이다.</p>
-            <p>
-                <strong class="word">★</strong>
-                <strong class="word">★</strong>
-                <strong class="word">★</strong>
-                <strong class="word">★</strong>
-                <strong class="word">★</strong>
-            </p>
+            <div class="cursor"></div>
+                <p>Loose <em>lips</em> sink ships.</p>
+                <p>가벼운 <em>입술이</em> 배를 가라앉게 만든다.</p>
+                <p>
+                    <strong class="word">★</strong>
+                    <strong class="word">★</strong>
+                    <strong class="word">★</strong>
+                    <strong class="word">★</strong>
+                    <strong class="word">★</strong>
+                </p>
+            </div>
         </div>
+
     </main>
 
     <!-- scirpt -->
     <script>
-        const word = document.querySelector(".word");
-        // const shadow = e => {
-        //     const { x, y } = e;
-        //     const rect = word.getBoundingClientRect();
-        //     const mouseX = (x - rect.left - rect.width/2) / rect.width * 5;
-        //     const mouseY = (y - rect.top - rect.height/2) / rect.height * 5;
-        //     word.style.textShadow = `${mouseX}px ${-mouseY}px 0px rgba(255, 165, 0, 0.4),
-        //                             ${-mouseX}px ${mouseY}px 0px rgba(255, 35, 251, 0.4),
-        //                             ${mouseY}px ${-mouseX}px 0px rgba(255, 255, 73, 0.4),
-        //                             ${-mouseY}px ${mouseX}px 0px rgba(102, 249, 255, 0.4)`
-        // };
-        // window.addEventListener("mousemove", shadow);
+        //const word = document.querySelector(".word");
 
-        // 다중
+        //const shadow = e => {
+        //    const { x, y } = e;
+        //    const rect= word.getBoundingClientRect();
+        //    const mouseX = (x - rect.left - rect.width/2) / rect.width * 5; // 마우스 좌표값 가운데로
+        //    const mouseY = (y - rect.top - rect.height/2) / rect.height * 5; // 마우스 좌표값 가운데로
+
+        //    word.style.textShadow = `${mouseX}px ${-mouseY}px 0px rgba(255, 165, 0, 0.4),
+        //                            ${-mouseX}px ${mouseY}px 0px rgba(255, 35, 251, 0.4),
+        //                            ${mouseY}px ${-mouseX}px 0px rgba(255, 255, 74, 0.4),
+        //                           ${-mouseY}px ${mouseX}px 0px rgba(102, 249, 255, 0.4)`
+        //};
+        //window.addEventListener("mousemove", shadow);
+
+        //다중
         window.addEventListener("mousemove", e => {
+            document.querySelector(".cursor").style.left = e.clientX - 25 + "px";
+            document.querySelector(".cursor").style.top = e.clientY - 25 + "px";
+            
             document.querySelectorAll(".word").forEach( elem => {
                 const { x, y } = e;
                 const rect = elem.getBoundingClientRect();
                 const mouseX = (x - rect.left - rect.width/2) / rect.width * 5;
                 const mouseY = (y - rect.top - rect.height/2) / rect.height * 5;
                 elem.style.textShadow = `${mouseX}px ${-mouseY}px 0px rgba(255, 165, 0, 0.4),
-                                    ${-mouseX}px ${mouseY}px 0px rgba(255, 35, 251, 0.4),
-                                    ${mouseY}px ${-mouseX}px 0px rgba(255, 255, 73, 0.4),
-                                    ${-mouseY}px ${mouseX}px 0px rgba(102, 249, 255, 0.4)`
+                                        ${-mouseX}px ${mouseY}px 0px rgba(255, 35, 251, 0.4),
+                                        ${mouseY}px ${-mouseX}px 0px rgba(255, 255, 73, 0.4),
+                                        ${-mouseY}px ${mouseX}px 0px rgba(102, 249, 255, 0.4)`
             });
         });
+        
+            
     </script>
 </body>
 </html>
