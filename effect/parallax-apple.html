@@ -27,7 +27,7 @@
             z-index: 10000000;
         }
         #section1 {}
-        #section2 {}
+        #section2 { position: relative; }
         #section3 {}
         #section4 {}
         #section5 {}
@@ -223,6 +223,22 @@
             left: 0; top: 50%;
             opacity: 0;
         }
+        .aniview {
+            width: 25vw;
+            height: 30vh;
+        }
+        .aniview > div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .aniview > div iframe {
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
@@ -378,10 +394,10 @@
         data-24000 = "display:none"
         data-24001= "display:block"
         data-40000 = "display:block" 
-        data-50001 = "display:none">
+        data-70001 = "display:none">
             <div class="s3txt01 fixed" data-title="검은색 원"
                 data-26000="width:100%; height: 100%"
-                data-27500="width: 40%; height: 40%; overflow: hidden"
+                data-27500="width: 40%; height: 30%; overflow: hidden"
             >
                 <h2 class="fixed"
                     data-7900 = "opacity: 0;"
@@ -397,16 +413,81 @@
                     <h2 class="fixed s3ball"
                     data-28500="opacity:0; left: 150%;"
                     data-29500="opacity:1; left: 50%"
-                    data-30000="opacity:1; left: 50%"
+                    data-31500="opacity:1; left: 50%"
+                    data-32000="left: -150%"
                     >BallAnimation
                     </h2>
-                    <h2 class="fixed s3ggsap">GSAPAnimation</h2>
-                    <h2 class="fixed s3tail">TailAnimation</h2>
-                    <h2 class="fixed s3text">TextAnimation</h2>
-                    <h2 class="fixed s3rocket">RocketAnimation</h2>
+                    <h2 class="fixed s3gsap"
+                    data-32000="opacity:0; left: 150%"
+                    data-34000="opacity:1; left: 50%;"
+                    data-35000="opacity:1; left: 50%;"
+                    data-38000="opacity:1; left: 50%;"
+                    data-40000="left: -150%"
+                    >GSAPAnimation
+                    </h2>
+                    <h2 class="fixed s3tail"
+                    data-40000="opacity:0; left: 150%"
+                    data-41000="opacity:1; left: 50%"
+                    data-45000="opacity:1; left: 50%"
+                    data-48000="opacity:1; left: -150%">TailAnimation</h2>
+                    >TailAnimation</h2>
+                    >TailAnimation</h2>
+                    <h2 class="fixed s3text"
+                    data-47000="opacity: 0; left: 150%"
+                    data-48000="opacity: 1; left: 50%"
+                    data-52000="opacity: 1; left: 50%"
+                    data-55000="opacity: 1; left: -150%"
+                    >
+                    TextAnimation</h2>
+                    <h2 class="fixed s3rocket"
+                    data-56000="opacity: 0; left: 150%"
+                    data-58000="opacity: 1; left: 50%"
+                    data-59500="opacity: 1; left: 50%"
+                    data-61000="opacity: 1; left: -150%"
+                    >RocketAnimation</h2>
                 </div>
-                <div class="fixed aniview">
-                    
+            </div>
+            <div class="fixed aniview">
+                <div class="fixed ani1"
+                data-28400="opacity:0"
+                data-28500="opacity: 1; left: 300%"
+                data-29500="opacity: 1; top: -50%; left: 50%"
+                data-31500="opacity: 1; top: -50%; left: 50%"
+                data-33000="left: -300%"
+                data-40000="left: -300%"
+                >
+                    <iframe src="https://dohaeun.github.io/dothome2/effect/react/ballanimation.html" frameborder="0"></iframe>
+                </div>
+                <div class="fixed ani2"
+                data-35000="opacity: 1; left: 300%"
+                data-36000="opacity: 1; left: 120%; top: 130%"
+                data-38000="opacity: 1; left: 120%; top: 130%"
+                data-40000="left: -250%">
+                    <iframe src="https://dohaeun.github.io/dothome2/effect/react/gsapanimation.html" frameborder="0"></iframe>
+                </div>
+                <div class="fixed ani3"
+                data-40000="opacity:1; left: 350%"
+                data-44000="opacity:1; left: 30%; top: -40%"
+                data-45000="opacity:1; left: 30%; top: -40%"
+                data-48000="opacity:1; left: -300%; top: -40%"
+                >
+                    <iframe src="https://dohaeun.github.io/dothome2/effect/react/tailanimation.html" frameborder="0"></iframe>
+                </div>
+                <div class="fixed ani4"
+                data-48000="opacity: 1; left: 300%"
+                data-49000="opacity: 1; left: 10%; top: -40%"
+                data-52000="opacity: 1; left: 10%; "
+                data-55000="opacity: 1; left: -300%;"
+                >
+                    <iframe src="https://dohaeun.github.io/dothome2/effect/react/textanimation.html" frameborder="0"></iframe>
+                </div>
+                <div class="fixed ani5"
+                data-57000="opacity:1; left: 300%"
+                data-58000="left: 90%; top: 120%"
+                data-59000="left: 90%; "
+                data-61000="left: -300%"
+                >
+                    <iframe src="https://dohaeun.github.io/dothome2/effect/react/rocketanimation.html" frameborder="0"></iframe>
                 </div>
             </div>
         </section>
