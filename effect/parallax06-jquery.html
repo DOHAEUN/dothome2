@@ -378,8 +378,8 @@
         @keyframes reveal-BTT {
             0% {width: 100%; top: 0; }
             50% {width: 100%; top: 0;}
-            80% {width: 100%; top: 0;}
-            100% {width: 100%; top: 100%; }
+            80% {width: 0%; top: 0;}
+            100% {width: 0%; top: 100%; }
         }
         @keyframes reveal-TTB {
             0% {width: 100%; top: 0;}
@@ -467,7 +467,7 @@
                     <figure class="content-item-imgWrap reveal reveal-BTT" >
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-desc reveal reveal-BTT"><span>악한 일은 작다 해도 하지 말라.</span></p>
+                    <p class="content-item-desc reveal reveal-BTT"><span data-time="300">악한 일은 작다 해도 하지 말라.</span></p>
                 </section>
                 <section id="section6" class="content-item">
                     <span class="content-item-num">06</span>
@@ -520,6 +520,8 @@
                   }
               });
           });
+
+        
       </script>
 </body>
 </html>

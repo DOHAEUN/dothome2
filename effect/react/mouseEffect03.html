@@ -19,7 +19,7 @@
         img {width: 100%; vertical-align: top;}
         li {list-style: none;}
         body {
-            background: url(img/image10@2.jpg) no-repeat center center;
+            background: url(../img/image06.jpg) no-repeat center center;
             background-size: cover;
             background-color: #959595;
             background-blend-mode:lighten;
@@ -188,19 +188,19 @@
         });
 
         //출력용
-        // $(".info.bottom li").click(function(){
-        //     //클릭한 글씨 값을 가져와서 alert으로 출력
-        //     const txt = $(this).text();
-        //     // 클릭한 글씨를 커서에 클래스로 추가합니다.
-        //     $(".info.bottom li").removeClass("active");
-        //     $(this).addClass("active");
-        //     $(".cursor").css("mix-blend-mode", txt)
-        // });
+        $(".info.bottom li").click(function(){
+            //클릭한 글씨 값을 가져와서 alert으로 출력
+            const txt = $(this).text();
+            // 클릭한 글씨를 커서에 클래스로 추가합니다.
+            $(".info.bottom li").removeClass("active");
+            $(this).addClass("active");
+            $(".cursor").css("mix-blend-mode", txt)
+        });
 
         // 제목에 마우스 오버 효과했을때 
-        $(".info.left h1").hover(function(){
-            $(".cursor").css("background-color","red")
-        })
+        // $(".info.left h1").hover(function(){
+        //     $(".cursor").css("background-color","red")
+        // })
     </script>
 </body>
 </html>
