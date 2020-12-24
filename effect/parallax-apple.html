@@ -158,7 +158,7 @@
             height: 57vh;
             margin: 25px;
             border-radius: 10px 10px 0 0;
-            background: #fff;
+            background: #000;
             display: flex;
             overflow: hidden;
         }
@@ -235,10 +235,17 @@
             top: 0;
             opacity: 0;
         }
-        .aniview > div iframe {
+        iframe {
             width: 100%;
             height: 100%;
+            border: 0;
         }
+        .box1 { background: #000; width: 100vw; height: 100vh;}
+        .box2 { background: #333; width: 100vw; height: 100vh;}
+        .box3 { background: #555; width: 100vw; height: 100vh;}
+        .box4 { background: #777; width: 100vw; height: 100vh;}
+        .box5 { background: #999; width: 100vw; height: 100vh;}
+        .box6 { background: #fff; width: 100vw; height: 100vh;}
     </style>
 </head>
 <body>
@@ -393,11 +400,13 @@
         <section id="section3"
         data-24000 = "display:none"
         data-24001= "display:block"
-        data-40000 = "display:block" 
-        data-70001 = "display:none">
+        data-40000 = "display:block"
+        data-61500 = "display:none">
             <div class="s3txt01 fixed" data-title="검은색 원"
                 data-26000="width:100%; height: 100%"
                 data-27500="width: 40%; height: 30%; overflow: hidden"
+                data-61000="width: 40%; height: 30%;"
+                data-61500="width: 100%; height: 20%"
             >
                 <h2 class="fixed"
                     data-7900 = "opacity: 0;"
@@ -459,8 +468,8 @@
                     <iframe src="https://dohaeun.github.io/dothome2/effect/react/ballanimation.html" frameborder="0"></iframe>
                 </div>
                 <div class="fixed ani2"
-                data-35000="opacity: 1; left: 300%"
-                data-36000="opacity: 1; left: 120%; top: 130%"
+                data-34000="opacity: 1; left: 300%"
+                data-35000="opacity: 1; left: 120%; top: 130%"
                 data-38000="opacity: 1; left: 120%; top: 130%"
                 data-40000="left: -250%">
                     <iframe src="https://dohaeun.github.io/dothome2/effect/react/gsapanimation.html" frameborder="0"></iframe>
@@ -492,10 +501,46 @@
             </div>
         </section>
         <!--//section3-->
-        <section id="section4"></section>
+        <section id="section4"
+            data-61499 = "display:none"
+            data-61500= "display:block"
+            data-99999 = "display:block"
+            data-100000 = "display:none"
+        >
+            <div class="fixed box1"
+                data-61500="height: 20%;"
+                data-62000="height: 20%; top: 50%"
+                data-63000="top: 90%"
+                data-64000="top: 90%"
+            ></div>
+            <div class="fixed box2"
+                data-64000="top: -20%"
+                data-65000="height: 20%; top: 70%"
+            >
+            </div>
+            <div class="fixed box3"
+                data-66000="top: -20%"
+                data-67000="height: 20%; top: 50%"
+            ></div>
+            <div class="fixed box4"
+                data-67000="top: -20%"
+                data-68000="height: 21%; top: 30%"></div>
+            <div class="fixed box5"
+                data-68000="top: -20%"
+                data-69000="height: 20%; top: 10%"
+            ></div>
+            <div class="fixed box6"
+                data-68000="opacity: 0"
+                data-69000="opacity:1; top: -100%"
+                data-70500=" top:50%"
+            ></div>
+            <h2 class="fixed bye"
+                data-70499="opacity:0"
+                data-70500="opacity:1; font-size: 0vw;"
+                data-71000=" font-size: 8vw;  transition: 0.4s"
+            >BYE!</h2>
+        </section>
         <!--//section4-->
-        <section id="section5"></section><!--//section5-->
-        <section id="section6"></section><!--//section6-->
     </div>
             
 

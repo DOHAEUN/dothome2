@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouse Effect06 - jQuery</title>
+    <title>Mouse Effect07 - jQuery</title>
     <style>
         @font-face {
             font-family: 'RIDIBatang';
@@ -30,15 +30,14 @@
 
         body {
             background: url(img/image12.jpg) no-repeat center center;
-            background-size: cover;
-            background-color: rgb(177, 191, 252);
+            background-size: cover;;
             height: 100vh;
             overflow: hidden;
             font-size: 16px;
             line-height: 1.5;
             font-family: 'MaruBuri-Regular';
             background-blend-mode: luminosity;
-            /* cursor: none; */
+            cursor: none;
             position: relative;
         }
         body::before {
@@ -123,24 +122,18 @@
             border-bottom: 2px dashed rgb(159, 211, 235);
             font-style: normal;
         }
-        .contents p .word {
-            color:rgb(159, 211, 235);
-            font-size: 4vw;
-        /*   text-shadow: 5px -10px 0px rgba(255, 165, 0, 0.4),
-                        -5px 10px 0px rgba(255, 35, 251, 0.4),
-                        10px -5px 0px rgba(255, 255, 74, 0.4),
-                        -10px 5px 0px rgba(102, 249, 255, 0.4); */
-        }
         .cursor {
             position: absolute;
-            width: 20px; height: 20px;
-            background: #fff;
+            width: 200px; height: 200px;
             border-radius: 50%;
-            z-index: 1000;
+            z-index: -1;
             user-select: none;
             pointer-events: none;
-            transform: scale(.5);
-            transition: transform 0.3s ease-in-out;
+            background-image: url(img/image04.jpg);
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+            border: 10px solid #fff;
         }
 
     </style>
@@ -149,7 +142,7 @@
     
     <!-- info -->
     <div class="info left">
-        <h1>Mouse Effect06 - jQuery</h1>
+        <h1>Mouse Effect07 - jQuery</h1>
         <p>마우스 방향에 따라 움직이기</p>
     </div>
     <div class="info right">
@@ -159,8 +152,8 @@
             <li><a href="mouseEffect03-jquery.html">3</a><a href="mouseEffect03-javascript.html">3</a></li>
             <li><a href="mouseEffect04-jquery.html">4</a><a href="mouseEffect04-javascript.html">4</a></li>
             <li><a href="mouseEffect05-jquery.html">5</a><a href="mouseEffect05-javascript.html">5</a></li>
-            <li><a href="mouseEffect06-jquery.html" class="active">6</a><a href="mouseEffect06-javascript.html">6</a></li>
-            <li><a href="mouseEffect07-jquery.html">7</a><a href="mouseEffect07-javascript.html">7</a></li>
+            <li><a href="mouseEffect06-jquery.html">6</a><a href="mouseEffect06-javascript.html">6</a></li>
+            <li><a href="mouseEffect07-jquery.html" class="active">7</a><a href="mouseEffect07-javascript.html">7</a></li>
             <li><a href="mouseEffect08-jquery.html">8</a><a href="mouseEffect08-javascript.html">8</a></li>
             <li><a href="mouseEffect09-jquery.html">9</a><a href="mouseEffect09-javascript.html">9</a></li>
         </ul>
@@ -178,15 +171,8 @@
         
         <div class="contents">
             <div class="cursor"></div>
-                <p>Loose <em>lips</em> sink ships.</p>
-                <p>가벼운 <em>입술이</em> 배를 가라앉게 만든다.</p>
-                <p>
-                    <strong class="word">★</strong>
-                    <strong class="word">★</strong>
-                    <strong class="word">★</strong>
-                    <strong class="word">★</strong>
-                    <strong class="word">★</strong>
-                </p>
+                <p>I dream my painting and I Paint my dream </p>
+                <p>나는 나의 그림을 <em>꿈</em> 꾸고, <em>꿈</em>을 그린다.</p>
             </div>
         </div>
         <div class="info bottom">
@@ -201,20 +187,13 @@
 
     <!-- scirpt -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>
+        const cursorWidth = $(".cursor").outerWidth()/2;
+        const cursorHeight = $(".cursor").outerHeight()/2;
+
         $(window).mousemove(function(e){
-            let x = e.pageX;
-            let y = e.pageY;
-            let mouseX = (x - $(".word").offset().left - $(".word").width() / 2) / $(".word").width() * 5
-            let mouseY = (y - $(".word").offset().top - $(".word").height() / 2) / $(".word").height() * 5
-
-            // $(".word").css({textShadow:"10px -20px 0px rgba(255, 165, 9, 0.4), -10px 20px 0px rgba(255, 35, 251, 0.4), 20px -10px 0px rgba(255, 255, 73, 0.4), -20px 10px 0px rgba(102, 249, 255, 0.4)"});
-            $(".word").css({textShadow:""+mouseX+"px -"+mouseY+"px 0px rgba(255, 165, 9, 0.4), -"+mouseX+"px "+mouseY+"px 0px rgba(255, 35, 251, 0.4)"});
-
-            $(".mouseX").text(parseInt(mouseX));
-            $(".mouseY").text(parseInt(mouseY));
-            $(".mouseX2").text(parseInt(-mouseX));
-            $(".mouseY2").text(parseInt(-mouseY));
+            gsap.to(".cursor", {duration: 0.3, left: e.pageX - cursorWidth, top: e.pageY - cursorWidth});
         });
     </script>
 </body>

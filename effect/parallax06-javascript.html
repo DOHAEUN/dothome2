@@ -519,11 +519,10 @@
         //       });
         //   });
         window.addEventListener("scroll", function(){
-            let scrollTop = window.scrollY;
-            console.log(scrollTop)
-            
             document.querySelector(".reveal").forEach(() => {
-                if(scrollTop + window.outerHeight / 2 > this.pageYOffset){
+                let scrollTop = document.documentElement.scrollTop;
+                let offsetTop = elem.offsetTop.documentElement.scrollTop;
+                if(scrollTop + window.innerHeight / 2 > this.offsetTop){
                     elem.classList.add("show")
                 }
             });
