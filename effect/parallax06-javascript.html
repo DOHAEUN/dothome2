@@ -519,9 +519,10 @@
         //       });
         //   });
         window.addEventListener("scroll", function(){
-            document.querySelector(".reveal").forEach(() => {
+            document.querySelectorAll(".reveal").forEach( elem => {
                 let scrollTop = document.documentElement.scrollTop;
                 let offsetTop = elem.offsetTop.documentElement.scrollTop;
+                console.log(elem)
                 if(scrollTop + window.innerHeight / 2 > this.offsetTop){
                     elem.classList.add("show")
                 }
