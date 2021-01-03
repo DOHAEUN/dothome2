@@ -1,9 +1,20 @@
 /* 레이아웃 */
+body {width: 100vw; height: 10000px; background: #000;}
 #contents {}
-#section1 {width: 100%; background: #ccc; height: 100vh;}
+#section1 {}
 #section2 {}
 #section3 {}
 #section4 {}
+
+/* container */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    height: inherit;
+}
+
+/* row */
+.row {margin: 0 100px;}
 
 /* 스크롤 */
 .scroll {
@@ -19,3 +30,52 @@
 }
 
 /* contents */
+.mainWrap { 
+    color: #fff; 
+    display: flex;
+}
+.mainWrap .intro {
+    font-size: 100px; 
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-weight: normal;
+    color: #fff;
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+.mainWrap .intro .first {display: none;}
+.mainWrap .intro .second {}
+.mainWrap .main-cont {
+    display: flex;
+}
+.mainWrap .imgWrap {
+    width: 332px; height: 281px;
+}
+.mainWrap .txtWrap {
+}
+.mainWrap .txtWrap p:first-child {
+    margin-bottom: 30px;
+}
+.mainWrap .txtWrap > p {
+    width: 340px; height: 120px;
+    font-size: 18px;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    line-height: 1.4;
+    margin-left: 50px;
+    font-weight: 400;
+}
+}
+.mainWrap .list {}
+.mainWrap .list ul { 
+    font-size: 25px; 
+    color: #616161;
+    margin-left: 382px;
+    margin-top: 50px;
+    font-family: 'Yantramanav', sans-serif;
+    line-height: 1;
+}
+.mainWrap .list li {
+    color: #fff;
+}
+
+.next {}
+.next h1 {font-size: 900px;}
