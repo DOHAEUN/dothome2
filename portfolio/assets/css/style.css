@@ -1,0 +1,21 @@
+/* 레이아웃 */
+#contents {}
+#section1 {width: 100%; background: #ccc; height: 100vh;}
+#section2 {}
+#section3 {}
+#section4 {}
+
+/* 스크롤 */
+.scroll {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    background: rgb(0, 0, 0, 0.8);
+    color: #ccc;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* contents */
