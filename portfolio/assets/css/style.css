@@ -1,81 +1,280 @@
-/* 레이아웃 */
-body {width: 100vw; height: 10000px; background: #000;}
-#contents {}
-#section1 {}
-#section2 {}
-#section3 {}
-#section4 {}
+/* 레이이아웃 */
+#contents {background: #000;}
+#section1 {position: relative; height: 10500px; z-index: 2000;}
+#section2 {position: relative; z-index: 3000;}
+#section3 {position: relative; z-index: 3000;}
+#section4 {position: relative;}
 
-/* container */
-.container {
-    width: 1200px;
-    margin: 0 auto;
-    height: inherit;
-}
-
-/* row */
-.row {margin: 0 100px;}
-
-/* 스크롤 */
-.scroll {
+/* scroll */
+/* .scroll {
     position: fixed;
-    right: 10px;
-    top: 10px;
-    width: 50px;
-    height: 50px;
-    background: rgb(0, 0, 0, 0.8);
-    color: #ccc;
+    right: 10px; top: 10px;
+    width: 50px; height: 50px;
+    background: rgba(0, 0, 0, 0.8);
     text-align: center;
     line-height: 50px;
-}
+    color: #fff;
+    z-index: 99999;
+} */
 
 /* contents */
-.mainWrap { 
-    color: #fff; 
-    display: flex;
+
+/* main */
+.sec1 {
+    overflow: hidden;
+    position: relative;
 }
-.mainWrap .intro {
-    font-size: 100px; 
-    font-family: 'NEXON Lv1 Gothic OTF';
-    font-weight: normal;
+.sec1Wrap {
     color: #fff;
-    padding-bottom: 100px;
-    padding-top: 50px;
-}
-.mainWrap .intro .first {display: none;}
-.mainWrap .intro .second {}
-.mainWrap .main-cont {
-    display: flex;
-}
-.mainWrap .imgWrap {
-    width: 332px; height: 281px;
-}
-.mainWrap .txtWrap {
-}
-.mainWrap .txtWrap p:first-child {
-    margin-bottom: 30px;
-}
-.mainWrap .txtWrap > p {
-    width: 340px; height: 120px;
-    font-size: 18px;
     font-family: 'NEXON Lv1 Gothic OTF Light';
-    line-height: 1.4;
-    margin-left: 50px;
-    font-weight: 400;
+    background: #000;
+    width: 500vw;
+    height: 100vh;
+    position: fixed;
 }
+.sec1Wrap > div {
+    float: left;
+    left: 0%; top: 5%;
+} 
+.frist {}
+.frist h1 {
+    padding-top: 50px;
+    font-size: 100px; 
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
 }
-.mainWrap .list {}
-.mainWrap .list ul { 
-    font-size: 25px; 
-    color: #616161;
-    margin-left: 382px;
-    margin-top: 50px;
-    font-family: 'Yantramanav', sans-serif;
+.frist .about {
+    display: flex;
+    padding-top: 100px;
+}
+.frist .about .imgWrap {width: 330px; height: 280px;}
+.frist .about .textWrap {
+    margin: 50px;
+}
+.frist .about .textWrap p {
+    width: 340px; height: 120px;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    font-size: 14px;
+}
+.frist .about .textWrap ul {
+    color: #616161; 
+    font-size: 20px;
     line-height: 1;
+    font-family: 'Yantramanav', sans-serif;
 }
-.mainWrap .list li {
+.frist .about .textWrap li {
     color: #fff;
 }
 
-.next {}
-.next h1 {font-size: 900px;}
+.second {
+    position: relative; 
+}
+.second h1{
+    font-size: 850px;
+    line-height: 850px;
+    margin-left: 500px;
+    position: absolute;
+    left: 0%; top: 0;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+}
+.third {
+    width: 100vw; height: 100vh;
+    background: url(../img/list_bg.jpg);
+    background-size: cover;
+}
+.third .listWrap {
+    position: relative;
+    overflow: hidden;
+}
+.third .listWrap .imgList {
+    position: fixed;
+    width: 100%;
+    left: 100%;
+}
+.third .listWrap .imgList .frame {
+    padding: 40px;
+    background: url(../img/Frame.png) no-repeat;
+    background-size: contain;
+    margin: 0 20px;
+    float: left;
+    width: 28%;
+}
+.third .listWrap li img {
+}
+.third .bg {
+    width: 100%; height: 100%;
+    background: #000;
+}
+
+/* portpolio */
+.sec2 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 500vh;
+    
+}
+.sec2 .imgUp {
+    position: fixed;
+    left: 0; top: 0;
+    width: 30%;
+    
+}
+.sec2 .imgUp .frame {
+    position: absolute;
+    left: 0; top: 0;
+    z-index: 3001;
+    width: 100%;
+}
+.sec2 .imgUp .imgWrap {
+    position: absolute;
+    z-index: 3002;
+    width: 100%;
+}
+.protCont {
+    position: fixed;
+    height: 1000vh;
+    width: 100vw;
+    background: #1d1d1d;
+    color: #fff;
+}
+.protCont .menuBtn {
+    position: fixed;
+    right: 8%; top: 5%;
+}
+.protCont .portTit {
+    font-size: 130px;
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: normal;
+    line-height: 100px;
+    padding: 10% 0 5% 8%;
+    border-bottom: 1px solid #fff;
+    letter-spacing: -3px;
+}
+.standardWrap {
+    width: 100%;
+    height: 23%;
+    margin-top: 50px;
+    font-family: 'NEXON Lv1 Gothic OTF';
+}
+.standardWrap .title {
+}
+.standardWrap .title ul {
+    display: flex;
+    width: 100%;
+}
+.standardWrap .title li {
+}
+.standardWrap .title li:nth-child(1) {
+    flex: 0 0 20%;
+    font-size: 35px;
+}
+.standardWrap .title li:nth-child(2) {
+    flex: 0 0 30%;
+    font-size: 25px;
+}
+.standardWrap .title li:nth-child(2) p {
+    font-size: 25px;
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 200;
+}
+.standardWrap .title li:nth-child(3) {
+    flex: 0 0 50%;
+    font-size: 15px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 50px;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+}
+.standardWrap .title li:nth-child(3) p {
+    margin-bottom: 20px;
+    font-weight: 400;
+    width: 100%;
+}
+
+.standardWrap .standardCont {
+    width: 50%;
+    float: right;
+    margin-top: 15px;
+}
+.standardWrap .standardCont ul {
+}
+.standardWrap .standardCont li {
+    text-align: left;
+    border-bottom: 1px solid #fff;
+    margin: 10px 0;
+}
+.standardWrap .standardCont li h3 {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    font-size: 30px;
+    padding: 10px 0;
+}
+.standardWrap .standardCont li pre {
+    margin-bottom: 30px;
+}
+.standardWrap .standardCont .standardImg {
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+.responsiveWrap {
+    width: 100%;
+    height: 23%;
+    border-top: 1px solid #fff;
+    font-family: 'NEXON Lv1 Gothic OTF';
+}
+.responsiveWrap .title {
+}
+.responsiveWrap .title ul {
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+}
+.responsiveWrap .title li {}
+.responsiveWrap .title li:nth-child(1) {
+    flex: 0 0 20%;
+    font-size: 35px;
+}
+.responsiveWrap .title li:nth-child(2) {
+    flex: 0 0 30%;
+    flex: 0 0 30%;
+    font-size: 25px;
+}
+.responsiveWrap .title li:nth-child(2) p {
+    font-size: 25px;
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 200;
+}
+.responsiveWrap .title li:nth-child(3) {
+    flex: 0 0 50%;
+    font-size: 15px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 50px;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+}
+.responsiveWrap .title li:nth-child(3) p {
+    margin-bottom: 20px;
+    font-weight: 400;
+    width: 100%;
+}
+.responsiveWrap .responsiveCont {
+    width: 50%;
+    float: right;
+    margin-top: 15px;
+}
+.responsiveWrap .responsiveCont ul {
+}
+.responsiveWrap .responsiveCont li {
+    text-align: left;
+    border-bottom: 1px solid #fff;
+    margin: 10px 0;
+}
+.responsiveWrap .responsiveCont li h3 {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    font-size: 30px;
+    padding: 10px 0;
+}
+.responsiveWrap .responsiveCont li pre {
+    margin-bottom: 30px;
+}
+.responsiveWrap .responsiveCont .standardImg {
+    margin-top: 50px;
+    margin-bottom: 150px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style03.css">
+    <!-- webfonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>PORTFOLIO</title>
+</head>
+<body>
+    <div class="scroll">0</div>
+    <div id="contents">
+        <section id="setctio1">
+            <div class="sec01">
+                <div class="sec01Wrap fixed-full">
+                    <div class="intro">
+                        <div class="introH"></div>
+                    </div>
+                    <div class="introA">
+                        <div class="imgWrap">
+                            <img src="assets/img/myimg.jpg" alt="본인사진">
+                        </div>
+                        <div class="txtWrap">
+                            <p>자기소개칸 입니다자기소개칸 입니다자기소개칸 입니다자기소개칸 입니다자기소개칸 입니다자기소개칸 입니다자기소개칸 입니다자기소개칸 입니다자기소개칸 입니다자기소개칸 입니다자기소개칸 입니다자기소개칸</p>
+                            <p>자기소개칸 입니다자기소개칸 입니다자기소개칸 입니다자기소개칸 입니다자기소개칸 입니다자기소개칸 입니다자기소개칸 입니다자기소개칸 입니다자기소개칸 입니다자기소개칸 입니다자기소개칸 입니다자기소개칸</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="setctio2"></section>
+        <section id="setctio3"></section>
+        <section id="setctio4"></section>
+        <section id="setctio5"></section>
+        <section id="setctio6"></section>
+    </div>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+    <script>
+        var s = skrollr.init();
+
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+            $(".scroll").html(scrollTop)
+        });
+    </script>
+</body>
+</html>

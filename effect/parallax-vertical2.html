@@ -48,12 +48,12 @@
             line-height: 1.4;
         }
 
-        #section1 .imgWrap .img {background: url(img/images24@2.jpg); background-size: cover;}
-        #section2 .imgWrap .img {background: url(img/images25@2.jpg); background-size: cover;}
-        #section3 .imgWrap .img {background: url(img/images26@2.jpg); background-size: cover;}
-        #section4 .imgWrap .img {background: url(img/images27@2.jpg); background-size: cover;}
-        #section5 .imgWrap .img {background: url(img/images28@2.jpg); background-size: cover;}
-        #section6 .imgWrap .img {background: url(img/images11@2.jpg); background-size: cover;}
+        #section1 .imgWrap .img {background: url(img/image01@2.jpg); background-size: cover;}
+        #section2 .imgWrap .img {background: url(img/image02@2.jpg); background-size: cover;}
+        #section3 .imgWrap .img {background: url(img/image03@2.jpg); background-size: cover;}
+        #section4 .imgWrap .img {background: url(img/image04@2.jpg); background-size: cover;}
+        #section5 .imgWrap .img {background: url(img/image05@2.jpg); background-size: cover;}
+        #section6 .imgWrap .img {background: url(img/image06@2.jpg); background-size: cover;}
         
         /* set */
         #section1 {position: relative; z-index: 6000; background: #111;}
@@ -165,7 +165,7 @@
         }
         // 3번째 섹션에 왔을 때 스크롤 탑값을 0으로 초기화
         let offset = scrollTop - $("#section3").offset().top;
-
+        console.log(offset)
         if( scrollTop > $("#section3").offset().top ){
             // $("#section3 .sec3-wrap > div:nth-child(1)").css("background","red");
             $("#section3 .sec3").css("left",-offset);

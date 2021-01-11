@@ -1,0 +1,452 @@
+/* rayout */
+
+#contents {}
+#section1 {position: relative; z-index: 1000; color: #fff;}
+#section2 {position: relative; z-index: 2000; color: #fff;}
+#section3 {position: relative; z-index: 1000;}
+#section4 {position: relative; z-index: 3000;}
+#section5 {position: relative;}
+
+.scroll {
+    width: 50px;
+    height: 50px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    position: fixed;
+    right: 0; top: 0;
+    line-height: 50px;
+    text-align: center;
+    z-index: 99999;
+}
+
+/* contents */
+/* scetion1 */
+.sec01 {
+    width: 100vw; height: 100vh; 
+    color: #fff;
+}
+.sec01 .sec01Wrap {
+    width: 500vw; height: 100vh;
+    position: fixed;
+    left: 0; top: 0;
+    background: #000;
+}
+.sec01 .sec01Wrap > div {float: left;}
+
+.sec01 .sec01Wrap .sec1-1 {
+    width: 100vw; height: 100vh;
+    padding-left: 100px;
+    box-sizing: border-box;
+}
+
+.sec1-1 .intro {font-family: var(--variable-nexonR);}
+
+.sec1-1 .intro .introH {}
+.sec1-1 .intro .introH h1 {
+font-size: 120px;
+    padding: 80px 0 70px 0;
+}
+
+.sec1-1 .intro .introA {
+    display: flex;
+    align-items: center;
+}
+.sec1-1 .intro .introA .imgWrap {
+    width: 330px; height: 280px
+}
+.sec1-1 .intro .introA .txtWrapp {}
+.sec1-1 .intro .introA .txtWrapp p {
+    width: 340px; height: 120px; 
+    font-size: 14px;
+    line-height: 1.2;
+    margin-left: 50px;
+}
+.sec1-1 .chapter {margin-left: 380px;}
+.sec1-1 .chapter ul {
+    color: #616161;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: var(--variable-yantra);
+    line-height: 1.2;
+}
+.sec1-1 .chapter li {color: #fff}
+
+.sec01 .sec01Wrap .sec1-2 {
+    width: 500vw; height: 100vh;
+    position: fixed;
+    background: #000;
+    z-index: 1000;
+}
+.sec1-2 h1 { font-size: 900px; line-height: 0.8;}
+
+.sec01 .sec01Wrap .sec1-3 {
+    width: 100vw; height: 100vh;
+    background: url(../img/list_bg.jpg);
+    background-size: cover;
+}
+
+.sec1-3 .listWrap {overflow: hidden;}
+.sec1-3 .listWrap ul {
+    position: fixed;
+    left: 0; top: 0%;
+    width: 120vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.sec1-3 .listWrap li {
+    position: relative;
+    flex: 1 1 30%;
+    margin: 0 3%;
+}
+.sec1-3 .listWrap li .frame {}
+.sec1-3 .listWrap li .poster {
+    position: absolute;
+    width: 85%;
+    left: 7.5%; top: 7.5%;
+}
+
+.listWrap .bg {
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+}
+
+/* section2 */
+.sec02 {width: 100vw; height: 100vh;}
+.sec02 .sec02Wrap {
+    width: 100vw; height: 1200vh;
+    position: fixed;
+    left: 0; top: 0;
+}
+.sec02Wrap .imgUp { position: fixed; width: 100vw; height: 120vh;}
+.sec02Wrap .imgUp .imgupWrap {position: relative;}
+.sec02Wrap .imgUp .frame {
+}
+.sec02Wrap .imgUp .imgWrap {
+    width: 85%;
+    position: absolute;
+    left: 7%; top: 5%;
+    z-index: 2001;
+}
+.sec02Wrap .portCont {
+    width: 100vw; height: 1300vh;
+    background: #000;
+}
+
+.sec02Wrap .menu {
+    position: fixed;
+    font-size: 16px;
+    font-family: var( --variable-yantra);
+    right: 4%; top: 5%;
+    z-index: 2001;
+}
+.portCont .portHeader {
+    padding-top: 150px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #fff;
+}
+.portCont .portHeader h1{
+    color: #fff;
+    font-size: 100px;
+    line-height: 0.8;
+    font-family: var( --variable-yantra);
+    font-weight: 400;
+    letter-spacing: -4px;
+    margin-left: 70px;
+}
+
+.siteWrap {}
+
+/* 웹표준 */
+.webstandardWrap {overflow: hidden;}
+.webstandardWrap .webstandardHeader {
+    color: #fff;
+    font-family: var(--variable-nexonR);
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+}
+.webstandardWrap .webstandardHeader .num { flex: 0 0 20%; font-size: 40px; line-height: 1;}
+.webstandardWrap .webstandardHeader .title {flex: 0 0 30%;}
+.webstandardWrap .webstandardHeader .title h2 {font-family: var(--variable-nexonB); font-size: 40px;}
+.webstandardWrap .webstandardHeader .title p {
+    font-family: var(--variable-yantra); 
+    font-weight: 200; font-size: 30px;
+}
+.webstandardWrap .webstandardHeader .ex { flex: 0 0 50%;}
+.webstandardWrap .webstandardHeader .ex p { font-size: 14px;}
+.webstandardWrap .webstandardHeader .ex p:nth-child(1) {padding-bottom: 10px;}
+.webstandardWrap .webstandardHeader .ex p:nth-child(2) {
+    padding-bottom: 50px; 
+    border-bottom: 1px solid #fff;
+}
+
+.webstandardWrap .webstandardCont {width: 50%; float: right;}
+.webstandardWrap .webstandardCont > div {}
+.webstandardWrap .webstandardCont .guide ul{width: 100%;}
+.webstandardWrap .webstandardCont .guide li {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #fff;
+}
+.webstandardWrap .webstandardCont .guide li h3 {
+    font-family: var(--variable-nexonR);
+    font-size: 30px;
+    padding: 20px 0;
+}
+.webstandardWrap .webstandardCont .guide li pre { padding: 20px;}
+.webstandardWrap .webstandardCont .mockup {margin-bottom: 100px;}
+
+/* 반응형 */
+.responsiveWrap {overflow: hidden; border-top: 1px solid #fff;}
+.responsiveWrap .responsiveHeader {
+    color: #fff;
+    font-family: var(--variable-nexonR);
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+}
+.responsiveWrap .responsiveHeader .num { flex: 0 0 20%; font-size: 40px; line-height: 1;}
+.responsiveWrap .responsiveHeader .title {flex: 0 0 30%;}
+.responsiveWrap .responsiveHeader .title h2 {font-family: var(--variable-nexonB); font-size: 40px;}
+.responsiveWrap .responsiveHeader .title p {
+    font-family: var(--variable-yantra); 
+    font-weight: 200; font-size: 30px;
+}
+.responsiveWrap .responsiveHeader .ex { flex: 0 0 50%;}
+.responsiveWrap .responsiveHeader .ex p { font-size: 14px;}
+.responsiveWrap .responsiveHeader .ex p:nth-child(1) {padding-bottom: 10px;}
+.responsiveWrap .responsiveHeader .ex p:nth-child(2) {
+    padding-bottom: 50px; 
+    border-bottom: 1px solid #fff;
+}
+
+.responsiveWrap .responsiveCont {width: 50%; float: right;}
+.responsiveWrap .responsiveCont > div {}
+.responsiveWrap .responsiveCont .guide ul{width: 100%;}
+.responsiveWrap .responsiveCont .guide li {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #fff;
+}
+.responsiveWrap .responsiveCont .guide li h3 {
+    font-family: var(--variable-nexonR);
+    font-size: 30px;
+    padding: 20px 0;
+}
+.responsiveWrap .responsiveCont .guide li pre {
+    padding: 20px;
+}
+.responsiveWrap .responsiveCont .mockup {
+    margin-top: 60px;
+}
+
+/* megabox */
+.megaboxWrap {
+    overflow: hidden; 
+    border-top: 1px solid #fff; 
+    margin-top: 100px;
+}
+.megaboxWrap .megaboxHeader {
+    color: #fff;
+    font-family: var(--variable-nexonR);
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+}
+.megaboxWrap .megaboxHeader .num { flex: 0 0 20%; font-size: 40px; line-height: 1;}
+.megaboxWrap .megaboxHeader .title {flex: 0 0 30%;}
+.megaboxWrap .megaboxHeader .title h2 {font-family: var(--variable-nexonB); font-size: 40px;}
+.megaboxWrap .megaboxHeader .title p {
+    font-family: var(--variable-yantra); 
+    font-weight: 200; font-size: 30px;
+}
+.megaboxWrap .megaboxHeader .ex { flex: 0 0 50%;}
+.megaboxWrap .megaboxHeader .ex p { font-size: 14px;}
+.megaboxWrap .megaboxHeader .ex p:nth-child(1) {padding-bottom: 10px;}
+.megaboxWrap .megaboxHeader .ex p:nth-child(2) {
+    padding-bottom: 50px; 
+    border-bottom: 1px solid #fff;
+}
+
+.megaboxWrap .megaboxCont {width: 50%; float: right;}
+.megaboxWrap .megaboxCont > div {}
+.megaboxWrap .megaboxCont .guide ul{width: 100%;}
+.megaboxWrap .megaboxCont .guide li {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #fff;
+}
+.megaboxWrap .megaboxCont .guide li h3 {
+    font-family: var(--variable-nexonR);
+    font-size: 30px;
+    padding: 20px 0;
+}
+.megaboxWrap .megaboxCont .guide li pre {
+    padding: 20px;
+}
+.megaboxWrap .megaboxCont .mockup {
+    margin-top: 60px;
+}
+
+/* 클로바 */
+.clovaWrap {
+    overflow: hidden; 
+    border-top: 1px solid #fff; 
+    margin-top: 100px;
+}
+.clovaWrap .clovaHeader {
+    color: #fff;
+    font-family: var(--variable-nexonR);
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+}
+.clovaWrap .clovaHeader .num { flex: 0 0 20%; font-size: 40px; line-height: 1;}
+.clovaWrap .clovaHeader .title {flex: 0 0 30%;}
+.clovaWrap .clovaHeader .title h2 {font-family: var(--variable-nexonB); font-size: 40px;}
+.clovaWrap .clovaHeader .title p {
+    font-family: var(--variable-yantra); 
+    font-weight: 200; font-size: 30px;
+}
+.clovaWrap .clovaHeader .ex { flex: 0 0 50%;}
+.clovaWrap .clovaHeader .ex p { font-size: 14px;}
+.clovaWrap .clovaHeader .ex p:nth-child(1) {padding-bottom: 10px;}
+.clovaWrap .clovaHeader .ex p:nth-child(2) {
+    padding-bottom: 50px; 
+    border-bottom: 1px solid #fff;
+}
+
+.clovaWrap .clovaCont {width: 50%; float: right;}
+.clovaWrap .clovaCont > div {}
+.clovaWrap .clovaCont .guide ul{width: 100%;}
+.clovaWrap .clovaCont .guide li {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #fff;
+}
+.clovaWrap .clovaCont .guide li h3 {
+    font-family: var(--variable-nexonR);
+    font-size: 30px;
+    padding: 20px 0;
+}
+.clovaWrap .clovaCont .guide li pre {
+    padding: 20px;
+}
+.clovaWrap .clovaCont .mockup {
+    margin-top: 60px;
+}
+
+/* section3 */
+.sec03 {width: 100vw; height: 100vh;}
+.sec03 .sec03Wrap {
+    width: 100vw; height: 100vh; 
+    position: fixed;
+    left: 0; top: 0;
+    background: url(../img/list_bg.jpg);
+    background-size: cover;
+}
+.sec03Wrap .listWrap {
+    position: fixed;
+    left: 0; top: 15%;
+    width: 100%;
+}
+.sec03Wrap .listWrap ul {
+    position: fixed;
+    left: 0; top: 0%;
+    width: 120vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.sec03Wrap .listWrap li {
+    position: relative;
+    margin: 0 3%;
+}
+.sec03Wrap .listWrap li .frame {}
+.sec03Wrap .listWrap li .poster {
+    position: absolute;
+    width: 86%;
+    left: 7%; top: 7%;
+}
+.sec03 .sec03Wrap .bg {
+    width: 100vw; height: 100vh; 
+    background: #000;
+}
+
+/* section4 */
+.sec04 {
+    width: 100vw; height: 100vh; 
+    color: #fff;
+    font-family: var(--variable-nexonR);
+}
+.sec04 .sec04Wrap{
+    width: 100vw; height: 1000vh;
+    position: fixed;
+    left: 0; top: 0;
+}
+.sec04 .sec04Wrap .imgUp {position: fixed; width: 100vw; height: 120vh;}
+.sec04 .sec04Wrap .imgUp .imgupWrap {position: flex;}
+.sec04 .sec04Wrap .imgUp .imgupWrap > div {flex: 1 1 30%;}
+.sec04 .sec04Wrap .imgUp .imgupWrap .frame {}
+.sec04 .sec04Wrap .imgUp .imgupWrap .imgWrap {
+    width: 85%;
+    position: absolute;
+    left: 7%; top: 5%;
+    z-index: 2001;
+}
+.sec04Wrap .scriptCont {
+    width: 100vw; height: 1300vh;
+    background: #000;
+}
+
+.sec04Wrap .menu {
+    position: fixed;
+    font-size: 16px;
+    font-family: var( --variable-yantra);
+    right: 4%; top: 5%;
+    z-index: 2001;
+}
+.scriptCont .scriptHeader {
+    padding-top: 150px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #fff;
+}
+.scriptCont .scriptHeader h1{
+    color: #fff;
+    font-size: 100px;
+    line-height: 0.8;
+    font-family: var( --variable-yantra);
+    font-weight: 400;
+    letter-spacing: -4px;
+    margin-left: 70px;
+}
+.scriptCont .scriptWrap {}
+.scriptWrap .parallaxWrap {}
+.scriptWrap .paraWrap .paraHeader {display: flex; margin-top: 50px;}
+.scriptWrap .paraWrap .paraHeader .num {flex: 0 0 25%;}
+.scriptWrap .paraWrap .paraHeader .title { flex: 0 0 25%;}
+.scriptWrap .paraWrap .paraHeader .title h2 {font-family: var(--variable-nexonR);}
+.scriptWrap .paraWrap .paraHeader .title p {
+    font-family: var(--variable-yantra); 
+    font-weight: 200; font-size: 20px;
+}
+.scriptWrap .paraWrap .paraHeader .ex {flex: 0 0 50%;font-size: 14px;}
+.scriptWrap .paraWrap .paraHeader .ex p:nth-child(1) {padding-bottom: 20px;}
+.scriptWrap .paraWrap .paraHeader .ex p:nth-child(2) {padding-bottom: 50px;}
+.scriptWrap .paraWrap .btnWrap {width: 50%; float: right;}
+.scriptWrap .paraWrap .btnWrap ul {display: flex;}
+.scriptWrap .paraWrap .btnWrap li {text-align: center; margin-right: 10px;}
+.scriptWrap .paraWrap .btnWrap li a {
+    padding: 7px 40px;
+    border-radius: 25px;
+    line-height: 20px;
+    border: 1px solid #fff;
+    transition: 0.5s;
+    font-weight: 600;
+}
+.scriptWrap .paraWrap .btnWrap li a:hover {
+    background: #fff;
+    color: #000;
+}
