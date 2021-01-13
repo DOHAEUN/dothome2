@@ -1,452 +1,756 @@
-/* rayout */
-
-#contents {}
-#section1 {position: relative; z-index: 1000; color: #fff;}
-#section2 {position: relative; z-index: 2000; color: #fff;}
-#section3 {position: relative; z-index: 1000;}
-#section4 {position: relative; z-index: 3000;}
+/* 레이아웃 */
+#contents {color: #fff;}
+#section1 {position: relative; z-index: 1000;}
+#section2 {position: relative; z-index: 2000;}
+#section3 {position: relative; z-index: 3000;}
+#section4 {position: relative;}
 #section5 {position: relative;}
+#section6 {position: relative;}
 
+/* scroll */
 .scroll {
-    width: 50px;
-    height: 50px;
-    background: rgba(0,0,0,0.6);
-    color: #fff;
+    width: 50px; height: 50px;
     position: fixed;
-    right: 0; top: 0;
+    right: 10px; top: 10px;
+    background: rgba(0,0,0,0.5);
     line-height: 50px;
     text-align: center;
-    z-index: 99999;
+    color: #fff;
+    z-index: 9999;
 }
 
 /* contents */
-/* scetion1 */
-.sec01 {
-    width: 100vw; height: 100vh; 
-    color: #fff;
-}
+/* section01 */
+.sec01 {width: 100vw; height: 100vh;}
 .sec01 .sec01Wrap {
-    width: 500vw; height: 100vh;
     position: fixed;
+    left: 0; top: 0;
+    width: 200vw; height: 100vh;
+    background: #000;
+    display: flex;
+    justify-items: center;
+}
+.sec01Wrap .sec1-1 {width: 100vw; position: relative;}
+.sec1-1 .introWrap {
+    position: absolute;
+    left: 50%; top: 60%;
+    transform: translate(-50%, -50%);
+    font-family: var( --variable-nexonR);
+}
+.sec1-1 .introWrap .intro {display: flex; align-items: center;}
+.sec1-1 .introWrap .intro .imgWrap {width: 330px; height: 280px;}
+.sec1-1 .introWrap .intro .txtWrap {margin-left: 50px;}
+.sec1-1 .introWrap .intro .txtWrap p { width: 340px; height: 120px;}
+
+.sec1-1 .introWrap .chapter {
+    margin-left: 380px; margin-top: 50px;
+    font-size: 20px;
+    color: #616161;
+    font-family: var(--variable-yantra);
+    font-weight: 300;
+}
+.sec1-1 .introWrap .chapter ul {}
+.sec1-1 .introWrap .chapter li {color: #fff;}
+
+.sec01Wrap .sec1-2 {
+    width: 500vw; height: 100vh;
+    background: #000;
+    position: fixed;
+    z-index: 1001;
+}
+.sec01Wrap .sec1-2 h1 {
+    font-size: 900px;
+    position: absolute;
+    line-height: 1;
+    left: 160vw; top: 45%;
+    transform: translate(-50%, -50%);
+}
+.sec01Wrap .sec1-3 {
+    width: 100vw;
+    background: url(../img/list_bg.jpg);
+    background-size: cover;
+    position: relative;
+}
+.sec01Wrap .sec1-3 .listWrap { width: 100vw; height: 100vh;}
+
+.listWrap .listImg {width: 30%;}
+.listWrap .listImg:nth-child(1) {}
+.listWrap .listImg:nth-child(2) {}
+.listWrap .listImg:nth-child(3) { margin-left: 1200px;}
+
+.listWrap .listImg .imgWrap {
+    position: relative;
+    left: 0%; top: 0%;
+}
+.listWrap .listImg .imgWrap .frame {}
+.listWrap .listImg .imgWrap .img {
+    position: absolute;
+    left: 6%; top: 6%;
+    width: 88%;
+}
+.sec01Wrap .sec1-3 .bg {
+    width: 100vw; height: 100vh;
+    position: absolute;
     left: 0; top: 0;
     background: #000;
 }
-.sec01 .sec01Wrap > div {float: left;}
 
-.sec01 .sec01Wrap .sec1-1 {
-    width: 100vw; height: 100vh;
-    padding-left: 100px;
-    box-sizing: border-box;
+/* section02 */
+.sec02 {width: 100vw; height: 100vh;}
+.sec02 .sec02Wrap {
+    width: 100vw; height: 800vh;
+    position: fixed;
+    left: 0; top: 0;
+    background: #1d1d1d;
 }
-
-.sec1-1 .intro {font-family: var(--variable-nexonR);}
-
-.sec1-1 .intro .introH {}
-.sec1-1 .intro .introH h1 {
-font-size: 120px;
-    padding: 80px 0 70px 0;
+.sec02Wrap .popupImg {
+    padding: 0 80px;
+    position: fixed;
+    left: 0;top: 0;
+    background: #1D1D1D;
+    z-index: 2999;
 }
-
-.sec1-1 .intro .introA {
+.sec02Wrap .popupImg .top .menu {
+    float: right;
+    padding-top: 30px;
+}
+.sec02Wrap .popupImg .center{padding-top: 210px;}
+.sec02Wrap .popupImg .center > div {
     display: flex;
     align-items: center;
 }
-.sec1-1 .intro .introA .imgWrap {
-    width: 330px; height: 280px
+.sec02Wrap .popupImg .center .react {
+    flex: 0 0 25%;
+    font-size: 55px;
+    line-height: 0.9;
 }
-.sec1-1 .intro .introA .txtWrapp {}
-.sec1-1 .intro .introA .txtWrapp p {
-    width: 340px; height: 120px; 
-    font-size: 14px;
-    line-height: 1.2;
-    margin-left: 50px;
-}
-.sec1-1 .chapter {margin-left: 380px;}
-.sec1-1 .chapter ul {
-    color: #616161;
-    font-size: 20px;
-    font-weight: 300;
+.sec02Wrap .popupImg .center .react h1 {
     font-family: var(--variable-yantra);
-    line-height: 1.2;
+    font-weight: 500;
 }
-.sec1-1 .chapter li {color: #fff}
+.sec02Wrap .popupImg .center .react p {
+    font-family: 'Italiana', serif;
+    font-size: 70px;
+}
+.sec02Wrap .popupImg .center .and {
+    flex: 0 0 50%;
+    text-align: center;
+}
+.sec02Wrap .popupImg .center .and img {
+    margin-top: 15px;
+    width: 110px;
+}
+.sec02Wrap .popupImg .center .vue {
+    flex: 0 0 25%;
+    text-align: right;
+    font-size: 55px;
+    line-height: 0.9;
+}
+.sec02Wrap .popupImg .center .vue h1 {
+    font-family: var(--variable-yantra);
+    font-weight: 400;
+}
+.sec02Wrap .popupImg .center .vue p {
+    font-family: 'Italiana', serif;
+    font-size: 70px;
+    font-weight: 200;
+}
+.sec02Wrap .popupImg .center .title {margin-top: 85px; position: relative;}
+.sec02Wrap .popupImg .center .title .txt {
+    width: 100%; height: 100%;
+    position: absolute;
+    text-align: center;
+    left: 0; top: 10%;
+}
+.sec02Wrap .popupImg .center .title .txt h1 {
+    font-size: 245px;
+    font-family: var(--variable-Playfair);
+    font-weight: 400;
+    line-height: 1.3;
+}
+.sec02Wrap .popupImg .center .portImg {margin-top: 100px;}
 
-.sec01 .sec01Wrap .sec1-2 {
-    width: 500vw; height: 100vh;
+.sec02Wrap .popupImg .bottom {padding-bottom: 100px;}
+.popupImg .bottom .info {
+    display: flex;
+    align-items: center;
+}
+.popupImg .bottom .info > div:nth-child(1) {flex: 0 0 30%;}
+.popupImg .bottom .info > div:nth-child(2) { flex: 0 0 70%;}
+.popupImg .bottom .info > div:nth-child(1) h1 {
+    flex: 0 0 50%;
+    font-size: 150px;
+    font-family: var(--variable-Playfair);
+    font-weight: 400;
+}
+.popupImg .bottom .info > div:nth-child(2) p {
+    width: 90%;
+    font-size: 14px;
+    line-height: 1.4;
+    font-family: var(--variable-nexonL);
+    margin: 10px 0;
+}
+.popupImg .bottom .info > div:nth-child(2) p:last-child{margin-bottom: 0;}
+
+.sec02Wrap .bg {
+    width: 100vw; height: 100vh; 
+    background: #1d1d1d;
+    z-index: 2001;
+}
+/* site */
+.sec02Wrap .portCont {
+    width: 100vw; height: 700vh;
+    background: #1d1d1d;
     position: fixed;
-    background: #000;
-    z-index: 1000;
+    left: 0; top: 0;
+    z-index: 2001;
 }
-.sec1-2 h1 { font-size: 900px; line-height: 0.8;}
+.sec02Wrap .portCont .menu {
+    text-align: right;
+    position: fixed;
+    right: 80px;
+    top: 30px;
+}
+.sec02Wrap .portCont .portTitle {
+    padding: 120px 0 50px 0;
+    border-bottom: 1px solid #fff;
+}
+.sec02Wrap .portCont .portTitle h1 {
+    padding: 0 80px;
+    font-size: 110px;
+    letter-spacing: -3px;
+    line-height: 0.9;
+    font-family: var(--variable-yantra);
+    font-weight: 400;
+}
+.sec02Wrap .portCont .siteWrap {
+    padding: 0 80px;
+    font-family: var(--variable-nexonR);
+}
+.portCont .siteWrap .webstandard {
+    overflow: hidden;
+    padding-bottom: 150px;
+    border-bottom: 1px solid #fff;
+}
 
-.sec01 .sec01Wrap .sec1-3 {
+.siteWrap .webstandard .title {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.siteWrap .webstandard .title .num {flex: 0 0 20%;}
+.siteWrap .webstandard .title .num h2 {font-size: 50px;}
+.siteWrap .webstandard .title .tit {
+    flex: 0 0 30%;
+    font-size: 25px;
+}
+.siteWrap .webstandard .title .ex {
+    flex: 0 0 50%;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.siteWrap .webstandard .title .ex p {}
+.siteWrap .webstandard .title .ex p:last-child {
+    padding:20px 0 70px 0;
+    border-bottom: 1px solid #fff;
+}
+.siteWrap .webstandard .cont {width: 50%; float: right;}
+.siteWrap .webstandard .cont .guide{ width: 100%;}
+.webstandard .cont .guide ul {}
+.webstandard .cont .guide li {
+    padding: 30px 0;
+    border-bottom: 1px solid #fff;
+    transition: all 0.8s ease;
+}
+.webstandard .cont .guide li:last-child{border-bottom: none;}
+.webstandard .cont .guide li h3 {position: relative;}
+.webstandard .cont .guide li span {
+    width: 50px; height: 50px;
+    float: right;
+    position: relative;
+}
+.webstandard .cont .guide li span::before{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 10px; top: 10px;
+    transform: rotate(-45deg);
+}
+.webstandard .cont .guide li span::after{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 20px; top: 10px;
+    transform: rotate(-135deg);
+}
+.webstandard .cont .guide li pre {
+    display: none;
+}
+.webstandard .cont .guide li.active pre {
+    display: block;
+}
+.webstandard .cont .guide li.active span {
+    width: 100%; height: 100%;
+    float: right;
+    position: relative;
+}
+.webstandard .cont .guide li.active span::before{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 10px; top: -15px;
+    transform: rotate(45deg);
+}
+.webstandard .cont .guide li.active span::after{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 20px; top: -15px;
+    transform: rotate(135deg);
+}
+.siteWrap .webstandard .cont .mockup{width: 100%;}
+
+.portCont .siteWrap .responsive {
+    overflow: hidden;
+    padding-bottom: 150px;
+    border-bottom: 1px solid #fff;
+}
+
+.siteWrap .responsive .title {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.siteWrap .responsive .title .num {flex: 0 0 20%;}
+.siteWrap .responsive .title .num h2 {font-size: 50px;}
+.siteWrap .responsive .title .tit {
+    flex: 0 0 30%;
+    font-size: 25px;
+}
+.siteWrap .responsive .title .ex {
+    flex: 0 0 50%;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.siteWrap .responsive .title .ex p {}
+.siteWrap .responsive .title .ex p:last-child {
+    padding:20px 0 70px 0;
+    border-bottom: 1px solid #fff;
+}
+.siteWrap .responsive .cont {width: 50%; float: right;}
+.siteWrap .responsive .cont .guide{ width: 100%;}
+.responsive .cont .guide ul {}
+.responsive .cont .guide li {
+    padding: 30px 0;
+    border-bottom: 1px solid #fff;
+}
+.responsive .cont .guide li:last-child{border-bottom: none;}
+.responsive .cont .guide li h3 {position: relative;}
+.responsive .cont .guide li span {
+    width: 50px; height: 50px;
+    float: right;
+    position: relative;
+}
+.responsive .cont .guide li span::before{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 10px; top: 10px;
+    transform: rotate(-45deg);
+}
+.responsive .cont .guide li span::after{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 20px; top: 10px;
+    transform: rotate(-135deg);
+}
+.responsive .cont .guide li pre {
+    display: none;
+}
+.responsive .cont .guide li.active pre {
+    display: block;
+}
+.responsive .cont .guide li.active span {
+    width: 100%; height: 100%;
+    float: right;
+    position: relative;
+}
+.responsive .cont .guide li.active span::before{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 10px; top: -15px;
+    transform: rotate(45deg);
+}
+.responsive .cont .guide li.active span::after{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 20px; top: -15px;
+    transform: rotate(135deg);
+}
+.siteWrap .responsive .cont .mockup{width: 100%;}
+
+.portCont .siteWrap .megabox {
+    overflow: hidden;
+    padding-bottom: 150px;
+    border-bottom: 1px solid #fff;
+}
+
+.siteWrap .megabox .title {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.siteWrap .megabox .title .num {flex: 0 0 20%;}
+.siteWrap .megabox .title .num h2 {font-size: 50px;}
+.siteWrap .megabox .title .tit {
+    flex: 0 0 30%;
+    font-size: 25px;
+}
+.siteWrap .megabox .title .ex {
+    flex: 0 0 50%;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.siteWrap .megabox .title .ex p {}
+.siteWrap .megabox .title .ex p:last-child {
+    padding:20px 0 70px 0;
+    border-bottom: 1px solid #fff;
+}
+.siteWrap .megabox .cont {width: 50%; float: right;}
+.siteWrap .megabox .cont .guide{ width: 100%;}
+.megabox .cont .guide ul {}
+.megabox .cont .guide li {
+    padding: 30px 0;
+    border-bottom: 1px solid #fff;
+}
+.megabox .cont .guide li:last-child{border-bottom: none;}
+.megabox .cont .guide li h3 {position: relative;}
+.megabox .cont .guide li span {
+    width: 50px; height: 50px;
+    float: right;
+    position: relative;
+}
+.megabox .cont .guide li span::before{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 10px; top: 10px;
+    transform: rotate(-45deg);
+}
+.megabox .cont .guide li span::after{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 20px; top: 10px;
+    transform: rotate(-135deg);
+}
+.megabox .cont .guide li pre {
+    display: none;
+}
+.megabox .cont .guide li.active pre {
+    display: block;
+}
+.megabox .cont .guide li.active span {
+    width: 100%; height: 100%;
+    float: right;
+    position: relative;
+}
+.megabox .cont .guide li.active span::before{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 10px; top: -15px;
+    transform: rotate(45deg);
+}
+.megabox .cont .guide li.active span::after{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 20px; top: -15px;
+    transform: rotate(135deg);
+}
+.siteWrap .megabox .cont .mockup{width: 100%;}
+
+.portCont .siteWrap .clova {
+    overflow: hidden;
+    padding-bottom: 150px;
+}
+
+.siteWrap .clova .title {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.siteWrap .clova .title .num {flex: 0 0 20%;}
+.siteWrap .clova .title .num h2 {font-size: 50px;}
+.siteWrap .clova .title .tit {
+    flex: 0 0 30%;
+    font-size: 25px;
+}
+.siteWrap .clova .title .ex {
+    flex: 0 0 50%;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.siteWrap .clova .title .ex p {}
+.siteWrap .clova .title .ex p:last-child {
+    padding:20px 0 70px 0;
+    border-bottom: 1px solid #fff;
+}
+.siteWrap .clova .cont {width: 50%; float: right;}
+.siteWrap .clova .cont .guide{ width: 100%;}
+.clova .cont .guide ul {}
+.clova .cont .guide li {
+    padding: 30px 0;
+    border-bottom: 1px solid #fff;
+}
+.clova .cont .guide li:last-child{border-bottom: none;}
+.clova .cont .guide li h3 {position: relative;}
+.clova .cont .guide li span {
+    width: 50px; height: 50px;
+    float: right;
+    position: relative;
+}
+.clova .cont .guide li span::before{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 10px; top: 10px;
+    transform: rotate(-45deg);
+}
+.clova .cont .guide li span::after{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 20px; top: 10px;
+    transform: rotate(-135deg);
+}
+.clova .cont .guide li pre {
+    display: none;
+}
+.clova .cont .guide li.active pre {
+    display: block;
+}
+.clova .cont .guide li.active span {
+    width: 100%; height: 100%;
+    float: right;
+    position: relative;
+}
+.clova .cont .guide li.active span::before{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 10px; top: -15px;
+    transform: rotate(45deg);
+}
+.clova .cont .guide li.active span::after{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 20px; top: -15px;
+    transform: rotate(135deg);
+}
+.siteWrap .clova .cont .mockup{width: 100%;}
+
+/* list2 */
+.sec02Wrap {position: relative;}
+.sec02Wrap .listWrap {
+    width: 100vw; height: 100vh;
+}
+.sec02Wrap .listWrap .list {
     width: 100vw; height: 100vh;
     background: url(../img/list_bg.jpg);
     background-size: cover;
-}
-
-.sec1-3 .listWrap {overflow: hidden;}
-.sec1-3 .listWrap ul {
-    position: fixed;
-    left: 0; top: 0%;
-    width: 120vw;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-}
-.sec1-3 .listWrap li {
-    position: relative;
-    flex: 1 1 30%;
-    margin: 0 3%;
-}
-.sec1-3 .listWrap li .frame {}
-.sec1-3 .listWrap li .poster {
     position: absolute;
-    width: 85%;
-    left: 7.5%; top: 7.5%;
-}
-
-.listWrap .bg {
-    width: 100vw;
-    height: 100vh;
-    background: #000;
-}
-
-/* section2 */
-.sec02 {width: 100vw; height: 100vh;}
-.sec02 .sec02Wrap {
-    width: 100vw; height: 1200vh;
-    position: fixed;
     left: 0; top: 0;
 }
-.sec02Wrap .imgUp { position: fixed; width: 100vw; height: 120vh;}
-.sec02Wrap .imgUp .imgupWrap {position: relative;}
-.sec02Wrap .imgUp .frame {
+.sec02Wrap .listWrap .list .listImg {
+    width: 100%; height: 100%;
+
 }
-.sec02Wrap .imgUp .imgWrap {
-    width: 85%;
+.sec02Wrap .listWrap .list .listImg .imgWrap {
+    position: fixed;
+    left: 10%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+.sec02Wrap .listWrap .list .listImg .imgWrap:nth-child(1){margin-left: 600px;}
+.sec02Wrap .listWrap .list .listImg .imgWrap:nth-child(2){ margin-left: 1200px; }
+.sec02Wrap .listWrap .list .listImg .imgWrap:nth-child(3){margin-left: 1800px;}
+.sec02Wrap .listWrap .list .listImg .imgWrap .frame{}
+.sec02Wrap .listWrap .list .listImg .imgWrap .img{
     position: absolute;
-    left: 7%; top: 5%;
-    z-index: 2001;
+    left: 6%; top: 6%;
+    width: 88%;
 }
-.sec02Wrap .portCont {
-    width: 100vw; height: 1300vh;
+.sec02 .sec02Wrap .bg2 {
+    width: 100vw; height: 100vh; 
+    position: absolute;
+    left: 0; top: 0;
     background: #000;
 }
-
-.sec02Wrap .menu {
-    position: fixed;
-    font-size: 16px;
-    font-family: var( --variable-yantra);
-    right: 4%; top: 5%;
-    z-index: 2001;
-}
-.portCont .portHeader {
-    padding-top: 150px;
-    padding-bottom: 50px;
-    border-bottom: 1px solid #fff;
-}
-.portCont .portHeader h1{
-    color: #fff;
-    font-size: 100px;
-    line-height: 0.8;
-    font-family: var( --variable-yantra);
-    font-weight: 400;
-    letter-spacing: -4px;
-    margin-left: 70px;
-}
-
-.siteWrap {}
-
-/* 웹표준 */
-.webstandardWrap {overflow: hidden;}
-.webstandardWrap .webstandardHeader {
-    color: #fff;
-    font-family: var(--variable-nexonR);
-    width: 100%;
-    display: flex;
-    margin-top: 50px;
-}
-.webstandardWrap .webstandardHeader .num { flex: 0 0 20%; font-size: 40px; line-height: 1;}
-.webstandardWrap .webstandardHeader .title {flex: 0 0 30%;}
-.webstandardWrap .webstandardHeader .title h2 {font-family: var(--variable-nexonB); font-size: 40px;}
-.webstandardWrap .webstandardHeader .title p {
-    font-family: var(--variable-yantra); 
-    font-weight: 200; font-size: 30px;
-}
-.webstandardWrap .webstandardHeader .ex { flex: 0 0 50%;}
-.webstandardWrap .webstandardHeader .ex p { font-size: 14px;}
-.webstandardWrap .webstandardHeader .ex p:nth-child(1) {padding-bottom: 10px;}
-.webstandardWrap .webstandardHeader .ex p:nth-child(2) {
-    padding-bottom: 50px; 
-    border-bottom: 1px solid #fff;
-}
-
-.webstandardWrap .webstandardCont {width: 50%; float: right;}
-.webstandardWrap .webstandardCont > div {}
-.webstandardWrap .webstandardCont .guide ul{width: 100%;}
-.webstandardWrap .webstandardCont .guide li {
-    padding-bottom: 30px;
-    border-bottom: 1px solid #fff;
-}
-.webstandardWrap .webstandardCont .guide li h3 {
-    font-family: var(--variable-nexonR);
-    font-size: 30px;
-    padding: 20px 0;
-}
-.webstandardWrap .webstandardCont .guide li pre { padding: 20px;}
-.webstandardWrap .webstandardCont .mockup {margin-bottom: 100px;}
-
-/* 반응형 */
-.responsiveWrap {overflow: hidden; border-top: 1px solid #fff;}
-.responsiveWrap .responsiveHeader {
-    color: #fff;
-    font-family: var(--variable-nexonR);
-    width: 100%;
-    display: flex;
-    margin-top: 50px;
-}
-.responsiveWrap .responsiveHeader .num { flex: 0 0 20%; font-size: 40px; line-height: 1;}
-.responsiveWrap .responsiveHeader .title {flex: 0 0 30%;}
-.responsiveWrap .responsiveHeader .title h2 {font-family: var(--variable-nexonB); font-size: 40px;}
-.responsiveWrap .responsiveHeader .title p {
-    font-family: var(--variable-yantra); 
-    font-weight: 200; font-size: 30px;
-}
-.responsiveWrap .responsiveHeader .ex { flex: 0 0 50%;}
-.responsiveWrap .responsiveHeader .ex p { font-size: 14px;}
-.responsiveWrap .responsiveHeader .ex p:nth-child(1) {padding-bottom: 10px;}
-.responsiveWrap .responsiveHeader .ex p:nth-child(2) {
-    padding-bottom: 50px; 
-    border-bottom: 1px solid #fff;
-}
-
-.responsiveWrap .responsiveCont {width: 50%; float: right;}
-.responsiveWrap .responsiveCont > div {}
-.responsiveWrap .responsiveCont .guide ul{width: 100%;}
-.responsiveWrap .responsiveCont .guide li {
-    padding-bottom: 30px;
-    border-bottom: 1px solid #fff;
-}
-.responsiveWrap .responsiveCont .guide li h3 {
-    font-family: var(--variable-nexonR);
-    font-size: 30px;
-    padding: 20px 0;
-}
-.responsiveWrap .responsiveCont .guide li pre {
-    padding: 20px;
-}
-.responsiveWrap .responsiveCont .mockup {
-    margin-top: 60px;
-}
-
-/* megabox */
-.megaboxWrap {
-    overflow: hidden; 
-    border-top: 1px solid #fff; 
-    margin-top: 100px;
-}
-.megaboxWrap .megaboxHeader {
-    color: #fff;
-    font-family: var(--variable-nexonR);
-    width: 100%;
-    display: flex;
-    margin-top: 50px;
-}
-.megaboxWrap .megaboxHeader .num { flex: 0 0 20%; font-size: 40px; line-height: 1;}
-.megaboxWrap .megaboxHeader .title {flex: 0 0 30%;}
-.megaboxWrap .megaboxHeader .title h2 {font-family: var(--variable-nexonB); font-size: 40px;}
-.megaboxWrap .megaboxHeader .title p {
-    font-family: var(--variable-yantra); 
-    font-weight: 200; font-size: 30px;
-}
-.megaboxWrap .megaboxHeader .ex { flex: 0 0 50%;}
-.megaboxWrap .megaboxHeader .ex p { font-size: 14px;}
-.megaboxWrap .megaboxHeader .ex p:nth-child(1) {padding-bottom: 10px;}
-.megaboxWrap .megaboxHeader .ex p:nth-child(2) {
-    padding-bottom: 50px; 
-    border-bottom: 1px solid #fff;
-}
-
-.megaboxWrap .megaboxCont {width: 50%; float: right;}
-.megaboxWrap .megaboxCont > div {}
-.megaboxWrap .megaboxCont .guide ul{width: 100%;}
-.megaboxWrap .megaboxCont .guide li {
-    padding-bottom: 30px;
-    border-bottom: 1px solid #fff;
-}
-.megaboxWrap .megaboxCont .guide li h3 {
-    font-family: var(--variable-nexonR);
-    font-size: 30px;
-    padding: 20px 0;
-}
-.megaboxWrap .megaboxCont .guide li pre {
-    padding: 20px;
-}
-.megaboxWrap .megaboxCont .mockup {
-    margin-top: 60px;
-}
-
-/* 클로바 */
-.clovaWrap {
-    overflow: hidden; 
-    border-top: 1px solid #fff; 
-    margin-top: 100px;
-}
-.clovaWrap .clovaHeader {
-    color: #fff;
-    font-family: var(--variable-nexonR);
-    width: 100%;
-    display: flex;
-    margin-top: 50px;
-}
-.clovaWrap .clovaHeader .num { flex: 0 0 20%; font-size: 40px; line-height: 1;}
-.clovaWrap .clovaHeader .title {flex: 0 0 30%;}
-.clovaWrap .clovaHeader .title h2 {font-family: var(--variable-nexonB); font-size: 40px;}
-.clovaWrap .clovaHeader .title p {
-    font-family: var(--variable-yantra); 
-    font-weight: 200; font-size: 30px;
-}
-.clovaWrap .clovaHeader .ex { flex: 0 0 50%;}
-.clovaWrap .clovaHeader .ex p { font-size: 14px;}
-.clovaWrap .clovaHeader .ex p:nth-child(1) {padding-bottom: 10px;}
-.clovaWrap .clovaHeader .ex p:nth-child(2) {
-    padding-bottom: 50px; 
-    border-bottom: 1px solid #fff;
-}
-
-.clovaWrap .clovaCont {width: 50%; float: right;}
-.clovaWrap .clovaCont > div {}
-.clovaWrap .clovaCont .guide ul{width: 100%;}
-.clovaWrap .clovaCont .guide li {
-    padding-bottom: 30px;
-    border-bottom: 1px solid #fff;
-}
-.clovaWrap .clovaCont .guide li h3 {
-    font-family: var(--variable-nexonR);
-    font-size: 30px;
-    padding: 20px 0;
-}
-.clovaWrap .clovaCont .guide li pre {
-    padding: 20px;
-}
-.clovaWrap .clovaCont .mockup {
-    margin-top: 60px;
-}
-
 /* section3 */
 .sec03 {width: 100vw; height: 100vh;}
 .sec03 .sec03Wrap {
-    width: 100vw; height: 100vh; 
+    width: 100vw; height: 800vh;
     position: fixed;
     left: 0; top: 0;
-    background: url(../img/list_bg.jpg);
-    background-size: cover;
+    background: #1a1a1a;
 }
-.sec03Wrap .listWrap {
+.sec03Wrap .popupImg {
+    width: 100%; height: 250vh;
     position: fixed;
-    left: 0; top: 15%;
-    width: 100%;
+    left: 0; top: 0;
+    background: #eee;
+    z-index: 3000;
+    box-sizing: border-box;
+    color: #000;
 }
-.sec03Wrap .listWrap ul {
-    position: fixed;
-    left: 0; top: 0%;
-    width: 120vw;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
+.sec03Wrap .popupImg .top {position: relative;}
+.sec03Wrap .popupImg .top .menu {
+    padding: 25px 80px 80px 0;
+    float: right;
 }
-.sec03Wrap .listWrap li {
+.sec03Wrap .popupImg .top .menu a {color: #000; font-weight: bold;}
+.sec03Wrap .popupImg .center {
+    float: right; 
+    margin-top: 160px;
+    margin-right: -125px;
+    line-height: 1.3;
     position: relative;
-    margin: 0 3%;
 }
-.sec03Wrap .listWrap li .frame {}
-.sec03Wrap .listWrap li .poster {
+.sec03Wrap .popupImg .center .txtWrap {
+    margin-bottom: 15px;
+}
+.sec03Wrap .popupImg .center .txtWrap p {
+    font-family: var(--variable-italiana);
+    font-size: 40px;
+}
+.sec03Wrap .popupImg .center .imgWrap {width: 660px;}
+.sec03Wrap .popupImg .center .scriptTxt {
+    font-size:380px;
     position: absolute;
-    width: 86%;
-    left: 7%; top: 7%;
+    left: 69%; top: 45%;
+    transform: translate(-120%, -50%);
+    font-family: var(--variable-Playfair);
+    letter-spacing: -8px;
 }
-.sec03 .sec03Wrap .bg {
-    width: 100vw; height: 100vh; 
-    background: #000;
+.sec03Wrap .popupImg .center .scriptTxt {
+    font-weight: 200;
+    line-height: 1;
 }
-
-/* section4 */
-.sec04 {
-    width: 100vw; height: 100vh; 
-    color: #fff;
-    font-family: var(--variable-nexonR);
+.sec03Wrap .popupImg .center .listTxt {margin-left: -820px;}
+.sec03Wrap .popupImg .center .listTxt p {
+    font-size: 110px;
+    font-family: var(--variable-italiana);
+    line-height: 1;
+    padding: 50px;
 }
-.sec04 .sec04Wrap{
-    width: 100vw; height: 1000vh;
+.sec03Wrap .popupImg .bottom {
+    position: absolute;
+    left: 80px; bottom: 0;
+    line-height: 1.4;
+}
+.sec03Wrap .scriptCont {
+    width: 100vw; height: 700vh;
+    background: #1a1a1a;
     position: fixed;
     left: 0; top: 0;
 }
-.sec04 .sec04Wrap .imgUp {position: fixed; width: 100vw; height: 120vh;}
-.sec04 .sec04Wrap .imgUp .imgupWrap {position: flex;}
-.sec04 .sec04Wrap .imgUp .imgupWrap > div {flex: 1 1 30%;}
-.sec04 .sec04Wrap .imgUp .imgupWrap .frame {}
-.sec04 .sec04Wrap .imgUp .imgupWrap .imgWrap {
-    width: 85%;
-    position: absolute;
-    left: 7%; top: 5%;
-    z-index: 2001;
-}
-.sec04Wrap .scriptCont {
-    width: 100vw; height: 1300vh;
-    background: #000;
-}
-
-.sec04Wrap .menu {
+.sec03Wrap .scriptCont .menu {
+    text-align: right;
     position: fixed;
-    font-size: 16px;
-    font-family: var( --variable-yantra);
-    right: 4%; top: 5%;
-    z-index: 2001;
+    right: 80px;
+    top: 30px;
 }
-.scriptCont .scriptHeader {
-    padding-top: 150px;
-    padding-bottom: 50px;
+.sec03Wrap .scriptCont .scriptTitle {
+    padding: 120px 0 50px 0;
     border-bottom: 1px solid #fff;
 }
-.scriptCont .scriptHeader h1{
-    color: #fff;
-    font-size: 100px;
-    line-height: 0.8;
-    font-family: var( --variable-yantra);
-    font-weight: 400;
-    letter-spacing: -4px;
-    margin-left: 70px;
+.sec03Wrap .scriptCont .scriptTitle h1 {
+    padding: 0 80px;
+    font-size: 110px;
+    letter-spacing: -3px;
+    line-height: 0.9;
+    font-family: var(--variable-yantra);
+    font-weight: 300;
 }
-.scriptCont .scriptWrap {}
-.scriptWrap .parallaxWrap {}
-.scriptWrap .paraWrap .paraHeader {display: flex; margin-top: 50px;}
-.scriptWrap .paraWrap .paraHeader .num {flex: 0 0 25%;}
-.scriptWrap .paraWrap .paraHeader .title { flex: 0 0 25%;}
-.scriptWrap .paraWrap .paraHeader .title h2 {font-family: var(--variable-nexonR);}
-.scriptWrap .paraWrap .paraHeader .title p {
-    font-family: var(--variable-yantra); 
-    font-weight: 200; font-size: 20px;
+.sec03Wrap .scriptCont .scriptWrap {
+    padding: 0 80px;
+    font-family: var(--variable-nexonR);
 }
-.scriptWrap .paraWrap .paraHeader .ex {flex: 0 0 50%;font-size: 14px;}
-.scriptWrap .paraWrap .paraHeader .ex p:nth-child(1) {padding-bottom: 20px;}
-.scriptWrap .paraWrap .paraHeader .ex p:nth-child(2) {padding-bottom: 50px;}
-.scriptWrap .paraWrap .btnWrap {width: 50%; float: right;}
-.scriptWrap .paraWrap .btnWrap ul {display: flex;}
-.scriptWrap .paraWrap .btnWrap li {text-align: center; margin-right: 10px;}
-.scriptWrap .paraWrap .btnWrap li a {
-    padding: 7px 40px;
-    border-radius: 25px;
-    line-height: 20px;
-    border: 1px solid #fff;
-    transition: 0.5s;
-    font-weight: 600;
+.scriptCont .scriptWrap .parallax {
+    overflow: hidden;
+    padding-bottom: 150px;
 }
-.scriptWrap .paraWrap .btnWrap li a:hover {
+
+.scriptWrap .parallax .title {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.scriptWrap .parallax .title .num {flex: 0 0 20%;}
+.scriptWrap .parallax .title .num h2 {font-size: 50px;}
+.scriptWrap .parallax .title .tit {
+    flex: 0 0 30%;
+    font-size: 25px;
+}
+.scriptWrap .parallax .title .ex {
+    flex: 0 0 50%;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.scriptWrap .parallax .title .ex p:last-child {padding:20px 0 70px 0;}
+.scriptWrap .parallax .paraCont {
+    width: 100%; height: 100%;
+    background: purple;
+}
+.scriptWrap .parallax .paraCont .scriptBtn {
+    background: blue;
+    height: 50vh;
+    width: 100%;
+}
+.scriptWrap .parallax .paraCont .scriptBtn a {
+    width: 427px; height: 4275px;
     background: #fff;
-    color: #000;
+    display: block;
+}
+.scriptWrap .parallax .paraCont .scirptView {
+    background: red;
+    height: 50vh;
 }

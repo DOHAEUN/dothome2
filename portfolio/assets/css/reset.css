@@ -26,8 +26,7 @@ html {
     --variable-nexonR:'NEXON Lv1 Gothic OTF Light';
     --variable-nexonB:'NEXON Lv1 Gothic OTF Bold';
     --variable-Playfair:'Playfair Display', serif;
-    --variable-Roboto:'Roboto', sans-serif;
-    
+    --variable-italiana:'Italiana', serif;
 }
 
 /* 여백 초기화 */
@@ -36,7 +35,7 @@ body, div, ul, ol, li, dd, dt, dl, h1, h2, h3, h4, h5, h6, input, fieldset,
 
 /* a 링크 초기화 */
 a {color: #fff; text-decoration: none;}
-a:hover {color: #000;}
+a:hover {color: #fff;}
 
 /* 블릿기호 초기화 */
 ul, ol, li{list-style: none;}
@@ -58,16 +57,14 @@ pre {
 }
 
 /* fixed */
-.fiexd {
+.fixed {
     position: fixed; 
     top: 50%; left: 50%; 
     transform: translate(-50%, -50%); 
-    z-index: 1000;
 }
 
 /* container */
 .container {
-    width: 1280px;
+    width: 1200px;
     margin: 0 auto;
-    height: inherit;
 }
