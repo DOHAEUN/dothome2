@@ -627,7 +627,7 @@
 /* section3 */
 .sec03 {width: 100vw; height: 100vh;}
 .sec03 .sec03Wrap {
-    width: 100vw; height: 200vh;
+    width: 100vw; height: 300vh;
     position: fixed;
     left: 0; top: 0;
     background: #1a1a1a;
@@ -655,13 +655,13 @@
     position: relative;
     left: 0; top: 0;
     overflow: hidden;
-    font-family: var(--variable-italiana);
 }
 .sec03Wrap .popupImg .center .right {float: right;}
 .sec03Wrap .popupImg .center .txtWrap {
     margin-bottom: 15px;
 }
 .sec03Wrap .popupImg .center .txtWrap p {
+    font-family: var(--variable-italiana);
     font-size: 40px;
 }
 .sec03Wrap .popupImg .center .imgWrap {
@@ -694,7 +694,7 @@
     line-height: 1.4;
 }
 .sec03Wrap .scriptCont {
-    width: 100vw; height: 500vh;
+    width: 100vw; height: 200vh;
     background: #1d1d1d;
     position: fixed;
     left: 0; top: 0;
@@ -791,7 +791,8 @@
     background: #2E67C4;
     color: #fff;
 }
-.scriptWrap .parallax .paraCont .scirptView {flex: 0 0 55%; background: #000;}
+.scriptWrap .parallax .paraCont .scirptView {flex: 0 0 55%;}
+.scriptWrap .parallax .paraCont .scirptView .iframe {}
 
 
 .scriptCont .scriptWrap .slider {
@@ -865,7 +866,10 @@
     background: #2E67C4;
     color: #fff;
 }
-.scriptWrap .slider .paraCont .scirptView {flex: 0 0 55%; background: #000;}
+.scriptWrap .slider .paraCont .scirptView {flex: 0 0 55%;}
+.scriptWrap .slider .paraCont .scirptView .iframe {
+    width: 100%;
+}
 .scriptCont .scriptWrap .mouse {
     overflow: hidden;
     margin-top: 100px;
@@ -883,7 +887,6 @@
     flex: 0 0 30%;
     font-size: 25px;
 }
-.scriptWrap .mouse .title .tit p {font-family: var(--variable-yantra);}
 .scriptWrap .mouse .title .ex {
     flex: 0 0 50%;
     font-size: 14px;
@@ -939,7 +942,10 @@
     background: #2E67C4;
     color: #fff;
 }
-.scriptWrap .mouse .mouseCont .scirptView {flex: 0 0 55%; background: #000;}
+.scriptWrap .mouse .mouseCont .scirptView {flex: 0 0 55%;}
+.scriptWrap .mouse .mouseCont .scirptView .iframe {
+    width: 100%;
+}
 .scriptCont .scriptWrap .quiz {
     overflow: hidden;
     margin-top: 100px;
@@ -1022,8 +1028,8 @@
     background: #2E67C4;
     color: #fff;
 }
-.scriptWrap .quiz .quizCont .scirptView {
-    flex: 0 0 55%;
-    background: #000;
+.scriptWrap .quiz .quizCont .scirptView {flex: 0 0 55%;}
+.scriptWrap .quiz .quiz .quizView .iframe {
+    width: 100%;
 }
 

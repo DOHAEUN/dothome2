@@ -11,8 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
-    <!-- prismjs -->
-    <link href="https://myCDN.com/prism@v1.x/themes/prism.css" rel="stylesheet" />
     <title>PORTFOLIO</title>
 </head>
 <body>
@@ -636,7 +634,7 @@
                     data-21400="opacity:0"
                     data-21401="opacity:1; top:0%"
                     data-22000="opacity:1; top:0%"
-                    data-24000="top: -300">
+                    data-30000="top: -400vh">
                         <div class="top">
                             <div class="menu">
                                 <a href="#">MENU</a>
@@ -843,8 +841,6 @@
     <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
-    <script src="https://myCDN.com/prism@v1.x/components/prism-core.min.js"></script>
-	<script src="https://myCDN.com/prism@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
     <script>
         var s = skrollr.init();
 
@@ -852,12 +848,6 @@
             let scrollTop = $(window).scrollTop();
             $(".scroll").html(parseInt(scrollTop))
         });
-
-        $(".guide ul li").on("click",function(){
-                var target = $(this);
-                console.log(target)
-                target.toggleClass("active");
-        })
     </script>
 </body>
 </html>
