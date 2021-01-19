@@ -1,0 +1,934 @@
+/* layout */
+body {height: 200000px;}
+#contents {}
+#section1 {z-index: 1000;}
+#section2 {z-index: 2000; overflow: hidden;} 
+#section3 {z-index: 3000;}
+#section4 {}
+#section5 {}
+
+/* scroll */
+.scroll {
+    position: fixed;
+    right: 10px; top: 10px;
+    width: 50px; height: 50px;
+    text-align: center;
+    line-height: 53px;
+    color: #fff;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    font-family: 'Kufam', cursive;
+    background: rgba(0,0,0,0.4);
+    z-index: 99999999;
+}
+
+/* contents */
+/* section1 */
+.sec1 {
+    overflow: hidden;
+    color: #fff;
+    height: 5000px; background: #000;
+    position: relative;
+    left: 0; top: 0;
+}
+.sec1 .sec1-1 {
+    position: fixed;
+    left: 80px; top: 20px;
+    font-size: 200px;
+    font-weight: 600;
+    font-family: 'Kufam';
+    letter-spacing: -7px;
+    text-transform: uppercase;
+}
+.sec1 .sec1-2 {
+    position: fixed;
+    left: 80px; top: 270px;
+    display: flex;
+}
+.sec1 .sec1-2 .img {
+    flex: 0 0 350px;
+}
+.sec1 .sec1-2 .txt { 
+    flex: 0 0 500px;
+    padding: 30px 0px 0 50px;
+    text-transform: capitalize;
+    overflow: hidden;
+}
+.sec1 .sec1-2 .txt p {
+    font-size: 16px; 
+    line-height: 1.6;
+    font-family: 'Chosunilbo_myungjo';
+}
+.sec1 .sec1-2 .txt h3 {
+    margin-top: 80px;
+    color: #616161;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    margin-bottom: 10px;
+}
+.sec1 .sec1-2 .txt li { 
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+.sec1 .sec1-2 .txt p:nth-child(1) {padding-bottom: 20px;}
+
+.sec1-2 .right  {
+    position: fixed;
+    right: 12px; bottom: 2%;
+    display: flex;
+}
+.sec1-2 .right p {
+    font-size: 50px;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin-right: 20px;
+    font-family: 'Kufam';
+    font-weight: 900;
+}
+.sec1-2 .right .icon {
+    width: 50px; height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    
+}
+.right .icon div{
+    width: 50px; height: 50px; 
+    overflow: hidden;
+    display: inline-block;
+    line-height: 60px;
+}
+.right .icon i {
+    color: #000;
+    animation: right 2s infinite ease-in-out 0.5s;
+}
+@keyframes right {
+    0% {margin-left: -80px;}
+    50% {margin-left: -0px;}
+    65% {margin-left: -0px;}
+    100% {margin-left: 55px;}
+}
+.sec1 .sec1-3 {
+    position: fixed;
+    left: 50%; top: 50%;
+    transform: (-0%, -50%);
+} 
+.sec1 .sec1-3 span{
+    font-size: 90vh;
+    line-height: 5vh;
+    font-family: 'Montserrat', cursive;
+    z-index: 9;
+    font-weight: 600;
+} 
+.sec1 .sec1-3 span:nth-child(1) {margin-right: 10vw;}
+
+/* section1 */
+
+.sec2 {
+    width: 100vw; height: 100vh;
+    background: #000;
+    color: #fff;
+}
+.sec2 .sec2-1 {position: relative;}
+.sec2 .sec2-1 .box2-1 {
+    width: 100vw; height: 100vh;
+    position: fixed;
+    left: 0;top: 0;
+    background: #000;
+    z-index: 2;
+}
+.sec2 .sec2-1 .box2-2 {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: url(../img/list_bg.jpg);
+    background-size: cover;
+}
+.sec2-2 {width: 100vw; height: 100vh;}
+
+.sec2-3 .listWrap {}
+.sec2-3 .listWrap .frameWrap {
+    position: fixed;
+    transform: translate(-50%,-50%);
+}
+.sec2-3 .listWrap .frame img {
+    width: 120vw;
+}
+.sec2-3 .listWrap .portWrap {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    
+}
+.listWrap .portWrap .portPost .frame img {
+    width: 100%; height: 100%;
+}
+.listWrap .portWrap .portPost {
+    width: 100vw;
+    background: #1D1D1D;
+    font-family: 'Chosunilbo_myungjo';
+}
+.listWrap .portWrap .portPost > div {padding: 0 80px;}
+.listWrap .portWrap .portPost .portTop .menu {
+    float: right;
+    padding-top: 80px;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+}
+.listWrap .portWrap .portPost .portCenter{padding-top: 210px;}
+.listWrap .portWrap .portPost .portCenter > div {
+    display: flex;
+    align-items: center;
+}
+.listWrap .portWrap .portPost .portCenter .react {
+    flex: 0 0 25%;
+}
+.listWrap .portWrap .portPost .portCenter .react h1 {
+    font-family: var(--variable-yantra);
+    font-weight: 400;
+    font-size: 6vw;
+    line-height: 0.9;
+}
+.listWrap .portWrap .portPost .portCenter .react p {
+    font-family: 'Italiana', serif;
+    font-size: 5vw;
+}
+.listWrap .portWrap .portPost .portCenter .and {
+    flex: 0 0 50%;
+    text-align: center;
+}
+.listWrap .portWrap .portPost .portCenter .and img {
+    margin-top: 15px;
+    width: 110px;
+}
+.listWrap .portWrap .portPost .portCenter .vue {
+    flex: 0 0 25%;
+    text-align: right;
+}
+.listWrap .portWrap .portPost .portCenter .vue h1 {
+    font-family: var(--variable-yantra);
+    font-weight: 400;
+    font-size: 6vw;
+    line-height: 0.9;
+}
+.listWrap .portWrap .portPost .portCenter .vue p {
+    font-family: 'Italiana', serif;
+    font-size: 5vw;
+    font-weight: 200;
+}
+.listWrap .portWrap .portPost .portCenter .portTitle {
+    margin-top: 85px; position: relative;
+}
+.listWrap .portWrap .portPost .portCenter .portTitle .txt {
+    height: 100%; width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0; top:0%;
+}
+.listWrap .portWrap .portPost .portCenter .portTitle .txt h1 {
+    overflow: hidden;  
+    font-size: 15vw;
+    font-family: var(--variable-Playfair);
+    font-weight: 400;
+    line-height: 1.3;
+    margin-top: 38px;
+    text-align: center;
+    letter-spacing: 12px;
+    padding-bottom: 40px;
+}
+.listWrap .portWrap .portPost .portCenter .portImg {margin-top: 100px;}
+
+.listWrap .portWrap .portPost .portBottom {padding: 50px 80px;}
+.portPost .portBottom .info {
+    display: flex;
+    align-items: center;
+}
+.portPost .portBottom .info > div:nth-child(1) {flex: 0 0 30%;}
+.portPost .portBottom .info > div:nth-child(2) { flex: 0 0 60%;}
+.portPost .portBottom .info > div:nth-child(1) h1 {
+    width: 100%;
+    font-size: 10vw;
+    font-family: var(--variable-Playfair);
+    font-weight: 400;
+}
+.portPost .portBottom .info > div:nth-child(2) p {
+    font-size: 1vw;
+    line-height: 1.4;
+    font-family: var(--variable-nexonL);
+    margin: 10px 0;
+}
+.portWrap .portPost .portBottom .info > div:nth-child(2) p:last-child{margin-bottom: 0;}
+
+
+.listWrap .scriptWrap {
+    position: fixed;
+    transform: translate(-50%, -50%);
+}
+.listWrap .scriptWrap .scirptPost {
+    width: 100vw;
+    background: #F2F2F2;
+    color: #000;
+}
+.listWrap .scriptWrap .scirptPost .top {overflow: hidden; padding: 0 80px;}
+.listWrap .scriptWrap .scirptPost .top .menu {
+    float: right;
+    padding-top: 80px;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+}
+.listWrap .scriptWrap .scirptPost .top .menu a{
+    text-transform: uppercase;
+    color: #000;
+}
+.listWrap .scriptWrap .scirptPost .center {
+    overflow: hidden;
+    position: relative;
+}
+.listWrap .scriptWrap .scirptPost .center .title {
+    font-size: 24vw;
+    position: absolute;
+    left: 80px; top: 40%;
+    letter-spacing: -3%;
+    font-family: 'Playfair Display', serif;;
+}
+.listWrap .scriptWrap .scirptPost .center .cont {
+    margin-top: 100px; 
+    float: right;
+    width: 50%;
+}
+.listWrap .scriptWrap .scirptPost .center .cont .txt {}
+.listWrap .scriptWrap .scirptPost .center .cont .txt p {
+    font-family: 'Italiana', serif;
+    font-size: 2vw;
+    line-height: 1.2;
+}
+.listWrap .scriptWrap .scirptPost .center .cont .txt p:last-child{
+    padding-bottom: 20px;
+}
+.listWrap .scriptWrap .scirptPost .center .cont .imgWrap {
+    width: 100%;
+}
+.listWrap .scriptWrap .scirptPost .txt2 {
+    font-size: 7vw;
+    text-align: center;
+    padding: 35px 80px;
+    font-family: 'Italiana', serif;;
+}
+.listWrap .scriptWrap .scirptPost .bottom .info {
+    display: flex;
+    align-items: center;
+    padding: 16px 80px;
+}
+.listWrap .scriptWrap .scirptPost .bottom .info > div:nth-child(1) {flex: 0 0 30%;}
+.listWrap .scriptWrap .scirptPost .bottom .info > div:nth-child(2) { flex: 0 0 60%;}
+.listWrap .scriptWrap .scirptPost .bottom .info > div:nth-child(1) h1 {
+    width: 100%;
+    font-size: 10vw;
+    font-family: var(--variable-Playfair);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.listWrap .scriptWrap .scirptPost .bottom .info > div:nth-child(2) p:last-child{    
+    font-size: 1vw;
+    line-height: 1.4;
+    font-family: var(--variable-nexonL);
+    margin: 10px 0;
+}
+.listWrap .aniWrap {
+    position: fixed;
+    transform: translate(-50%, -50%);
+}
+.listWrap .aniWrap .aniPost {
+    width: 100vw;
+    background: #1d1d1d;
+}
+.aniWrap .aniPost .top {
+    display: flex; 
+    overflow: hidden;
+    padding: 0px 80px 70px 80px;
+}
+.aniWrap .aniPost .top .topImg {
+    margin: 0 auto;
+    width: 50%;
+}
+.aniWrap .aniPost .top a {
+    margin-top: 100px;
+    font-family: 'NEXON Lv1 Gothic OTF Light'
+}
+.aniWrap .aniPost .center{padding: 0 80px;}
+.aniWrap .aniPost .center .title {
+    font-family: 'Playfair Display';
+    text-align: center;
+}
+.aniWrap .aniPost .center .title .subTit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:6vw;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #fff;
+}
+.aniWrap .aniPost .center .title .subTit h2{
+    flex: 0 0 33.3333;
+}
+.aniWrap .aniPost .center .title .mainTit {
+    font-size: 10vw;
+    letter-spacing: 10px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #fff;
+}
+.aniWrap .aniPost .center .centerImg {margin-top: 100px;}
+
+.aniWrap .aniPost .bottom .info {
+    display: flex;
+    align-items: center;
+    padding: 50px 80px;
+}
+.aniWrap .aniPost .bottom .info > div:nth-child(1) {flex: 0 0 30%;}
+.aniWrap .aniPost .bottom .info > div:nth-child(2) { flex: 0 0 60%;}
+.aniWrap .aniPost .bottom .info > div:nth-child(1) h1 {
+    width: 100%;
+    font-size: 10vw;
+    font-family: var(--variable-Playfair);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.aniWrap .aniPost .bottom .info > div:nth-child(2) p:last-child{    
+    font-size: 1vw;
+    line-height: 1.4;
+    font-family: var(--variable-nexonL);
+    margin: 10px 0;
+}
+
+.sec2-3 .bg {
+    width: 100vw; height: 100vh;
+    background: #000;
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 3;
+}
+
+.sec2-4 {
+    width: 100vw;
+    background: #1d1d1d;
+    position: fixed;
+}
+.sec2-4 .portTitle {
+    font-size: 100px;
+    line-height:0.9;
+    padding: 130px 80px 70px 80px;
+    border-bottom: 1px solid #fff;
+    font-family: 'Arimo';
+    font-weight: 400;
+
+}
+.sec2-4 .menu {padding:40px 80px 0 80px;}
+.sec2-4 .menu a {float: right; font-family: 'NEXON Lv1 Gothic OTF Light';}
+.sec2-4 .portTitle h1 {}
+.sec2-4 .portCont {padding: 0 80px;}
+.portCont .webstandard { overflow: hidden;}
+.portCont .webstandard .titleWrap {display: flex; margin-top: 80px;}
+.portCont .webstandard .titleWrap .num {
+    flex: 0 0 20%;
+    font-size: 40px;
+    line-height: 0.8;
+}
+.portCont .webstandard .titleWrap .tit {
+    flex:0 0 25%;
+    font-size: 25px;
+}
+.portCont .webstandard .titleWrap .tit p {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    margin-top: 5px;
+}
+.portCont .webstandard .titleWrap .tit h2 {
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+}
+.portCont .webstandard .titleWrap .ex {
+    flex: 0 0 55%;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #fff;
+}
+.portCont .webstandard .titleWrap .ex p {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+.portCont .webstandard .cont {width: 55%; float: right;}
+.portCont .webstandard .cont .guide{ width: 100%;}
+.webstandard .cont .guide ul {
+    margin-bottom: 100px;
+}
+.webstandard .cont .guide li {
+    border-bottom: 1px solid #fff;
+}
+.webstandard .cont .guide li h3 {
+    padding: 30px 0;
+    position: relative;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+}
+.webstandard .cont .guide li span {
+    width: 50px; height: 50px;
+    float: right;
+    position: relative;
+}
+.webstandard .cont .guide li span::before{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 10px; top: 10px;
+    transform: rotate(-45deg);
+}
+.webstandard .cont .guide li span::after{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 20px; top: 10px;
+    transform: rotate(-135deg);
+}
+.webstandard .cont .guide li span.active::before{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 10px; top: 10px;
+    transform: rotate(45deg);
+}
+.webstandard .cont .guide li span.active::after{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 20px; top: 10px;
+    transform: rotate(135deg);
+}
+.webstandard .cont .guide li .code {
+    display: none;
+    width: 100%;
+}
+.webstandard .cont .guide li .code pre {
+}
+
+.webstandard .cont .guide li .code.active {
+    display: block;
+    margin-bottom: 30px;
+    transition: all 0.8s ease;
+}
+.webstandard .cont .mockup {margin-bottom: 200px;}
+
+
+.portCont .responsive { overflow: hidden; border-top: 1px solid #fff;}
+.portCont .responsive .titleWrap {display: flex; margin-top: 80px;}
+.portCont .responsive .titleWrap .num {
+    flex: 0 0 20%;
+    font-size: 40px;
+    line-height: 0.8;
+}
+.portCont .responsive .titleWrap .tit {
+    flex:0 0 25%;
+    font-size: 25px;
+}
+.portCont .responsive .titleWrap .tit p {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    margin-top: 5px;
+}
+.portCont .responsive .titleWrap .tit h2 {
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+}
+.portCont .responsive .titleWrap .ex {
+    flex: 0 0 55%;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #fff;
+}
+.portCont .responsive .titleWrap .ex p {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+.portCont .responsive .cont {width: 55%; float: right;}
+.portCont .responsive .cont .guide{ width: 100%;}
+.responsive .cont .guide ul {
+    margin-bottom: 100px;
+}
+.responsive .cont .guide li {
+    border-bottom: 1px solid #fff;
+}
+.responsive .cont .guide li h3 {
+    padding: 30px 0;
+    position: relative;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+}
+.responsive .cont .guide li span {
+    width: 50px; height: 50px;
+    float: right;
+    position: relative;
+}
+.responsive .cont .guide li span::before{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 10px; top: 10px;
+    transform: rotate(-45deg);
+}
+.responsive .cont .guide li span::after{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 20px; top: 10px;
+    transform: rotate(-135deg);
+}
+.responsive .cont .guide li span.active::before{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 10px; top: 10px;
+    transform: rotate(45deg);
+}
+.responsive .cont .guide li span.active::after{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 20px; top: 10px;
+    transform: rotate(135deg);
+}
+.responsive .cont .guide li .code {
+    display: none;
+    width: 100%;
+}
+.responsive .cont .guide li .code pre {}
+
+.responsive .cont .guide li .code.active {
+    display: block;
+    margin-bottom: 30px;
+    transition: all 0.8s ease;
+}
+.responsive .cont .mockup {margin-bottom: 200px;}
+
+.portCont .megabox { overflow: hidden; border-top: 1px solid #fff;}
+.portCont .megabox .titleWrap {display: flex; margin-top: 80px;}
+.portCont .megabox .titleWrap .num {
+    flex: 0 0 20%;
+    font-size: 40px;
+    line-height: 0.8;
+}
+.portCont .megabox .titleWrap .tit {
+    flex:0 0 25%;
+    font-size: 25px;
+}
+.portCont .megabox .titleWrap .tit p {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    margin-top: 5px;
+}
+.portCont .megabox .titleWrap .tit h2 {
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+}
+.portCont .megabox .titleWrap .ex {
+    flex: 0 0 55%;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #fff;
+}
+.portCont .megabox .titleWrap .ex p {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+.portCont .megabox .cont {width: 55%; float: right;}
+.portCont .megabox .cont .guide{ width: 100%;}
+.megabox .cont .guide ul {
+    margin-bottom: 100px;
+}
+.megabox .cont .guide li {
+    border-bottom: 1px solid #fff;
+}
+.megabox .cont .guide li h3 {
+    padding: 30px 0;
+    position: relative;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+}
+.megabox .cont .guide li span {
+    width: 50px; height: 50px;
+    float: right;
+    position: relative;
+}
+.megabox .cont .guide li span::before{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 10px; top: 10px;
+    transform: rotate(-45deg);
+}
+.megabox .cont .guide li span::after{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 20px; top: 10px;
+    transform: rotate(-135deg);
+}
+.megabox .cont .guide li span.active::before{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 10px; top: 10px;
+    transform: rotate(45deg);
+}
+.megabox .cont .guide li span.active::after{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 20px; top: 10px;
+    transform: rotate(135deg);
+}
+.megabox .cont .guide li .code {
+    display: none;
+    width: 100%;
+}
+.megabox .cont .guide li .code pre {}
+
+.megabox .cont .guide li .code.active {
+    display: block;
+    margin-bottom: 30px;
+    transition: all 0.8s ease;
+}
+.megabox .cont .mockup {margin-bottom: 200px;}
+
+.portCont .clova { overflow: hidden; border-top: 1px solid #fff;}
+.portCont .clova .titleWrap {display: flex; margin-top: 80px;}
+.portCont .clova .titleWrap .num {
+    flex: 0 0 20%;
+    font-size: 40px;
+    line-height: 0.8;
+}
+.portCont .clova .titleWrap .tit {
+    flex:0 0 25%;
+    font-size: 25px;
+}
+.portCont .clova .titleWrap .tit p {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    margin-top: 5px;
+}
+.portCont .clova .titleWrap .tit h2 {
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+}
+.portCont .clova .titleWrap .ex {
+    flex: 0 0 55%;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #fff;
+}
+.portCont .clova .titleWrap .ex p {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+.portCont .clova .cont {width: 55%; float: right;}
+.portCont .clova .cont .guide{ width: 100%;}
+.clova .cont .guide ul {
+    margin-bottom: 100px;
+}
+.clova .cont .guide li {
+    border-bottom: 1px solid #fff;
+}
+.clova .cont .guide li h3 {
+    padding: 30px 0;
+    position: relative;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+}
+.clova .cont .guide li span {
+    width: 50px; height: 50px;
+    float: right;
+    position: relative;
+}
+.clova .cont .guide li span::before{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 10px; top: 10px;
+    transform: rotate(-45deg);
+}
+.clova .cont .guide li span::after{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 20px; top: 10px;
+    transform: rotate(-135deg);
+}
+.clova .cont .guide li span.active::before{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 10px; top: 10px;
+    transform: rotate(45deg);
+}
+.clova .cont .guide li span.active::after{
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 20px; top: 10px;
+    transform: rotate(135deg);
+}
+.clova .cont .guide li .code {
+    display: none;
+    width: 100%;
+}
+.clova .cont .guide li .code pre {}
+
+.clova .cont .guide li .code.active {
+    display: block;
+    margin-bottom: 30px;
+    transition: all 0.8s ease;
+}
+.clova .cont .mockup {
+    margin-bottom: 200px;
+    position: relative;
+}
+.clova .cont .mockup .hoverWrap {
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0);
+    position: absolute;
+    left: 0; top: 0;
+    transition:all 0.6s ease-in-out;
+}
+.clova .cont .mockup .hoverWrap .btnWrap {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-evenly;
+}
+.clova .cont .mockup .hoverWrap .btnWrap a {
+    opacity: 0;
+    transition:all 0.6s ease-in-out;
+    padding: 20px 30px;
+    background: rgba(0,0,0,0.8);
+    border-radius: 15px;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.clova .cont .mockup .hoverWrap:hover {
+    background: rgba(0,0,0,0.5);
+}
+.clova .cont .mockup .hoverWrap:hover a {
+    opacity: 1;
+}
+
+/* section3 */
+.sec3 {
+    width: 100vw; height: 400vh;
+    position: fixed;
+    left: 0; top: 0;
+    background: #1d1d1d;
+    color: #fff;
+}
+.sec3 .menu {padding:40px 80px 0 80px;}
+.sec3 .menu a {
+    float: right;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    text-transform: uppercase;   
+}
+.sec3 .scriptTitle {
+    font-size: 100px;
+    line-height:0.9;
+    padding: 130px 80px 70px 80px;
+    border-bottom: 1px solid #fff;
+    font-family: 'Arimo';
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.scriptCont .parallax {padding: 0 80px;}
+.scriptCont .parallax .titleWrap {
+    display: flex; 
+    margin-top: 80px;
+}
+.scriptCont .parallax .titleWrap .num {
+    flex: 0 0 20%;
+    font-size: 40px;
+    line-height: 0.8;
+}
+.scriptCont .parallax .titleWrap .tit {
+    flex:0 0 25%;
+    font-size: 25px;
+}
+.scriptCont .parallax .titleWrap .tit h2 {font-family: 'NEXON Lv1 Gothic OTF Bold';}
+.scriptCont .parallax .titleWrap .tit p {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+.scriptCont .parallax .titleWrap .ex {
+    flex: 0 0 55%;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #fff;
+}
+.scriptCont .parallax .titleWrap .ex p {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+.scriptCont .parallax .titleWrap .ex .listBtn {
+    display: flex;
+    margin-top: 50px;
+}
+.scriptCont .parallax .titleWrap .ex .listBtn a {
+    padding: 5px 35px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+
+.scriptCont .parallax .paraCont {
+    display: flex;
+}
+.scriptCont .parallax .paraCont .btnWrap {
+    flex: 0 0 50%;
+    overflow: hidden;
+}
+
+.scriptCont .parallax .paraCont .btnWrap > div {
+    width: 50%;
+    background: #ccc;
+    position: relative;
+}
+.scriptCont .parallax .paraCont .btnWrap .btn a{
+    padding: 9vw;
+    background: #aaa;
+    border-radius: 100%;
+    font-size: 40px;
+    float: right;
+}
+.scriptCont .parallax .paraCont .btnWrap .btn.on a {
+    background: #2E67C4;
+}
