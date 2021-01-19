@@ -916,14 +916,17 @@ body {height: 200000px;}
     flex: 0 0 50%;
     overflow: hidden;
 }
-
 .scriptCont .parallax .paraCont .btnWrap > div {
-    width: 50%;
+    width: 100%;
+    overflow: hidden;
+}
+.scriptCont .parallax .paraCont .btnWrap > div > div {
+    width: 100%;
     background: #ccc;
-    position: relative;
+    overflow: hidden;
 }
 .scriptCont .parallax .paraCont .btnWrap .btn a{
-    padding: 9vw;
+    padding: 8vw;
     background: #aaa;
     border-radius: 100%;
     font-size: 40px;
