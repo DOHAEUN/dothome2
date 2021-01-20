@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sliderEffect01 - JQuery</title>
+    <title>Slider Effect05 - jQuery</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap" rel="stylesheet">
     <style>
         /* reset */
@@ -89,8 +89,9 @@
             color: var(--color-title);
             font-family: var(--font-cafe);
             font-size: 16px;
-            background: url(../img/image02@2.jpg);
+            background: url(../img/image11.jpg) no-repeat center center;
             background-size: cover;
+            height: 100vh;
         }
         body::before {
             content: '';
@@ -272,76 +273,109 @@
 
         /* slider */
         .slider_wrap {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            width: 800px; height: 480px; 
+            overflow: hidden;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 100;
         }
         .slider_img {
-            position: relative;
-            width: 800px; height: 480px;
             overflow: hidden;
-            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+            position: relative;
         }
         .slider_img .slider {
-            position: absolute;
-            left: 0; top: 0;
+            float: left;
+            width: 800px; height: 480px;
+            position: relative;
         }
         .slider_img .slider span {
             position: absolute;
             left: 5px; top: 5px;
         }
-        .slider_img .slider:nth-child(1) {z-index: 5;}
-        .slider_img .slider:nth-child(2) {z-index: 4;}
-        .slider_img .slider:nth-child(3) {z-index: 3;}
-        .slider_img .slider:nth-child(4) {z-index: 2;}
-        .slider_img .slider:nth-child(5) {z-index: 1;}
+        
+        .slider_btn a {
+            position: absolute;
+            top: 50%; transform: translateY(-50%);
+            z-index: 1000;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            text-transform: capitalize;
+            font-family: var(--font-lato);
+            color: var(--color-title);
+
+        }
+        .slider_btn a.prev {
+            left: 0;
+        }
+        .slider_btn a.next {
+            right: 0;
+        }
         
     </style>
 </head>
 <body>
     <!-- info -->
     <div class="info left">
-        <h1>sliderEffect01</h1>
-        <p>이미지 슬라이드 - 3초에 한 번씩 변경하기</p>
+        <h1>slider Effect05 - jQuery</h1>
+        <p>이미지 슬라이드 - 버튼 만들기</p>
     </div>
     <!-- info -->
+
     <!-- main -->
     <main>
         <div class="slider_wrap">
             <div class="slider_img">
-                <div class="slider"><img src="../img/image02.jpg" alt="이미지1"><span>이미지1</span></div>
-                <div class="slider"><img src="../img/image04.jpg" alt="이미지2"><span>이미지2</span></div>
-                <div class="slider"><img src="../img/image05.jpg" alt="이미지3"><span>이미지3</span></div>
-                <div class="slider"><img src="../img/image06.jpg" alt="이미지4"><span>이미지4</span></div>
-                <div class="slider"><img src="../img/image07.jpg" alt="이미지5"><span>이미지5</span></div>
+                <div class="slider s1"><img src="../img/image07.jpg" alt="이미지1"><span>이미지1</span></div>
+                <div class="slider s2"><img src="../img/image04.jpg" alt="이미지2"><span>이미지2</span></div>
+                <div class="slider s3"><img src="../img/image03.jpg" alt="이미지3"><span>이미지3</span></div>
+                <div class="slider s4"><img src="../img/image05.jpg" alt="이미지4"><span>이미지4</span></div>
+                <div class="slider s5"><img src="../img/image01.jpg" alt="이미지5"><span>이미지5</span></div>
+            </div>
+            <div class="slider_btn">
+                <a href="#" class="prev">prev</a>
+                <a href="#" class="next">next</a>
             </div>
         </div>
     </main>
     <!-- //main -->
+
     <!-- scirpt -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         const sliderWrap = $(".slider_wrap");
         const sliderImg = $(".slider_img");
         const slider = $(".slider");
+        const sliderBtn = $(".slider_btn");
         
-        let currentIndex = 0;               // 현재  첫 번째로 보이는 이미지
-        let sliderCount = slider.length;    // 이미지의 갯수
+        let currentIndex = 0;
+        let sliderCount = slider.length;
+        let sliderWidth = slider.width();
+        let sliderHeight = slider.height();
+        let sliderTotalWidth = sliderWidth * sliderCount
 
-        // 3초에 한 번씩 함수를 실행
-        setInterval(function(){
-            let nextIndex = (currentIndex + 1) % sliderCount; // 다음 이미지
+        sliderImg.css({ width: sliderTotalWidth, height: sliderHeight, marginLeft: -sliderWidth });
+        $(".slider:last-child").prependTo(sliderImg);
 
-            slider.eq(currentIndex).fadeOut(); // 첫 번째 이미지를 사라짐
-            slider.eq(nextIndex).fadeIn();
+        function moveLeft(){
+            sliderImg.animate({ left: + sliderWidth }, 400, function(){
+                $(".slider:last-child").prependTo(sliderImg);
+                sliderImg.css("left", "");
+            });
+        }
+        function moveRight(){
+            sliderImg.animate({ left: - sliderWidth }, 400, function(){
+                $(".slider:first-child").appendTo(sliderImg);
+                sliderImg.css("left", "");
+            });
+        }
 
-            console.log("currentIndex : " + currentIndex);
-            console.log("nextIndex : " + nextIndex);
-            
-            // currentIndex++;
-            currentIndex = nextIndex;
-        },3000);
+        sliderBtn.find(".prev").click(function(){
+            moveLeft();
+        });
+        sliderBtn.find(".next").click(function(){
+            moveRight();
+        });
     </script>
 </body>
 </html>
