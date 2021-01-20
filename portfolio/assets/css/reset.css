@@ -1,4 +1,14 @@
-/* 웹폰트 */
+/* �麹佔�� */
+
+@font-face {
+    font-family: 'Iropke Batang';
+    font-style: normal;
+    font-weight: 400;
+    src: url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.eot);
+    src: url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.eot?#iefix) format('embedded-opentype'),
+         url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff) format('woff'),
+         url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.ttf) format('truetype');
+  }
 @font-face {
     font-family: 'NEXON Lv1 Gothic OTF';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
@@ -19,7 +29,19 @@
     font-style: normal;
 }
 
-/* 폰트 변수 설정 */
+@font-face {
+    font-family: 'S-CoreDream-2ExtraLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* �佔�� 覲��� �れ�� */
 html {
     --variable-yantra:'yantramanav', sans-serif;
     --variable-nexonL:'NEXON Lv1 Gothic OTF';
@@ -29,24 +51,24 @@ html {
     --variable-italiana:'Italiana', serif;
 }
 
-/* 여백 초기화 */
+/* ��葦 豐�蠍壱�� */
 body, div, ul, ol, li, dd, dt, dl, h1, h2, h3, h4, h5, h6, input, fieldset,
  p, select, table, td, tr, textarea, button, form, figure, figcaption {margin:0; padding: 0;}
 
-/* a 링크 초기화 */
+/* a 襷��� 豐�蠍壱�� */
 a {color: #fff; text-decoration: none;}
 a:hover {color: #fff;}
 
-/* 블릿기호 초기화 */
+/* 觚�襴衰鍵�� 豐�蠍壱�� */
 ul, ol, li{list-style: none;}
 
-/* 이미지 초기화 */
+/* �企�讌� 豐�蠍壱�� */
 img, video {width: 100%; vertical-align: top;}
 
-/* 폰트 스타일 초기화 */
+/* �佔�� �ろ���� 豐�蠍壱�� */
 em {font-style: normal;}
 
-/* 프리,코드 초기화 */
+/* ��襴�,貊��� 豐�蠍壱�� */
 pre {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;

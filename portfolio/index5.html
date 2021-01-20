@@ -763,7 +763,7 @@
                 </div>
                 <div class="scriptCont">
                     <div class="parallax">
-                        <div class="titleWrap">
+                        <div class="parallaxWrap">
                             <div class="num">
                                 <h2>1</h2>
                             </div>
@@ -775,27 +775,133 @@
                                 <p>parallax란 시차라는 뜻으로 화면이 상하 또는 좌우로 스크롤링될 때 배경 이미지와 오브젝트 이미지간의 시차를 두어 이질감을 느끼게 해주는 효과입니다.</p>
                                 <p>jQuery와 자바스크립트 두가지 방법을 사용하여 표현하였습니다.</p>
                                 <div class="listBtn">
-                                    <a href="#">1</a>
-                                    <a href="#">2</a>
-                                    <a href="#">3</a>
-                                    <a href="#">4</a>
-                                    <a href="#">5</a>
-                                    <a href="#">6</a>
+                                   <div class="btn on"><a href="#">1</a></div>
+                                   <div class="btn"><a href="#">2</a></div>
+                                   <div class="btn"><a href="#">3</a></div>
+                                   <div class="btn"><a href="#">4</a></div>
+                                   <div class="btn"><a href="#">5</a></div>
+                                   <div class="btn"><a href="#">6</a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="paraCont">
                             <div class="btnWrap">
-                                <div>
-                                    <div class="btn on">
-                                        <span></span>
-                                        <a href="#">ON</a>
+                                <div class="btn">
+                                    <div class="on">
+                                        <a href="#">
+                                            <span class="bg"></span>
+                                            <span class="txt">ON</span>
+                                        </a>
                                     </div>
-                                    <div class="btn">
-                                        <span></span>
-                                        <a href="#">OFF</a>
+                                    <div class="off">
+                                        <a href="#">
+                                            <span class="bg"></span>
+                                            <span class="txt">OFF</span>
+                                        </a>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="viewWrap">
+                                <iframe src="sample/parallax01.html" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="sliderTitle">
+                                <div class="num">
+                                    <h2>2</h2>
+                                </div>
+                                <div class="tit">
+                                    <h2>슬라이드 이펙트</h2>
+                                    <p>Slide</p>
+                                </div>
+                            <div class="ex">
+                                <p>나열된 이미지들을 왼쪽 또는 오른쪽으로 이동시키거나 시간의 흐름에 따라 자동으로 이동 시키는 스크립트입니다.</p>
+                                <p>jQuery로 먼저 스크립트를 제작한 뒤 jQuery를 다시 javascript로 제작해보았습니다.</p>
+                                <div class="listBtn">
+                                    <div class="listBtn">
+                                        <div class="btn on"><a href="#">1</a></div>
+                                        <div class="btn"><a href="#">2</a></div>
+                                        <div class="btn"><a href="#">3</a></div>
+                                        <div class="btn"><a href="#">4</a></div>
+                                        <div class="btn"><a href="#">5</a></div>
+                                        <div class="btn"><a href="#">6</a></div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sliderCont">
+                            <div class="btnWrap">
+                                <div class="btn">
+                                    <div class="on">
+                                        <a href="#">
+                                            <span class="bg"></span>
+                                            <span class="txt">ON</span>
+                                        </a>
+                                    </div>
+                                    <div class="off">
+                                        <a href="#">
+                                            <span class="bg"></span>
+                                            <span class="txt">OFF</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="viewWrap">
+                                <div class="iframe">
+                                    <iframe src="sample/sliderEffect01.html" frameborder="0"></iframe>
+                                </div>
+                                <!-- <div class="script">
+                                    <div class="script-btn">
+                                        <ul>
+                                            <li><a href="#">jQuery</a></li>
+                                            <li><a href="#">javascript</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="code">
+                                        <div class="jq">
+<pre>$(window).scroll(function(){
+    const scrollTop = $(window).scrollTop() * 1.1
+    $(".scrollTop").text(parseInt(scrollTop));
+    
+    $(".content-item").each(function(num){
+        $(".s"+(num+1)+"OffsetTop").text(parseInt($("#section"+(num+1)).offset().top));
+        if(scrollTop > $(this).offset().top){
+            $(".s"+(num+1)+"OffsetTop").css("color", "red")
+            $(this).addClass("show")
+        } else {
+            $(".s"+(num+1)+"OffsetTop").css("color", "#fff")
+            $(this).removeClass("show")
+        }
+    });
+});</pre>
+                                        </div>
+                                        <div class="js">
+<pre>        window.addEventListener("scroll", function(){
+    let pageYOffset = window.pageYOffset + screen.height / 2;
+    // 출력용 한번에(for문)
+    for (let i=1; i<=9; i++){
+        document.querySelector(".s"+i+"OffsetTop").innerText = document.getElementById("section"+i).offsetTop;
+
+        if( pageYOffset > document.getElementById("section"+i).offsetTop ) {
+            document.querySelector(".s"+i+"OffsetTop").style.color = "red";
+        } else {
+            document.querySelector(".s"+i+"OffsetTop").style.color = "white";
+        }
+    }
+
+    // 나타내기 한번에
+    document.querySelectorAll(".content-item").forEach(elem => {
+        if( pageYOffset > elem.offsetTop ){
+            elem.classList.add("show");
+        } else {
+            elem.classList.remove("show");
+        }
+    });
+});</pre>
+                                        </div>
+                                    </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -838,9 +944,10 @@
                 }else{
                     target.next().addClass("active");
                 }
-            });
-            
+            }); 
         });
+
+
     </script>
 </body>
 </html>

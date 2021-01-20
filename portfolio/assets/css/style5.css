@@ -27,7 +27,7 @@ body {height: 200000px;}
 .sec1 {
     overflow: hidden;
     color: #fff;
-    height: 5000px; background: #000;
+    height: 6000px; background: #000;
     position: relative;
     left: 0; top: 0;
 }
@@ -845,7 +845,7 @@ body {height: 200000px;}
 
 /* section3 */
 .sec3 {
-    width: 100vw; height: 400vh;
+    width: 100vw; height: 1000vh;
     position: fixed;
     left: 0; top: 0;
     background: #1d1d1d;
@@ -866,72 +866,272 @@ body {height: 200000px;}
     font-weight: 400;
     text-transform: capitalize;
 }
-.scriptCont .parallax {padding: 0 80px;}
-.scriptCont .parallax .titleWrap {
+.scriptCont .parallax {padding: 0 80px; margin-bottom: 200px;}
+.scriptCont .parallax .parallaxWrap {
     display: flex; 
     margin-top: 80px;
 }
-.scriptCont .parallax .titleWrap .num {
+.parallax .parallaxWrap .num {
     flex: 0 0 20%;
     font-size: 40px;
     line-height: 0.8;
 }
-.scriptCont .parallax .titleWrap .tit {
+.parallax .parallaxWrap .tit {
     flex:0 0 25%;
     font-size: 25px;
 }
-.scriptCont .parallax .titleWrap .tit h2 {font-family: 'NEXON Lv1 Gothic OTF Bold';}
-.scriptCont .parallax .titleWrap .tit p {
+.parallax .parallaxWrap .tit h2 {font-family: 'NEXON Lv1 Gothic OTF Bold';}
+.parallax .parallaxWrap .tit p {
     font-family: 'NEXON Lv1 Gothic OTF Light';
     margin-top: 5px;
     text-transform: capitalize;
 }
-.scriptCont .parallax .titleWrap .ex {
+.parallax .parallaxWrap .ex {
     flex: 0 0 55%;
     padding-bottom: 50px;
     border-bottom: 1px solid #fff;
 }
-.scriptCont .parallax .titleWrap .ex p {
+.parallax .parallaxWrap .ex p {
     font-family: 'NEXON Lv1 Gothic OTF Light';
     margin-bottom: 15px;
     line-height: 1.4;
 }
-.scriptCont .parallax .titleWrap .ex .listBtn {
+.parallax .parallaxWrap .ex .listBtn {
     display: flex;
     margin-top: 50px;
 }
-.scriptCont .parallax .titleWrap .ex .listBtn a {
+
+.parallax .parallaxWrap .ex .listBtn .btn a {
     padding: 5px 35px;
     border: 1px solid #fff;
     border-radius: 20px;
     text-align: center;
     margin-right: 15px;
+    transition: all 0.2s ease-in;
+}
+.parallax .parallaxWrap .ex .listBtn .btn a:hover,
+.parallax .parallaxWrap .ex .listBtn .btn.on a {
+    background: #fff;
+    color: #000;
 }
 
 
-.scriptCont .parallax .paraCont {
+.parallax .paraCont {
+    display: flex;
+    justify-content: flex-end;
+    margin: 50px 200px;
+}
+.parallax .paraCont .btn {
+    flex: 0 0 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.parallax .paraCont .btn a {
+    padding: 11vw;
+    background: #2F2F2F;
+    border-radius: 50%;
+    display: block;
+    margin-right: 50px;
+    position: relative;
+}
+.parallax .paraCont .btn a {
+    position: relative;
+}
+.parallax .paraCont .btn a .txt {
+    font-size: 40px;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+}
+@keyframes turn {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
+}
+.parallax .paraCont .btn .on a .bg,
+.parallax .paraCont .btn .on:focus a .bg {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.6s;
+    position: absolute;
+    left: 0; top: 0;
+    background: #2E67C4;
+}
+.parallax .paraCont .btn .on:hover a .bg {
+    transform: scale(0);
+
+}
+.parallax .paraCont .btn .off a .bg,
+.parallax .paraCont .btn .off:focus a .bg {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: all 0.6s;
+    position: absolute;
+    left: 0; top: 0;
+    background: #2E67C4;
+}
+.parallax .paraCont .btn .off:hover a .bg {
+    transform: scale(1);
+}
+.parallax .paraCont .btn > div {}
+.parallax .paraCont .viewWrap {
+    flex: 0 0 55%;
+    background: blue;
+}
+.parallax .paraCont .viewWrap iframe {
+    width: 100%; height: 100%;
+}
+
+
+.scriptCont .slider {
+    padding: 0 80px;
+    border-top: 1px solid #fff;
+}
+.scriptCont .slider .sliderTitle {
+    display: flex; 
+    margin-top: 80px;
+}
+.scriptCont .slider .sliderTitle .num {
+    flex: 0 0 20%;
+    font-size: 40px;
+    line-height: 0.8;
+}
+.scriptCont .slider .sliderTitle .tit {
+    flex:0 0 25%;
+    font-size: 25px;
+}
+.scriptCont .slider .sliderTitle .tit h2 {font-family: 'NEXON Lv1 Gothic OTF Bold';}
+.scriptCont .slider .sliderTitle .tit p {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+.scriptCont .slider .sliderTitle .ex {
+    flex: 0 0 55%;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #fff;
+}
+.scriptCont .slider .sliderTitle .ex p {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+.scriptCont .slider .sliderTitle .ex .listBtn {
+    display: flex;
+    margin-top: 50px;
+}
+.scriptCont .slider .sliderTitle .ex .listBtn .btn a {
+    padding: 5px 35px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 15px;
+    transition: all 0.2s ease-in;
+}
+.scriptCont .slider .sliderTitle .ex .listBtn .btn a:hover,
+.scriptCont .slider .sliderTitle .ex .listBtn .btn.on a   {
+    background: #fff;
+    color: #000;
+}
+
+
+.scriptCont .slider .sliderCont {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+.scriptCont .slider .sliderCont .btn {
+    flex: 0 0 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.scriptCont .slider .sliderCont .btn a {
+    padding: 11vw;
+    background: #2F2F2F;
+    border-radius: 50%;
+    display: block;
+    margin-right: 50px;
+    position: relative;
+}
+.scriptCont .slider .sliderCont .btn a {
+    position: relative;
+}
+.scriptCont .slider .sliderCont .btn a .txt {
+    font-size: 40px;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+}
+@keyframes turn {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
+}
+.scriptCont .slider .sliderCont .btn .on a .bg,
+.scriptCont .slider .sliderCont .btn .on:focus a .bg {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.6s;
+    position: absolute;
+    left: 0; top: 0;
+    background: #2E67C4;
+}
+.scriptCont .slider .sliderCont .btn .on:hover a .bg {
+    transform: scale(0);
+
+}
+.scriptCont .slider .sliderCont .btn .off a .bg,
+.scriptCont .slider .sliderCont .btn .off:focus a .bg {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: all 0.6s;
+    position: absolute;
+    left: 0; top: 0;
+    background: #2E67C4;
+}
+.scriptCont .slider .sliderCont .btn .off:hover a .bg {
+    transform: scale(1);
+}
+.scriptCont .slider .sliderCont .btn > div {}
+.scriptCont .slider .sliderCont .viewWrap {
+    flex: 0 0 55%;
+    background: blue;
+}
+.scriptCont .slider .sliderCont .viewWrap .iframe {
+    width: 100%; height: 100%;
+    position: absolute;
+    left: 0; top: 0;
+}
+.scriptCont .slider .sliderCont .viewWrap .script {
+    position: relative;
+}
+.scriptCont .slider .sliderCont .viewWrap .script .script-btn {
+    position: absolute;
+    right: 0; top: 0;
     display: flex;
 }
-.scriptCont .parallax .paraCont .btnWrap {
-    flex: 0 0 50%;
-    overflow: hidden;
+.scriptCont .slider .sliderCont .viewWrap .script .script-btn ul {
+    display: flex;
 }
-.scriptCont .parallax .paraCont .btnWrap > div {
+.scriptCont .slider .sliderCont .viewWrap .script .script-btn li {margin-right: 10px;}
+.scriptCont .slider .sliderCont .viewWrap .script .code {
+    position: relative;
+}
+.scriptCont .slider .sliderCont .viewWrap .script .code .jq {
+    position: absolute;
+    left: 0; top: 0;
     width: 100%;
-    overflow: hidden;
+    height: 100%;
 }
-.scriptCont .parallax .paraCont .btnWrap > div > div {
+.scriptCont .slider .sliderCont .viewWrap .script .code .js {
+    position: absolute;
+    left: 0; top: 0;
     width: 100%;
-    background: #ccc;
-    overflow: hidden;
-}
-.scriptCont .parallax .paraCont .btnWrap .btn a{
-    padding: 8vw;
-    background: #aaa;
-    border-radius: 100%;
-    font-size: 40px;
-    float: right;
-}
-.scriptCont .parallax .paraCont .btnWrap .btn.on a {
-    background: #2E67C4;
+    height: 100%;
 }
