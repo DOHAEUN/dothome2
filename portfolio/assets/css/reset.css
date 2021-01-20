@@ -1,4 +1,4 @@
-/* �麹佔�� */
+/* 폰트 설정 */
 
 @font-face {
     font-family: 'Iropke Batang';
@@ -41,7 +41,7 @@
     font-weight: normal;
     font-style: normal;
 }
-/* �佔�� 覲��� �れ�� */
+/* css 변수 */
 html {
     --variable-yantra:'yantramanav', sans-serif;
     --variable-nexonL:'NEXON Lv1 Gothic OTF';
@@ -51,42 +51,19 @@ html {
     --variable-italiana:'Italiana', serif;
 }
 
-/* ��葦 豐�蠍壱�� */
+/* 초기화 */
 body, div, ul, ol, li, dd, dt, dl, h1, h2, h3, h4, h5, h6, input, fieldset,
- p, select, table, td, tr, textarea, button, form, figure, figcaption {margin:0; padding: 0;}
+ p, select, table, td, tr, textarea, button, form, figure, figcaption, pre {margin:0; padding: 0;}
 
-/* a 襷��� 豐�蠍壱�� */
+/* a태그 초기화 */
 a {color: #fff; text-decoration: none;}
 a:hover {color: #fff;}
 
-/* 觚�襴衰鍵�� 豐�蠍壱�� */
+/* 리스트 초기화 */
 ul, ol, li{list-style: none;}
 
-/* �企�讌� 豐�蠍壱�� */
+/* 미디어 초기화 */
 img, video {width: 100%; vertical-align: top;}
 
-/* �佔�� �ろ���� 豐�蠍壱�� */
+/* em 초기화 */
 em {font-style: normal;}
-
-/* ��襴�,貊��� 豐�蠍壱�� */
-pre {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    background: #232323;
-    padding: 3% 5%;
-    font-size: 14px;
-    line-height: 1.4;
-}
-
-/* fixed */
-.fixed {
-    position: fixed; 
-    top: 50%; left: 50%; 
-    transform: translate(-50%, -50%); 
-}
-
-/* container */
-.container {
-    width: 1280px;
-    margin: 0 auto;
-}

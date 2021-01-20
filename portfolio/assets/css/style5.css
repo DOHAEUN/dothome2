@@ -979,9 +979,10 @@ body {height: 200000px;}
 .parallax .paraCont .btn > div {}
 .parallax .paraCont .viewWrap {
     flex: 0 0 55%;
+    position: relative;
 }
 .parallax .paraCont .viewWrap .iframe {
-    height: 45vw;
+    height: 100%;
 }
 .parallax .paraCont .viewWrap .iframe iframe {
     width: 100%; height: 100%;
@@ -1107,38 +1108,30 @@ body {height: 200000px;}
     position: relative;
 }
 .scriptCont .slider .sliderCont .viewWrap .iframe {
-    width: 100%; height: 45vw;
+    width: 100%; height: inherit;
     position: absolute;
     left: 0; top: 0;
-    background: red;
 }
 .scriptCont .slider .sliderCont .viewWrap .iframe iframe {
     width: 100%; height: 100%;
 }
 .scriptCont .slider .sliderCont .viewWrap .script {
     position: relative;
+    width: 100%; height: 100%;
+    background: red;
 }
 .scriptCont .slider .sliderCont .viewWrap .script .script-btn {
     position: absolute;
     right: 0; top: 0;
-    display: flex;
 }
-.scriptCont .slider .sliderCont .viewWrap .script .script-btn ul {
-    display: flex;
-}
-.scriptCont .slider .sliderCont .viewWrap .script .script-btn li {margin-right: 10px;}
 .scriptCont .slider .sliderCont .viewWrap .script .code {
-    position: relative;
+    position: absolute;
 }
 .scriptCont .slider .sliderCont .viewWrap .script .code .jq {
     position: absolute;
     left: 0; top: 0;
-    width: 100%;
-    height: 100%;
 }
 .scriptCont .slider .sliderCont .viewWrap .script .code .js {
     position: absolute;
     left: 0; top: 0;
-    width: 100%;
-    height: 100%;
 }
