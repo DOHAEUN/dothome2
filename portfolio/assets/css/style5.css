@@ -919,7 +919,7 @@ body {height: 200000px;}
 .parallax .paraCont {
     display: flex;
     justify-content: flex-end;
-    margin: 50px 200px;
+    margin: 100px 0px;
 }
 .parallax .paraCont .btn {
     flex: 0 0 45%;
@@ -932,7 +932,7 @@ body {height: 200000px;}
     background: #2F2F2F;
     border-radius: 50%;
     display: block;
-    margin-right: 50px;
+    margin-right: 70px;
     position: relative;
 }
 .parallax .paraCont .btn a {
@@ -979,9 +979,11 @@ body {height: 200000px;}
 .parallax .paraCont .btn > div {}
 .parallax .paraCont .viewWrap {
     flex: 0 0 55%;
-    background: blue;
 }
-.parallax .paraCont .viewWrap iframe {
+.parallax .paraCont .viewWrap .iframe {
+    height: 45vw;
+}
+.parallax .paraCont .viewWrap .iframe iframe {
     width: 100%; height: 100%;
 }
 
@@ -1102,11 +1104,16 @@ body {height: 200000px;}
 .scriptCont .slider .sliderCont .viewWrap {
     flex: 0 0 55%;
     background: blue;
+    position: relative;
 }
 .scriptCont .slider .sliderCont .viewWrap .iframe {
-    width: 100%; height: 100%;
+    width: 100%; height: 45vw;
     position: absolute;
     left: 0; top: 0;
+    background: red;
+}
+.scriptCont .slider .sliderCont .viewWrap .iframe iframe {
+    width: 100%; height: 100%;
 }
 .scriptCont .slider .sliderCont .viewWrap .script {
     position: relative;
