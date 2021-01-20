@@ -33,45 +33,25 @@
             transition: all 0.2s;
         }
         /* info */
-        .info {
-            position: fixed; z-index: 1000;
-        }
-        .info.left {
-            left: 20px; top: 20px;
-        }
-        .info.right {
-            right: 20px; top: 20px;
-        }
-        .info.bottom {
-            right: 20px; bottom: 20px;
-        }
-        .info h1 {
-            font-size: 2rem;
-            line-height: 1.4;
-        }
-        .info p {
-            font-size: 1rem;
-        }
-        .info li {
-            font-size: 1rem;
-            line-height: 1.4;
-        }
+        .info {position: fixed; z-index: 1000;}
+        .info.left {left: 20px; top: 20px;}
+        .info.right{right: 20px; top: 20px;}
+        .info.bottom {right: 20px; bottom: 20px;}
+        .info h1 {font-size: 2rem; line-height: 1.4;}
+        .info p {font-size: 1rem;}
+        .info li {font-size: 1rem; line-height: 1.4;}
         .info li a {
             color: #fff;
-            width: 25px; height: 25px;
-            border: 1px dashed #fff;
+            width: 25px; height: 25px; 
+            border: 1px dashed #fff; 
             display: inline-block;
-            border-radius: 50%;
-            text-align: center;
+            border-radius: 50%; 
             line-height: 25px;
             font-size: 0.8rem;
-            margin: 3px;
+            margin: 5px;
+            text-align: center;
         }
-        .info li a.active {
-            background: #fff;
-            color: #000;
-        }
-
+        .info li a.active {background: #fff; color: #000;}
         @media (max-width: 800px){
             .info h1 {display: none;}
         }
@@ -321,8 +301,8 @@
         }
         .slider_dot a {
             display: inline-block;
-            width: 20px;
-            height: 20px;
+            width: 1vw;
+            height: 1vw;
             background: rgba(0, 0, 0, 0.3);
             text-indent: -9999px;
             border-radius: 50%;
