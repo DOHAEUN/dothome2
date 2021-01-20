@@ -1945,108 +1945,31 @@
 .donutImg p {color: #565656; font-size: 18px; }
 .donutImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
-.appleImg {text-align: center; }
-.appleImg h5 {color: #51b224; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
-.appleImg p {color: #565656; font-size: 18px; }
-.appleImg span {color: #999; font-size: 12px; text-transform: uppercase;}
-
-.breadImg {text-align: center; }
-.breadImg h5 {color: #a46816; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
-.breadImg p {color: #565656; font-size: 18px; }
-.breadImg span {color: #999; font-size: 12px; text-transform: uppercase;}
-
-.carrotImg {text-align: center; }
-.carrotImg h5 {color: #ff860d; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
-.carrotImg p {color: #565656; font-size: 18px; }
-.carrotImg span {color: #999; font-size: 12px; text-transform: uppercase;}
-
-.burgerImg {text-align: center; }
-.burgerImg h5 {color: #de912a; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
-.burgerImg p {color: #565656; font-size: 18px; }
-.burgerImg span {color: #999; font-size: 12px; text-transform: uppercase;}
-
-.cherriesImg {text-align: center; }
-.cherriesImg h5 {color: #f04b3e; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
-.cherriesImg p {color: #565656; font-size: 18px; }
-.cherriesImg span {color: #999; font-size: 12px; text-transform: uppercase;}
-
-.cookieImg {text-align: center; }
-.cookieImg h5 {color: #c8801d; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
-.cookieImg p {color: #565656; font-size: 18px; }
-.cookieImg span {color: #999; font-size: 12px; text-transform: uppercase;}
-
-.frenchImg {text-align: center; }
-.frenchImg h5 {color: #f04b3e; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
-.frenchImg p {color: #565656; font-size: 18px; }
-.frenchImg span {color: #999; font-size: 12px; text-transform: uppercase;}
-
-.chickenImg {text-align: center; }
-.chickenImg h5 {color: #a35a2d; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
-.chickenImg p {color: #565656; font-size: 18px; }
-.chickenImg span {color: #999; font-size: 12px; text-transform: uppercase;}
-
-.grapesImg {text-align: center; }
-.grapesImg h5 {color: #51b224; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
-.grapesImg p {color: #565656; font-size: 18px; }
-.grapesImg span {color: #999; font-size: 12px; text-transform: uppercase;}
-
-.hotdogImg {text-align: center; }
-.hotdogImg h5 {color: #a64b23; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
-.hotdogImg p {color: #565656; font-size: 18px; }
-.hotdogImg span {color: #999; font-size: 12px; text-transform: uppercase;}
-
-.cupcakeImg {text-align: center; }
-.cupcakeImg h5 {color: #d6bb8d; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
-.cupcakeImg p {color: #565656; font-size: 18px; }
-.cupcakeImg span {color: #999; font-size: 12px; text-transform: uppercase;}
-
-.lemonImg {text-align: center; }
-.lemonImg h5 {color: #ffd10a; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
-.lemonImg p {color: #565656; font-size: 18px; }
-.lemonImg span {color: #999; font-size: 12px; text-transform: uppercase;}
-
-.macaronImg {text-align: center; }
-.macaronImg h5 {color: #824b3d; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
-.macaronImg p {color: #565656; font-size: 18px; }
-.macaronImg span {color: #999; font-size: 12px; text-transform: uppercase;}
-
-.pearImg {text-align: center; }
-.pearImg h5 {color: #ffd10a; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
-.pearImg p {color: #565656; font-size: 18px; }
-.pearImg span {color: #999; font-size: 12px; text-transform: uppercase;}
-
-.pizzaImg {text-align: center; }
-.pizzaImg h5 {color: #c52525; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
-.pizzaImg p {color: #565656; font-size: 18px; }
-.pizzaImg span {color: #999; font-size: 12px; text-transform: uppercase;}
-
-.popcornImg {text-align: center; }
-.popcornImg h5 {color: #c52525; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
-.popcornImg p {color: #565656; font-size: 18px; }
-.popcornImg span {color: #999; font-size: 12px; text-transform: uppercase;}
-
-.creamImg {text-align: center; }
-.creamImg h5 {color: #d6bb8d; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
-.creamImg p {color: #565656; font-size: 18px; }
-.creamImg span {color: #999; font-size: 12px; text-transform: uppercase;}
-
-.magnumImg {text-align: center; }
-.magnumImg h5 {color: #f47cc3; font-size: 23px; padding-top: 22px; text-transform: uppercase;}
-.magnumImg p {color: #565656; font-size: 18px; }
-.magnumImg span {color: #999; font-size: 12px; text-transform: uppercase;}
-
-.vanillaImg {text-align: center; }
-.vanillaImg h5 {color: #824b3d; font-size: 23px; padding-top: 22px; text-transform: uppercase;}
-.vanillaImg p {color: #565656; font-size: 18px; }
-.vanillaImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 /* control */
 .control {}
 .control h3 {margin-top:30px;}
 
-
-
-
+/* figma */
+.figma {width: 100%; margin: 50px 0;}
+.figma ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+}
+.figma li {list-style: none;}
+.figma li a {
+	padding: 3px 20px;
+	border: 1px solid rgb(153, 102, 204);
+	border-radius: 7px;
+	transition: background 0.3s ease-in;
+	color:rgb(153, 102, 204);
+}
+.figma li a:hover{
+	background: rgb(153, 102, 204);
+	color:#f9d366;
+}
 
 
 
