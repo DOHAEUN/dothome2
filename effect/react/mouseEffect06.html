@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouse Effect05 - jquery</title>
+    <title>Mouse Effect06 - jQuery</title>
     <style>
         @font-face {
             font-family: 'RIDIBatang';
@@ -16,6 +16,12 @@
             .jejumyeongjo * { 
             font-family: 'Jeju Myeongjo', serif;
         }
+        @font-face {
+            font-family: 'MaruBuri-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
         *, *::before, *::after {box-sizing: border-box; margin: 0; padding: 0; color: #fff;}
         a {text-decoration: none; color: #fff; transition: all 0.2s;}
         a:hover {border-bottom: 1px dashed #fff;}
@@ -23,16 +29,16 @@
         li {list-style: none;}
 
         body {
-            background: #000;
+            background: url(../img/image12.jpg) no-repeat center center;
             background-size: cover;
-            background-color: #000;
+            background-color: rgb(177, 191, 252);
             height: 100vh;
             overflow: hidden;
             font-size: 16px;
             line-height: 1.5;
-            font-family: 'Jeju Myeongjo', serif;
+            font-family: 'MaruBuri-Regular';
             background-blend-mode: luminosity;
-            cursor: none;
+            /* cursor: none; */
             position: relative;
         }
         body::before {
@@ -95,44 +101,35 @@
         /* main */
         .contents {
             display: flex;
-            align-items: center;
+            position: relative;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
             justify-content: center;
-            width: 100%; height: 100vh;
-            overflow: hidden;
+            align-items: center;
         }
-        .move-image {
-            position: relative;
-            cursor: none;
+        .contents p {
+            max-width: 70vw;
+            font-size: 3vw;
+            text-align: justify;
         }
-        .move-image .mimg {
-            width: 50vw;
-            height: 60vh;
-            position: relative;
-            overflow: hidden;
-            transition: transform 500ms cubic-bezier(0.25, 0.45, 0.45, 0.84);
+        .contents p:first-child {
+            font-size: 2vw;
+            line-height: 2;
         }
-        .move-image:hover .mimg {
-            transform: scale(1.025);
-            
+        .contents p em {
+            color: rgb(159, 211, 235);
+            border-bottom: 2px dashed rgb(159, 211, 235);
+            font-style: normal;
         }
-        .move-image .mimg .img {
-            position: absolute;
-            left: -5%; top: -5%;
-            width: 110%; 
-            height: 110%;
-            transition: transform 500ms cubic-bezier(0.25, 0.45, 0.45, 0.84);
-            object-fit: cover; /* background-size */
-            filter: grayscale(100%);
-        }
-        .move-image .mtxt {
-            position: absolute;
-            left: 50%; top: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            font-size: 1.3rem;
-            white-space: nowrap;
-            background: rgba(0,0,0,0.5);
-            padding: 1rem;
+        .contents p .word {
+            color:rgb(159, 211, 235);
+            font-size: 4vw;
+        /*   text-shadow: 5px -10px 0px rgba(255, 165, 0, 0.4),
+                        -5px 10px 0px rgba(255, 35, 251, 0.4),
+                        10px -5px 0px rgba(255, 255, 74, 0.4),
+                        -10px 5px 0px rgba(102, 249, 255, 0.4); */
         }
         .cursor {
             position: absolute;
@@ -142,7 +139,8 @@
             z-index: 1000;
             user-select: none;
             pointer-events: none;
-            transition: transform 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.84);
+            transform: scale(.5);
+            transition: transform 0.3s ease-in-out;
         }
 
     </style>
@@ -151,47 +149,49 @@
     
     <!-- info -->
     <div class="info left">
-        <h1>Mouse Effect05</h1>
+        <h1>Mouse Effect06</h1>
         <p>마우스 방향에 따라 움직이기</p>
     </div>
+    <!-- <div class="info bottom">
+        <ul>
+            <li>clientX : <span class="clientX">0</span></li>
+            <li>clientY : <span class="clientY">0</span></li>
+        </ul>
+    </div> -->
     <!-- info -->
     
     <main>
-        
         <div class="contents">
             <div class="cursor"></div>
-
-            <div class="move-image">
-                <div class="mimg">
-                    <img class="img" src="../img/image06.jpg" alt="이미지">
-                </div>
-                <div class="mtxt">
-                    <p>I never dreamed about success, Iworked for it</p>
-                    <p>나는 결코 성공에 대해 꿈꾸지 않았다. 나는 꿈을 위해 행동했다.</p>
-                </div>
+                <p>Loose <em>lips</em> sink ships.</p>
+                <p>가벼운 <em>입술이</em> 배를 가라앉게 만든다.</p>
+                <p>
+                    <strong class="word">★</strong>
+                    <strong class="word">★</strong>
+                    <strong class="word">★</strong>
+                    <strong class="word">★</strong>
+                    <strong class="word">★</strong>
+                </p>
             </div>
         </div>
-
     </main>
 
     <!-- scirpt -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>
-
-        $(".move-image").mousemove(function(e){
-            gsap.to(".cursor",{duration: 0.2, left: e.pageX - 10, top: e.pageY - 10});
-            
-            let x = e.clientX - ($(".move-image").width()/2 + $(".move-image").position().left ); //position: left 값은 사진의 왼쪽을 기준으로 반의 값
-            let y = e.clientY - ($(".move-image").height()/2+ $(".move-image").position().top ); //position: left 값은 사진의 왼쪽 위를 기준으로 반의 값
-           
-            $(".img").attr({"style":"transform:translate("+x/20+"px, "+y/20+"px)"});
-        });
-
-        // 출력용
         $(window).mousemove(function(e){
-            $(".clientX").text(e.clientX);
-            $(".clientY").text(e.clientY);
+            let x = e.pageX;
+            let y = e.pageY;
+            let mouseX = (x - $(".word").offset().left - $(".word").width() / 2) / $(".word").width() * 5
+            let mouseY = (y - $(".word").offset().top - $(".word").height() / 2) / $(".word").height() * 5
+
+            // $(".word").css({textShadow:"10px -20px 0px rgba(255, 165, 9, 0.4), -10px 20px 0px rgba(255, 35, 251, 0.4), 20px -10px 0px rgba(255, 255, 73, 0.4), -20px 10px 0px rgba(102, 249, 255, 0.4)"});
+            $(".word").css({textShadow:""+mouseX+"px -"+mouseY+"px 0px rgba(255, 165, 9, 0.4), -"+mouseX+"px "+mouseY+"px 0px rgba(255, 35, 251, 0.4)"});
+
+            $(".mouseX").text(parseInt(mouseX));
+            $(".mouseY").text(parseInt(mouseY));
+            $(".mouseX2").text(parseInt(-mouseX));
+            $(".mouseY2").text(parseInt(-mouseY));
         });
     </script>
 </body>
