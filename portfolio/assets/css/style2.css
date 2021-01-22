@@ -1,0 +1,91 @@
+/* layout */
+#contents {}
+#section1 {
+    height: 5000px;
+    background: #000;
+}
+#section2 {}
+#section3 {}
+#section4 {}
+#section5 {}
+
+/* fixed */
+.fixed {
+    position: fixed;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* scroll */
+.scroll {
+    position: fixed;
+    right: 10px; top: 10px;
+    width: 50px; height: 50px;
+    text-align: center;
+    line-height: 53px;
+    color: #fff;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    font-family: 'Kufam', cursive;
+}
+
+/* sec1 */
+.sec1 {}
+.sec1 .sec1-box1 {
+    color: #fff;
+    font-family: 'Kufam', cursive;
+    font-size: 200px;
+    position: fixed;
+    left: 30px; top: 30px;
+    letter-spacing: -1px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.sec1 .sec1-box2 {
+    color: #fff;
+    font-size: 200px;
+    position: fixed;
+    left: 48px; top: 270px;
+    display: flex;
+}
+.sec1 .sec1-box2 .img {
+    width: 400px;
+    flex: 0 0 400px;
+    margin-right: 40px;
+}
+.sec1 .sec1-box2 .txt {
+    font-size: 20px;
+    line-height: 1.4;
+    flex: 0 0 500px;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+}
+.sec1 .sec1-box2 .txt p {
+    margin-bottom: 10px;
+}
+.sec1 .sec1-box2 .txt h3 {
+    font-size: 18px;
+    color: #777;
+    margin-top: 30px;
+}
+.sec1 .sec1-box2 .txt li {
+    font-size: 16px;
+}
+.sec1 .sec1-box3 {
+    position: fixed;
+    right: 60px;
+    bottom: 30px;
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Kufam', cursive;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.sec1 .sec1-box4 {
+    font-size: 50vh;
+    line-height: 56vh;
+    padding-bottom: 2vh;
+    color: #fff;
+    font-family: "Montserrat";
+    left: 100%;
+    transform: translate(0%, -50%);
+}

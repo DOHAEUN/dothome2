@@ -49,6 +49,7 @@ html {
     --variable-nexonB:'NEXON Lv1 Gothic OTF Bold';
     --variable-Playfair:'Playfair Display', serif;
     --variable-italiana:'Italiana', serif;
+    font-size: 12px;
 }
 
 /* 초기화 */
