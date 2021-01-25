@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentacle Animation</title>
+    <style>
+        body{overflow: hidden;}
+        .jelly-container {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background: linear-gradient(to bottom, rgba(1, 141, 210, 0.36), transparent);
+        }
+
+        div[class^=blble-] {
+        width: 75px;
+        height: 75px;
+        background: rgba(0, 141, 210, 0.3);
+        border-radius: 50%;
+        position: absolute;
+        bottom: 6px;
+        }
+
+        div[class^=blble-]:after {
+        content: "";
+        position: absolute;
+        border-top: 1px solid rgba(255, 255, 255, 0.63);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        width: 85%;
+        height: 85%;
+        border-radius: 50%;
+        }
+
+        .blble-1 {
+        left: 20%;
+        animation: buble-move 5s -3230ms ease-in-out infinite;
+        }
+
+        .blble-2 {
+        left: 59%;
+        animation: buble-move 5s -4204ms ease-in-out infinite;
+        }
+
+        .blble-3 {
+        left: 39%;
+        animation: buble-move 5s -1450ms ease-in-out infinite;
+        }
+
+        .blble-4 {
+        left: 42%;
+        animation: buble-move 5s -2922ms ease-in-out infinite;
+        }
+
+        .blble-5 {
+        left: 56%;
+        animation: buble-move 5s -3828ms ease-in-out infinite;
+        }
+
+        .blble-6 {
+        left: 66%;
+        animation: buble-move 5s -1298ms ease-in-out infinite;
+        }
+
+        .blble-7 {
+        left: 59%;
+        animation: buble-move 5s -2520ms ease-in-out infinite;
+        }
+
+        .blble-8 {
+        left: 57%;
+        animation: buble-move 5s -1693ms ease-in-out infinite;
+        }
+
+        .blble-9 {
+        left: 1%;
+        animation: buble-move 5s -4896ms ease-in-out infinite;
+        }
+
+        .blble-10 {
+        left: 5%;
+        animation: buble-move 5s -4458ms ease-in-out infinite;
+        }
+
+        .blble-11 {
+        left: 29%;
+        animation: buble-move 5s -9312ms ease-in-out infinite;
+        }
+
+        .blble-12 {
+        left: 15%;
+        animation: buble-move 5s -8959ms ease-in-out infinite;
+        }
+
+        .blble-13 {
+        left: 19%;
+        animation: buble-move 5s -623ms ease-in-out infinite;
+        }
+
+        .blble-14 {
+        left: 44%;
+        animation: buble-move 5s -6539ms ease-in-out infinite;
+        }
+
+        .blble-15 {
+        left: 33%;
+        animation: buble-move 5s -879ms ease-in-out infinite;
+        }
+
+        .blble-16 {
+        left: 37%;
+        animation: buble-move 5s -398ms ease-in-out infinite;
+        }
+
+        .blble-17 {
+        left: 78%;
+        animation: buble-move 5s -1200ms ease-in-out infinite;
+        }
+
+        .blble-18 {
+        left: 20%;
+        animation: buble-move 5s -1030ms ease-in-out infinite;
+        }
+
+        .blble-19 {
+        left: 67%;
+        animation: buble-move 5s -899ms ease-in-out infinite;
+        }
+
+        .blble-20 {
+        left: 83%;
+        animation: buble-move 5s -10000ms ease-in-out infinite;
+        }
+
+        @keyframes buble-move {
+        0% {
+            width: 1px;
+            height: 1px;
+            transform: translatey(0);
+        }
+        100% {
+            width: 75px;
+            height: 75px;
+            transform: translatey(-1000%);
+        }
+        }
+        .jelly_wrapper {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 256px;
+        height: 300px;
+        animation: jelly-move 10s infinite linear;
+        }
+
+        .jelly-body {
+        width: 100%;
+        height: 250px;
+        background: linear-gradient(to bottom, #009dd2, #ebf28a);
+        border-top-left-radius: 70px;
+        border-top-right-radius: 90px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        animation: head-movement 10s infinite linear;
+        }
+
+        @keyframes head-movement {
+        0% {
+            border-top-left-radius: 70px;
+            border-top-right-radius: 90px;
+        }
+        20% {
+            border-top-left-radius: 70px;
+            border-top-right-radius: 90px;
+        }
+        25% {
+            border-top-left-radius: 80px;
+            border-top-right-radius: 80px;
+        }
+        30% {
+            border-top-left-radius: 90px;
+            border-top-right-radius: 70px;
+        }
+        70% {
+            border-top-left-radius: 90px;
+            border-top-right-radius: 70px;
+        }
+        75% {
+            border-top-left-radius: 80px;
+            border-top-right-radius: 80px;
+        }
+        80% {
+            border-top-left-radius: 70px;
+            border-top-right-radius: 90px;
+        }
+        100% {
+            border-top-left-radius: 70px;
+            border-top-right-radius: 90px;
+        }
+        }
+        @keyframes jelly-move {
+        0% {
+            top: 55%;
+            left: 50%;
+        }
+        5% {
+            top: 50%;
+        }
+        10% {
+            top: 55%;
+        }
+        15% {
+            top: 55%;
+        }
+        20% {
+            top: 50%;
+        }
+        25% {
+            top: 55%;
+            left: 100%;
+            left: calc(100% - 150px);
+        }
+        30% {
+            top: 50%;
+        }
+        45% {
+            top: 55%;
+        }
+        50% {
+            top: 50%;
+            left: 50%;
+        }
+        55% {
+            top: 55%;
+        }
+        60% {
+            top: 50%;
+        }
+        65% {
+            top: 55%;
+        }
+        70% {
+            top: 50%;
+        }
+        75% {
+            top: 55%;
+            left: 150px;
+        }
+        80% {
+            top: 50%;
+        }
+        85% {
+            top: 55%;
+        }
+        90% {
+            top: 50%;
+        }
+        95% {
+            top: 55%;
+        }
+        100% {
+            top: 50%;
+            left: 50%;
+        }
+        }
+        .jelly-temacle-1 {
+        width: 50px;
+        height: 50px;
+        background: #ebf28a;
+        border-radius: 0 0 50% 50%;
+        position: absolute;
+        left: 0;
+        box-shadow: 0 2.5px 0 #008d98;
+        animation: tentacle 1s infinite ease-in -0.2s;
+        }
+
+        .jelly-temacle-2 {
+        width: 50px;
+        height: 50px;
+        background: #ebf28a;
+        border-radius: 0 0 50% 50%;
+        position: absolute;
+        left: 20%;
+        box-shadow: 0 2.5px 0 #008d98;
+        animation: tentacle 1s infinite ease-in;
+        }
+
+        .jelly-temacle-3 {
+        width: 50px;
+        height: 50px;
+        background: #ebf28a;
+        border-radius: 0 0 50% 50%;
+        position: absolute;
+        left: 40%;
+        box-shadow: 0 2.5px 0 #008d98;
+        animation: tentacle 1s infinite ease-in -0.2s;
+        }
+
+        .jelly-temacle-4 {
+        width: 50px;
+        height: 50px;
+        background: #ebf28a;
+        border-radius: 0 0 50% 50%;
+        position: absolute;
+        left: 60%;
+        box-shadow: 0 2.5px 0 #008d98;
+        animation: tentacle 1s infinite ease-in;
+        }
+
+        .jelly-temacle-5 {
+        width: 50px;
+        height: 50px;
+        background: #ebf28a;
+        border-radius: 0 0 50% 50%;
+        position: absolute;
+        left: 80%;
+        box-shadow: 0 2.5px 0 #008d98;
+        animation: tentacle 1s infinite ease-in -0.2s;
+        }
+
+        @keyframes tentacle {
+        0% {
+            bottom: 0;
+        }
+        50% {
+            bottom: 8%;
+        }
+        100% {
+            bottom: 0;
+        }
+        }
+        .jelly-inner {
+        width: 50%;
+        height: 200px;
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        animation: move 10s infinite linear;
+        }
+        .jelly-inner .jelly-eye {
+        position: absolute;
+        top: -40px;
+        }
+        .jelly-inner .jelly-eye:before {
+        content: "";
+        position: absolute;
+        left: 60px;
+        height: 20px;
+        width: 20px;
+        background: #fff;
+        border-radius: 50%;
+        animation: eye-blick 3.5s infinite linear;
+        }
+        .jelly-inner .jelly-eye:after {
+        content: "";
+        position: absolute;
+        left: -60px;
+        height: 20px;
+        width: 20px;
+        background: #fff;
+        border-radius: 50%;
+        animation: eye-blick 3.5s infinite linear;
+        }
+        .jelly-inner .jelly-mouth {
+        position: absolute;
+        width: 200px;
+        height: 80px;
+        background: #f4cfd1;
+        border-radius: 30px;
+        transform: translate(-50%);
+        }
+        .jelly-inner .jelly-mouth:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 60%;
+        height: 1px;
+        background: #ff9393;
+        transform: translate(-50%, -50%);
+        }
+        .jelly-inner .jelly-hands {
+        position: absolute;
+        top: 65px;
+        }
+        .jelly-inner .jelly-hands:before {
+        content: "";
+        position: absolute;
+        width: 45px;
+        height: 50px;
+        box-shadow: 0 5px 6px #3b949b;
+        left: 105px;
+        border-radius: 0 0 50% 50%;
+        }
+        .jelly-inner .jelly-hands:after {
+        content: "";
+        position: absolute;
+        width: 45px;
+        height: 50px;
+        box-shadow: 0 5px 6px #3b949b;
+        left: -150px;
+        border-radius: 0 0 50% 50%;
+        }
+
+        @keyframes move {
+        0% {
+            left: 60%;
+        }
+        20% {
+            left: 60%;
+        }
+        25% {
+            left: 50%;
+        }
+        30% {
+            left: 40%;
+        }
+        70% {
+            left: 40%;
+        }
+        75% {
+            left: 50%;
+        }
+        80% {
+            left: 60%;
+        }
+        100% {
+            left: 60%;
+        }
+        }
+        @keyframes eye-blick {
+        0% {
+            height: 20px;
+        }
+        2% {
+            height: 1px;
+        }
+        4% {
+            height: 20px;
+        }
+        100% {
+            height: 20px;
+        }
+        }
+        .jelly-hair {
+        width: 100px;
+        height: 75px;
+        background: linear-gradient(to bottom, #ef891a, #ebf28a);
+        position: absolute;
+        left: 30%;
+        top: -10px;
+        border-radius: 25px;
+        animation: hair 10s infinite linear;
+        }
+
+        @keyframes hair {
+        0% {
+            transform: rotate3d(0, 1, 0, 180deg) rotate3d(0, 0, 1, 75deg);
+        }
+        20% {
+            transform: rotate3d(0, 1, 0, 180deg) rotate3d(0, 0, 1, 75deg);
+        }
+        25% {
+            transform: rotate3d(0, 1, 0, 90deg) rotate3d(0, 0, 1, 75deg);
+        }
+        30% {
+            transform: rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 75deg);
+        }
+        70% {
+            transform: rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 75deg);
+        }
+        75% {
+            transform: rotate3d(0, 1, 0, 90deg) rotate3d(0, 0, 1, 75deg);
+        }
+        80% {
+            transform: rotate3d(0, 1, 0, 180deg) rotate3d(0, 0, 1, 75deg);
+        }
+        100% {
+            transform: rotate3d(0, 1, 0, 180deg) rotate3d(0, 0, 1, 75deg);
+        }
+}
+    </style>
+</head>
+<body>
+    <div class="jelly-container">
+        <div class="blble-1"></div>
+        <div class="blble-2"></div>
+        <div class="blble-3"></div>
+        <div class="blble-4"></div>
+        <div class="blble-5"></div>
+        <div class="blble-6"></div>
+        <div class="blble-7"></div>
+        <div class="blble-8"></div>
+        <div class="blble-9"></div>
+        <div class="blble-10"></div>
+        <div class="jelly_wrapper">
+          <div class="jelly-hair"></div>
+          <div class="jelly-body">
+            <div class="jelly-inner">
+              <div class="jelly-eye"></div>
+              <div class="jelly-mouth"></div>
+              <div class="jelly-hands"></div>
+            </div>
+          </div>
+          <div class="jelly-temacle-1"></div>
+          <div class="jelly-temacle-2"></div>
+          <div class="jelly-temacle-3"></div>
+          <div class="jelly-temacle-4"></div>>
+          <div class="jelly-temacle-5"></div>>
+        </div>
+        <div class="blble-11"></div>
+        <div class="blble-12"></div>
+        <div class="blble-13"></div>
+        <div class="blble-14"></div>
+        <div class="blble-15"></div>
+        <div class="blble-16"></div>
+        <div class="blble-17"></div>
+        <div class="blble-18"></div>
+        <div class="blble-19"></div>
+        <div class="blble-20"></div>
+      </div>
+</body>
+</html>
