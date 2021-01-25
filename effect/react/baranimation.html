@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            background-image: linear-gradient(to top, #fcc5e4 0%, #fda34b   15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%,        #020f75 100%);}
+            .bar {
+                width: 1vh;
+                height: 5vh;
+                background: #fff;
+                position:absolute;
+                left: 0; right:0; top: 0; bottom:0;
+                margin: auto;
+                animation: bar 2s ease 100;
+            }
+
+            .bar2 {
+                width: 1vh;
+                height: 5vh;
+                background: #fff;
+                position:absolute;
+                left: 0; right:0; top: 0; bottom:0;
+                margin: auto;
+                animation: bar2 2s ease 100;
+            }
+            @keyframes bar{
+            0% {transform: rotate(0deg); height: 0px;}
+            25% {transform: rotate(0deg); height: 80vh;}
+            75% {transform: rotate(180deg); height: 80vh;}
+            100% {transform: rotate(180deg); height: 0px;}
+            }
+
+            @keyframes bar2{
+            0% {transform: rotate(180deg); height: 0px;}
+            25% {transform: rotate(180deg); height: 80vh;}
+            75% {transform: rotate(0deg); height: 80vh;}
+            100% {transform: rotate(0deg); height: 0px;}
+            }
+
+    </style>
+</head>
+<body>
+    <div class="bar"></div>
+    <div class="bar2"></div>
+</body>
+</html>

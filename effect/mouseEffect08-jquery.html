@@ -237,12 +237,12 @@
         $(window).on("mousemove", mouseMove);
 
         function mouseMove(e){
-                let positioninSlow = (e.pageX - ($(window).width()/2)) * 0.1
-                let positioninFast = (e.pageX - ($(window).width()/2)) * 0.2
+            let positioninSlow = (e.pageX - ($(window).width()/2)) * 0.1
+            let positioninFast = (e.pageX - ($(window).width()/2)) * 0.2
 
-                gsap.to(".span-slow", {duration: .4, x: positioninSlow})
-                gsap.to(".span-fast", {duration: .4, x: -positioninFast})
-            }
+            gsap.to(".span-slow", {duration: .4, x: positioninSlow})
+            gsap.to(".span-fast", {duration: .4, x: -positioninFast})
+        }
     </script>
 </body>
 </html>

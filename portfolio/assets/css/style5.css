@@ -4,7 +4,7 @@ body {height: 200000px;}
 #section1 {z-index: 1000;}
 #section2 {z-index: 2000; overflow: hidden;} 
 #section3 {z-index: 3000;}
-#section4 {}
+#section4 {position: relative; z-index: 4000;}
 #section5 {}
 
 /* scroll */
@@ -359,6 +359,7 @@ body {height: 200000px;}
 .aniWrap .aniPost .center .title {
     font-family: 'Playfair Display';
     text-align: center;
+    margin-top: 30px;
 }
 .aniWrap .aniPost .center .title .subTit {
     display: flex;
@@ -372,10 +373,16 @@ body {height: 200000px;}
     flex: 0 0 33.3333;
 }
 .aniWrap .aniPost .center .title .mainTit {
-    font-size: 10vw;
-    letter-spacing: 10px;
+    width: 100%;
     padding-bottom: 30px;
     border-bottom: 1px solid #fff;
+}
+.aniWrap .aniPost .center .title .mainTit h1 {
+    font-size: 15vw;
+    font-weight: 200;
+    line-height: 1.4;
+    width: 100%;
+    letter-spacing: 10px;
 }
 .aniWrap .aniPost .center .centerImg {margin-top: 100px;}
 
@@ -991,7 +998,7 @@ body {height: 200000px;}
 
 /* section3 */
 .sec3 {
-    width: 100vw; height: 1000vh;
+    width: 100vw; 
     position: fixed;
     left: 0; top: 0;
     background: #1d1d1d;
@@ -1062,20 +1069,18 @@ body {height: 200000px;}
     background: #fff;
     color: #000;
 }
-
-
 .parallax .paraCont {
     display: flex;
     justify-content: flex-end;
     margin: 100px 0px;
 }
-.parallax .paraCont .btn {
+.parallax .paraCont .btnWrap .changeBtn {
     flex: 0 0 45%;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
 }
-.parallax .paraCont .btn a {
+.parallax .paraCont .btnWrap .changeBtn a {
     padding: 11vw;
     background: #2F2F2F;
     border-radius: 50%;
@@ -1083,10 +1088,31 @@ body {height: 200000px;}
     margin-right: 70px;
     position: relative;
 }
-.parallax .paraCont .btn a {
+.parallax .paraCont .btnWrap .changeBtn a {
     position: relative;
 }
-.parallax .paraCont .btn a .txt {
+.parallax .paraCont .btnWrap .changeBtn a .txt {
+    width: 100%; height: 100%;
+    position: absolute;
+    left: 0%; top: 0;
+    border-radius: 50%;
+    padding-top: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    animation: trun 12s infinite linear ;
+}
+.parallax .paraCont .btnWrap .changeBtn .on a .txt {
+    animation: none;
+}
+@keyframes trun {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
+}
+.parallax .paraCont .btnWrap .changeBtn a .txt2 {
     font-size: 40px;
     position: absolute;
     left: 50%; top: 50%;
@@ -1094,35 +1120,111 @@ body {height: 200000px;}
     font-family: 'NEXON Lv1 Gothic OTF Bold';
     color: #fff;
 }
-.parallax .paraCont .btn a .bg {
-    width: 100%; height: 100%;
-    border-radius: 50%;
-    transform: scale(0);
-    transition: all 0.6s;
+.parallax .paraCont .btnWrap .changeBtn a .bg {
     position: absolute;
     left: 0; top: 0;
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    background: #2F2F2F;
+    animation: bg1 0.6s ease-in;
+}
+@keyframes bg1 {
+    0% {transform: scale(1); background: #2E67C4; }
+    100% {transform: scale(0); background: #2E67C4;}
+}
+.parallax .paraCont .btnWrap .changeBtn .on a .bg {
     background: #2E67C4;
+    animation: bg2 0.6s ease-in;
 }
-.parallax .paraCont .btn a:hover .bg,
-.parallax .paraCont .btn .on a .bg{
-    transform: scale(1);
+@keyframes bg2 {
+    0% {transform: scale(0); }
+    100% {transform: scale(1);}
 }
-.parallax .paraCont .btn > div {}
 .parallax .paraCont .paraView {
     flex: 0 0 55%;
     position: relative;
 }
-.parallax .paraCont .paraView .iframe {
+.parallax .paraCont .paraView .view {
+    width: 100%; height: 100%;
+}
+.parallax .paraCont .paraView .view .iframe {
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0; top: 0;
 }
-.parallax .paraCont .paraView .iframe iframe {
+.parallax .paraCont .paraView .view .iframe iframe {
     width: 100%; height: 100%;
 }
+.parallax .paraCont .paraView .paraCode {
+    width: 100%; height: 100%;
+    position: absolute;
+    left: 0; bottom: 0;
+    background: #272822;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border: 1px solid rgb(128, 117, 117);
+    display: none;
+}
+.parallax .paraCont .paraView .paraCode .codeList {
+    width: 100%; height: 100%;
+    position: relative;
+}
+.parallax .paraCont .paraView .paraCode .codeList > div {}
+.parallax .paraCont .paraView .paraCode .codeList .jqBtn a {
+    border-top: none;
+}
+.parallax .paraCont .paraView .paraCode .codeList > div a {
+    display: inline-block;
+    width: 100%; height: 100%;
+    font-size: 16px;
+    padding:2vw 1vw;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    font-family: 'Chosunilbo_myungjo';
+    position: relative;
+}
+.parallax .paraCont .paraView .paraCode .codeList > div a span {}
+.parallax .paraCont .paraView .paraCode .codeList > div a span::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 9.7%; top: 50%;
+    transform: rotate(-135deg);
+}
+.parallax .paraCont .paraView .paraCode .codeList > div a span::after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 8%; top: 50%;
+    transform: rotate(135deg);
+}
 
+.parallax .paraCont .paraView .paraCode .codeList > div a.active span::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 9.7%; top: 50%;
+    transform: rotate(135deg);
+}
+.parallax .paraCont .paraView .paraCode .codeList > div a.active span::after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: 8%; top: 50%;
+    transform: rotate(-135deg);
+}
+.parallax .paraCont .paraView .paraCode .codeList .jsBtn .js {display: none;}
 
+/* slider */
 .scriptCont .slider {
     padding: 0 80px;
     border-top: 1px solid #fff;
@@ -1173,8 +1275,6 @@ body {height: 200000px;}
     background: #fff;
     color: #000;
 }
-
-
 .slider .sliderCont {
     display: flex;
     justify-content: flex-end;
@@ -1382,7 +1482,7 @@ body {height: 200000px;}
 
 
 .scriptCont .quiz {
-    padding: 0 80px;
+    padding: 0px 80px 200px 80px;
     border-top: 1px solid #fff;
 }
 .scriptCont .quiz .quizTitle {
@@ -1506,4 +1606,35 @@ body {height: 200000px;}
 }
 .quiz .quizCont .quizView .iframe iframe {
     width: 100%; height: 100%;
+}
+
+
+/* section4 */
+.sec4 {
+    width: 100vw; height: 100vh;
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 4000;
+    background: #F2F2F2;
+}
+.sec4-circle {
+    width: 50vh; height: 50vh;
+    background: #1d1d1d;
+    position: absolute;
+    left: 23.8%; top: 13%;
+    transform: translate(-50%, -80%);
+    border-radius: 50%;
+    
+}
+.sec4-title {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+.sec4-title span{
+    font-size: 20vw;
+    line-height: 1;
+    padding-bottom: 3vw;
+    color: #1d1d1d;
 }
