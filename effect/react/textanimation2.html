@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'Recipekorea';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            background: #e3f2fd;
+            overflow: hidden;
+        }
+        svg {
+            font-family: 'Recipekorea';
+            position:absolute;
+            width: 100vw; height: 100vh;
+        }
+        svg text {
+            text-transform: uppercase;
+            font-size: 15vh;
+            animation: stroke 5s infinite alternate;
+        }
+        @keyframes stroke {
+            0% {fill: rgba(77,138,204,0); stroke: rgba(54,95,160,1); stroke-dashoffset: 25%; stroke-dasharray: 0px 50%; stroke-width:2;}
+            70% {fill: rgba(77,138,204,0); stroke: rgba(54,95,160,1); }
+            80% {fill: rgba(77,138,204,0); stroke: rgba(54,95,160,1); stroke-width:3;}
+            100% {fill: rgba(77,138,204,1); stroke: rgba(54,95,160,0); stroke-dashoffset: -25%; stroke-dasharray:50% 0px; stroke-width:0;}
+        }
+    </style>
+</head>
+<body>
+    <svg viewBox = "0 0 1320 300">
+        <text x="50%" y="50%" dy="4vw" text-anchor="middle">HAEUN</text>  
+      </svg>
+</body>
+</html>
